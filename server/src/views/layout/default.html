@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html xmlns:v="urn:schemas-microsoft-com:vml">
 
@@ -9,74 +8,76 @@
 <body isopeneventnamecheck="{{@isOpenEventNameCheck}}">
 
 
-  {{if isIframeVideo}}
+    {{if isIframeVideo}}
 
-      <!--给iframe调用，如果带这个值则是iframe使用的，没有头部和底部（默认这个值是false）-->
-      {{@content}}
+    <!--给iframe调用，如果带这个值则是iframe使用的，没有头部和底部（默认这个值是false）-->
+    {{@content}} {{else}}
 
-  {{else}}
+    <!--页头-固定顶部-->
+    <header id="header" style="position: relative; z-index: 2">
+        {{ include '../partials/header.html' }}
+    </header>
 
-      <!--页头-固定顶部-->
-      <header id="header" style="position: relative; z-index: 2">
-          {{ include '../partials/header.html' }}
-      </header>
+    <!--主内容-->
+    <section id="mainSection" style="position: relative; z-index: 1;background-color: #F0F1F5;">
+        {{@content}}
+    </section>
 
-      <!--主内容-->
-      <section id="mainSection" style="position: relative; z-index: 1">
-          {{@content}}
-      </section>
+    <!--页脚-->
+    <footer>
+        {{ include '../partials/footer.html' }}
+    </footer>
 
-      <!--页脚-->
-      <footer>
-          {{ include '../partials/footer.html' }}
-      </footer>
+    {{/if}}
 
-  {{/if}}
-
-  <div class="public_rightSuspension">
-    <ul class="rs_icon">
-      <li><a href="{{website.qqOnline}}"  target="_blank" class="service"></a></li>
-      <li><a href="/about/advice" class="feedback"></a></li>
-      <li><a href="#" class="weChat">
-        <span class="erWeiMa wc-ewm">
+    <div class="public_rightSuspension">
+        <ul class="rs_icon">
+            <li>
+                <a href="{{website.qqOnline}}" target="_blank" class="service"></a>
+            </li>
+            <li>
+                <a href="/about/advice" class="feedback"></a>
+            </li>
+            <li>
+                <a href="#" class="weChat">
+                    <span class="erWeiMa wc-ewm">
         <img src="{{cdnUrl}}/images/public/wechat-code.png" alt="微信订阅号">
         <i class="text">订阅号</i>
         <img src="{{cdnUrl}}/images/public/wechat-scode.png" alt="微信服务号">
         <i class="text">服务号</i>
         </span>
-      </a></li>
-      <li><a href="#" class="weiBo">
-        <span class="erWeiMa wb-ewm"><img src="{{cdnUrl}}/images/public/weibo-code.png" alt="微博二维码"></span>
-      </a></li>
-      <li><a href="#" class="top"></a></li>
-    </ul>
-</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="weiBo">
+                    <span class="erWeiMa wb-ewm"><img src="{{cdnUrl}}/images/public/weibo-code.png" alt="微博二维码"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="top"></a>
+            </li>
+        </ul>
+    </div>
 
 
 </body>
+
 </html>
 
 
-{{ if isDebug }} 
+{{ if isDebug }}
 <script type="text/javascript">
-    window.onerror = function(errorMessage, scriptURI, lineNumber,columnNumber,errorObj) {
-        alert("错误信息：" + errorMessage + "出错文件：" +  scriptURI + "出错行号：" + lineNumber + "出错列号：" + columnNumber + "错误详情："+ errorObj);
+    window.onerror = function(errorMessage, scriptURI, lineNumber, columnNumber, errorObj) {
+        alert("错误信息：" + errorMessage + "出错文件：" + scriptURI + "出错行号：" + lineNumber + "出错列号：" + columnNumber + "错误详情：" + errorObj);
     }
 </script>
 {{/if}}
 
 <script type="text/javascript">
     //解决 IE8 不支持console
-    window.console = window.console || (function () {
-        var c = {}; c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile
-        = c.clear = c.exception = c.trace = c.assert = function () { };
+    window.console = window.console || (function() {
+        var c = {};
+        c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile = c.clear = c.exception = c.trace = c.assert = function() {};
         return c;
     })();
 </script>
-
-
-
-
-
-
-

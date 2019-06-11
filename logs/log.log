@@ -3749,3 +3749,354 @@
 [2019-06-11 14:03:14.235] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
 [2019-06-11 14:03:14.466] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
 [2019-06-11 14:03:14.511] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:17.372] [INFO] console - Server running at:http://YR19qqq:8038
+[2019-06-11 14:03:17.464] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetLotteryProvinceList--->undefined--------------success
+[2019-06-11 14:03:17.725] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}--------------success
+[2019-06-11 14:03:17.781] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:17.804] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}--------------success
+[2019-06-11 14:03:18.423] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:18.470] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:18.516] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:18.678] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:20.192] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:20.202] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:21.206] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:24.049] [INFO] console - Api-URL:http://47.75.55.136:8082/chaseplan/getrecentplan--->undefined--------------success
+[2019-06-11 14:03:24.472] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:25.201] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:26.217] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:27.050] [INFO] console - Api-URL:http://47.75.55.136:8082/chaseplan/getrecentplan--->undefined--------------success
+[2019-06-11 14:03:29.276] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:32.203] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:32.469] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:32.573] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:32.692] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:33.237] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:36.303] [ERROR] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}---------------error
+[2019-06-11 14:03:36.311] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (D:\project\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (D:\project\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-06-11 14:03:37.211] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:38.236] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:38.243] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:38.451] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:38.487] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:41.217] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:44.194] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:44.549] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:44.552] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:44.844] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:45.219] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:49.197] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:50.195] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:50.220] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:50.460] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:50.499] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:53.226] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:56.205] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:56.234] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:03:56.421] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:56.454] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:03:56.703] [INFO] console - Api-URL:http://47.75.55.136:8086/home/GetAdData--->{"codes":"eycp_home_banner"}--------------success
+[2019-06-11 14:03:56.769] [INFO] console - Api-URL:http://47.75.55.136:8082/chaseplan/getrecentplan--->undefined--------------success
+[2019-06-11 14:03:57.210] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:01.216] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:02.221] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:02.232] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:02.434] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:02.495] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:05.223] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:06.777] [ERROR] console - Api-URL:http://47.75.55.136:8081/notice/getNotices--->{"pageIndex":1,"pageSize":5}---------------error
+[2019-06-11 14:04:06.782] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (D:\project\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (D:\project\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-06-11 14:04:06.854] [INFO] console - Api-URL:http://47.75.55.136:8082//totalpoint/GetRecentPoints--->undefined--------------success
+[2019-06-11 14:04:07.090] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawardnotice--->{"quantity":5}--------------success
+[2019-06-11 14:04:07.976] [INFO] console - Api-URL:http://47.75.55.136:8081/article/GetArticleList--->{"categoryIds":[6,32,33,34,35,36],"pageSize":5}--------------success
+[2019-06-11 14:04:08.194] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:08.518] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:08.519] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:08.795] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:09.202] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:09.239] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["gd11x5","jx11x5","jsk3","gxk3","cqssc","tjssc","gdkl10","gxkl10","bjpk10","shssl"]}--------------success
+[2019-06-11 14:04:09.337] [INFO] console - Api-URL:http://47.75.55.136:8082//video/getvideoawarddata--->{"groupId":2,"type":0}--------------success
+[2019-06-11 14:04:10.209] [INFO] console - Api-URL:http://47.75.55.136:8081//friendlink/getlist--->{"code":"home"}--------------success
+[2019-06-11 14:04:10.443] [ERROR] console - Debug:internal, implementation, error
+    TemplateError: D:\project\Eycp.SitePC\server\src\views\home\index.html:73:29
+    71|                     <div class="al_listBlock">
+    72|                         <ul>
+ >> 73|                             {{if noticeList.data}}
+    74|                                 {{if noticeList.data.length > 0}}
+    75|                                     {{each noticeList.data  list }}
+    76|                                         <li><a href="/notice/detail-{{@list.id }}.html"  class="title" target="_blank">{{@list.title }}</a></li>
+
+RuntimeError: Cannot read property 'data' of null: D:\project\Eycp.SitePC\server\src\views\home\index.html:73:29
+    71|                     <div class="al_listBlock">
+    72|                         <ul>
+ >> 73|                             {{if noticeList.data}}
+    74|                                 {{if noticeList.data.length > 0}}
+    75|                                     {{each noticeList.data  list }}
+    76|                                         <li><a href="/notice/detail-{{@list.id }}.html"  class="title" target="_blank">{{@list.title }}</a></li>
+
+RuntimeError: Cannot read property 'data' of null
+[2019-06-11 14:04:13.170] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:14.183] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:14.188] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:14.385] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:14.419] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:16.473] [INFO] console - Api-URL:http://47.75.55.136:8086/home/GetAdData--->{"codes":"eycp_home_banner"}--------------success
+[2019-06-11 14:04:16.529] [INFO] console - Api-URL:http://47.75.55.136:8082/chaseplan/getrecentplan--->undefined--------------success
+[2019-06-11 14:04:17.232] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:17.333] [INFO] console - Api-URL:http://47.75.55.136:8081/notice/getNotices--->{"pageIndex":1,"pageSize":5}--------------success
+[2019-06-11 14:04:17.401] [INFO] console - Api-URL:http://47.75.55.136:8082//totalpoint/GetRecentPoints--->undefined--------------success
+[2019-06-11 14:04:17.632] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawardnotice--->{"quantity":5}--------------success
+[2019-06-11 14:04:17.794] [INFO] console - Api-URL:http://47.75.55.136:8081/article/GetArticleList--->{"categoryIds":[6,32,33,34,35,36],"pageSize":5}--------------success
+[2019-06-11 14:04:18.953] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["gd11x5","jx11x5","jsk3","gxk3","cqssc","tjssc","gdkl10","gxkl10","bjpk10","shssl"]}--------------success
+[2019-06-11 14:04:19.040] [INFO] console - Api-URL:http://47.75.55.136:8082//video/getvideoawarddata--->{"groupId":2,"type":0}--------------success
+[2019-06-11 14:04:19.076] [INFO] console - 渲染导航几次
+[2019-06-11 14:04:19.204] [INFO] console - Api-URL:http://47.75.55.136:8086/home/GetAdData--->{"codes":"eycp_home_banner"}--------------success
+[2019-06-11 14:04:19.335] [INFO] console - Api-URL:http://47.75.55.136:8082/chaseplan/getrecentplan--->undefined--------------success
+[2019-06-11 14:04:19.484] [INFO] console - Api-URL:http://47.75.55.136:8081/article/GetArticleList--->{"categoryIds":[6,32,33,34,35,36],"pageSize":5}--------------success
+[2019-06-11 14:04:20.241] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:20.486] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:20.521] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:20.599] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["gd11x5","jx11x5","jsk3","gxk3","cqssc","tjssc","gdkl10","gxkl10","bjpk10","shssl"]}--------------success
+[2019-06-11 14:04:20.691] [INFO] console - Api-URL:http://47.75.55.136:8082//video/getvideoawarddata--->{"groupId":2,"type":0}--------------success
+[2019-06-11 14:04:20.728] [INFO] console - 渲染导航几次
+[2019-06-11 14:04:22.382] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["jsk3","gxk3"]}--------------success
+[2019-06-11 14:04:22.864] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["cqssc","tjssc"]}--------------success
+[2019-06-11 14:04:23.149] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["gdkl10","gxkl10"]}--------------success
+[2019-06-11 14:04:23.524] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["cqssc","tjssc"]}--------------success
+[2019-06-11 14:04:25.231] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:26.201] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:26.210] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:26.449] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:26.488] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:28.085] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["jsk3","gxk3"]}--------------success
+[2019-06-11 14:04:28.959] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["gd11x5","jx11x5"]}--------------success
+[2019-06-11 14:04:29.127] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["jsk3","gxk3"]}--------------success
+[2019-06-11 14:04:29.166] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["cqssc","tjssc"]}--------------success
+[2019-06-11 14:04:29.228] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:29.230] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:29.503] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["gdkl10","gxkl10"]}--------------success
+[2019-06-11 14:04:30.212] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:30.305] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["gdkl10","gxkl10"]}--------------success
+[2019-06-11 14:04:30.479] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["cqssc","tjssc"]}--------------success
+[2019-06-11 14:04:30.599] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["jsk3","gxk3"]}--------------success
+[2019-06-11 14:04:30.882] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["gd11x5","jx11x5"]}--------------success
+[2019-06-11 14:04:32.214] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:32.247] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:32.447] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:32.491] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:33.195] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:37.192] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:37.902] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["gd11x5","jx11x5"]}--------------success
+[2019-06-11 14:04:38.227] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:38.257] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:38.483] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:38.527] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:38.947] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["bjpk10","shssl"]}--------------success
+[2019-06-11 14:04:41.176] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:44.212] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:44.240] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:44.404] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:44.447] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:45.076] [INFO] console - Api-URL:http://47.75.55.136:8082//totalpoint/GetRecentPoints--->undefined--------------success
+[2019-06-11 14:04:45.268] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:49.222] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:50.210] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:50.231] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:50.423] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:50.541] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:53.214] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:56.195] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:56.484] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:04:56.563] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:56.829] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:04:57.222] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:01.213] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:02.222] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:02.255] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:02.458] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:02.541] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:05.214] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:08.214] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:08.572] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:08.583] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:08.756] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:09.163] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:13.185] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:14.225] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:14.229] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:14.467] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:15.157] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:17.192] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:19.947] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["jsk3","gxk3"]}--------------success
+[2019-06-11 14:05:20.320] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:20.513] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:20.551] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["gdkl10","gxkl10"]}--------------success
+[2019-06-11 14:05:20.688] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["gdkl10","gxkl10"]}--------------success
+[2019-06-11 14:05:20.790] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:20.848] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:20.885] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:21.034] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["bjpk10","shssl"]}--------------success
+[2019-06-11 14:05:21.173] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:21.512] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:21.689] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetGroupAwards--->{"lotterys":["bjpk10","shssl"]}--------------success
+[2019-06-11 14:05:24.204] [INFO] console - Api-URL:http://47.75.55.136:8082/chaseplan/getrecentplan--->undefined--------------success
+[2019-06-11 14:05:25.198] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:26.225] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:26.259] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:29.207] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:29.475] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:32.224] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:32.489] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:33.218] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:37.228] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:37.476] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:38.171] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:41.203] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:41.211] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:44.234] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:44.262] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:44.458] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:44.522] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:45.212] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:49.213] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:50.215] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:50.419] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:50.492] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:50.718] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:53.188] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:56.194] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:56.226] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:05:56.426] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:56.475] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:05:57.184] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:01.197] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:02.187] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:02.404] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:02.465] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:02.713] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:05.218] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:08.213] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:08.225] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:08.447] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:08.498] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:09.219] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:13.219] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:14.215] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:14.463] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:14.502] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:15.592] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:17.211] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:20.218] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:20.237] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:21.511] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:22.019] [INFO] console - Api-URL:http://47.75.55.136:8082/chaseplan/getrecentplan--->undefined--------------success
+[2019-06-11 14:06:25.212] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:26.208] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:26.503] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:29.230] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:29.488] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:30.996] [ERROR] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}---------------error
+[2019-06-11 14:06:31.001] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (D:\project\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (D:\project\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-06-11 14:06:32.215] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:32.243] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:33.200] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:37.195] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:37.444] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:38.206] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:38.467] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:41.188] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:43.603] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawardtime--->{"lotterycode":"bjpk10"}--------------success
+[2019-06-11 14:06:44.037] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:44.176] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:44.231] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:44.413] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:44.450] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:48.909] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"bjpk10"}--------------success
+[2019-06-11 14:06:49.203] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:50.203] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:50.437] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:50.470] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:50.707] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:53.219] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:53.893] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"bjpk10"}--------------success
+[2019-06-11 14:06:54.984] [ERROR] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}---------------error
+[2019-06-11 14:06:54.987] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (D:\project\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (D:\project\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-06-11 14:06:56.284] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:56.314] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:56.532] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:56.599] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:06:57.242] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:06:58.876] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"bjpk10"}--------------success
+[2019-06-11 14:07:02.528] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:02.553] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:02.759] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:02.814] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:03.907] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"bjpk10"}--------------success
+[2019-06-11 14:07:05.256] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:07.746] [INFO] console - Server running at:http://YR19qqq:8038
+[2019-06-11 14:07:07.842] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetLotteryProvinceList--->undefined--------------success
+[2019-06-11 14:07:07.898] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}--------------success
+[2019-06-11 14:07:07.955] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}--------------success
+[2019-06-11 14:07:08.093] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:08.211] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:08.254] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:08.303] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:08.307] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:08.451] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:08.589] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:08.677] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:08.716] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:09.000] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"bjpk10"}--------------success
+[2019-06-11 14:07:09.232] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:13.197] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:13.925] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"bjpk10"}--------------success
+[2019-06-11 14:07:14.226] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:14.252] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:14.483] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:14.551] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:17.162] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:18.881] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"bjpk10"}--------------success
+[2019-06-11 14:07:20.495] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:20.589] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:20.764] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:21.220] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:23.892] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"bjpk10"}--------------success
+[2019-06-11 14:07:24.046] [INFO] console - Api-URL:http://47.75.55.136:8082/chaseplan/getrecentplan--->undefined--------------success
+[2019-06-11 14:07:25.210] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:26.212] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:26.527] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:26.530] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:26.774] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:28.874] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"bjpk10"}--------------success
+[2019-06-11 14:07:29.168] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:29.170] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:32.193] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:32.223] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:32.421] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:32.483] [INFO] console - Api-URL:http://47.75.55.136:8081/data/seo.json--->undefined--------------success
+[2019-06-11 14:07:33.182] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"gd11x5"}--------------success
+[2019-06-11 14:07:33.888] [INFO] console - Api-URL:http://47.75.55.136:8082//lottery/getawarddata--->{"lotterycode":"bjpk10"}--------------success
