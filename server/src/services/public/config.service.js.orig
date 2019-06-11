@@ -1,0 +1,36 @@
+/***********************************************************************************
+ *
+ *           基础配置服务;
+ *
+ ***********************************************************************************/
+
+'use strict';
+
+const  config = require('../../../config/app.config.js').config;
+const  routesConfig = require('../../../config/routes.config.js').routes;
+const  trendConfig = require('../../../config/trend.config.js').config;
+
+const configService = new class ConfigService {
+
+    constructor() {
+         this.config = config;
+         this.routes = routesConfig;
+         this.trend = trendConfig;
+    }
+
+    getChartConfig( _lotteryClassity, _flot){
+        return {
+            theadObject: require('../../../config/chart/' +_lotteryClassity+'/thead.config.js')[_flot],
+            cssObject: require('../../../config/chart/' +_lotteryClassity+'/style.config.js')[_flot],
+<<<<<<< local
+            helpObject: require('../../../config/chart/' +_lotteryClassity+'/help.config.js')[_flot]
+            //,budgetary: require('../../../config/chart/' +_lotteryClassity+'/budgetary.config.js')[_flot]
+=======
+            helpObject: require('../../../config/chart/' +_lotteryClassity+'/help.config.js')[_flot],
+            budgetary: require('../../../config/chart/budgetary.config.js')[_lotteryClassity]
+>>>>>>> other
+        }
+    }
+}
+
+export default configService; 

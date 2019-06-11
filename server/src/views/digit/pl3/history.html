@@ -1,0 +1,55 @@
+<!--中间独立-->
+<div class="eyu100-main main-lotteryHistoryPage">
+    <div class="main-centerSection">
+        <div class="public-lotteryLatestInfo">
+            {{ include '../../template/components/lotteryTimer.component.art' }}
+        </div>
+        <!--历史开奖区域-->
+        <div class="lotteryHistoryBlock">
+            <div class="lotteryHistory">
+                {{ include '../../template/components/digitTableTitle.component.art' }}
+                <div class="lh-toolBlock">
+                    <span class="toolText">查看号码分布：</span>
+                    <label class="public-checkboxBlock public-float-left public-m-r20" data-value="groupThree"><i class="checkbox"></i><span class="checkbox-text">组三</span></label>
+                    <label class="public-checkboxBlock public-float-left public-m-r20" data-value="groupSix"><i class="checkbox"></i><span class="checkbox-text">组六</span></label>
+                    <span class="lh-funBtn public-float-left clear">清空选项</span>
+                    <div class="explainBlock">
+                        <span class="lh-funBtn" id="Introduce"><i class="explain"></i>使用说明</span>
+                        <div class="lh-superposedLayer" style="display: none;">
+                            <i class="arrow"></i>
+                            <div class="explainInfo">
+                                以表格形式展示历史开奖号码，使用勾选功能可自定义查看号码开出的形态、区间、组合等，便于辅助分析号码开出的规律。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="public-table">
+                    <table>
+                        {{@ lotteryCode | pl3Header}}
+                        <tbody class="history-body">
+                            {{ include '../../template/digit/pl3/history.art' }}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--开灯之后的遮罩层-->
+        <div class="history-maskLayer"></div>
+        <style>
+        </style>
+        {{ include '../../partials/recommend.html' }}
+    </div>
+</div>
+
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/digit/pl3/history.container'
+    ];
+    
+    require(pathArray, function(callback) {
+        callback.initialize('{{lotteryCode}}', {{isAwarding}}, {{awardTime.current.period}});
+    })
+</script>
+    
+    
+        

@@ -1,0 +1,496 @@
+[2019-05-13 00:00:00.868] [INFO] console - 现在时间： 2019-05-12T16:00:00.868Z
+[2019-05-13 00:00:14.450] [ERROR] console - Api-URL:http://172.31.15.184:8082/totalpoint/getpoints--->{"pagesize":500,"page":1}---------------error
+[2019-05-13 00:00:14.454] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+[2019-05-13 00:00:14.457] [ERROR] console - TypeError: Cannot read property 'items' of null
+    at DealWithCommonService._callee13$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:1636:30)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 09:39:14.251] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 09:39:14.253] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 09:39:14.257] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 09:41:14.322] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 09:41:14.324] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 09:41:14.328] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 09:43:14.465] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 09:43:14.468] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 09:43:14.471] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 09:45:14.562] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 09:45:14.586] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 09:45:14.590] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 09:47:19.682] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 09:47:19.686] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 09:47:19.690] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 09:49:49.787] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 09:49:49.817] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 09:49:49.823] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 09:51:49.886] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 09:51:49.888] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 09:51:49.891] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 09:54:49.994] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 09:54:49.998] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 09:54:50.002] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 10:01:50.187] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 10:01:50.196] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 10:01:50.204] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 10:29:30.158] [INFO] console - Server running at:http://iZj6c74lqepn0tZ:8038
+[2019-05-13 10:29:32.460] [ERROR] console - getProvince: provinceArray为空
+[2019-05-13 10:29:59.069] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 10:29:59.209] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 10:29:59.217] [WARN] console - mainNavData: 参数_lotteryAllTree为空, 这里会再次请求彩种树，所以只是警告！
+[2019-05-13 10:29:59.219] [ERROR] console - mainNavData: 出现请求异常！
+[2019-05-13 10:29:59.221] [ERROR] console - TypeError: Cannot read property 'length' of null
+    at DealWithCommonService.dealWithMainNav (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:723:44)
+    at DealWithCommonService._callee5$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:655:29)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 10:29:59.224] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 10:31:59.300] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 10:31:59.303] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 10:31:59.306] [WARN] console - mainNavData: 参数_lotteryAllTree为空, 这里会再次请求彩种树，所以只是警告！
+[2019-05-13 10:31:59.307] [ERROR] console - mainNavData: 出现请求异常！
+[2019-05-13 10:31:59.309] [ERROR] console - TypeError: Cannot read property 'length' of null
+    at DealWithCommonService.dealWithMainNav (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:723:44)
+    at DealWithCommonService._callee5$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:655:29)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 10:31:59.310] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 10:33:59.581] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 10:33:59.590] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 10:33:59.599] [WARN] console - mainNavData: 参数_lotteryAllTree为空, 这里会再次请求彩种树，所以只是警告！
+[2019-05-13 10:33:59.610] [ERROR] console - mainNavData: 出现请求异常！
+[2019-05-13 10:33:59.612] [ERROR] console - TypeError: Cannot read property 'length' of null
+    at DealWithCommonService.dealWithMainNav (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:723:44)
+    at DealWithCommonService._callee5$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:655:29)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 10:33:59.635] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 10:35:59.660] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-13 10:35:59.666] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:343:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-13 10:35:59.671] [WARN] console - mainNavData: 参数_lotteryAllTree为空, 这里会再次请求彩种树，所以只是警告！
+[2019-05-13 10:35:59.681] [ERROR] console - mainNavData: 出现请求异常！
+[2019-05-13 10:35:59.693] [ERROR] console - TypeError: Cannot read property 'length' of null
+    at DealWithCommonService.dealWithMainNav (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:723:44)
+    at DealWithCommonService._callee5$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:655:29)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[2019-05-13 10:35:59.708] [ERROR] console - TypeError: Cannot read property 'recommend' of undefined
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:84:90)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)

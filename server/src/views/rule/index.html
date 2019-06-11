@@ -1,0 +1,97 @@
+<!--中间独立-->
+<div class="eyu100-main main-playingRulePage">
+	<div class="main-centerSection">
+		<!--一级栏目-->
+		<div class="ld-publicNav">
+            <ul>
+                <li>
+                    <a href="{{if data.first && data.first.digit}}/rule/{{data.first.digit.code}}-boon{{else}}#{{/if}}" class="sort"><i class="qg"></i>全国彩</a>
+                    <i class="line"></i>
+                </li>
+                <li>
+                    <a href="{{if data.first &&  data.first.high}}/rule/{{data.first.high.code}}-high{{else}}#{{/if}}" class="sort"><i class="gp"></i>高频彩</a>
+                    <i class="line"></i>
+                </li>
+                <li><a href="{{if data.first &&  data.first.other}}/rule/{{data.first.other.code}}-other-14{{else}}#{{/if}}" class="sort"><i class="df"></i>地方彩</a></li>
+            </ul>
+		</div>
+		<div class="ld_pubListBlock">
+			<div class="">
+				<div class="rp_lotB">
+					<p class="lot_tit"><span>全国福彩</span></p>
+					<ul class="lot_list">
+                        {{if data.digit && data.digit.boon}}
+                        {{each data.digit.boon.list item}}
+                            <li>
+                                <a href="/rule/{{item.code}}-{{data.digit.boon.type}}" class="tl_lin">
+                                    <span class="ll_im"><img style="width: 45px" src="{{cdnUrl}}/pic/logo/logo_{{item.code}}.png" alt=""></span>
+                                    <i class="ll_f">{{item.name}}玩法</i>
+                                </a>
+                            </li>
+                        {{/each}}
+                        {{/if}}
+					</ul>
+				</div>
+				<div class="rp_lotB">
+					<p class="lot_tit"><span>全国体彩</span></p>
+					<ul class="lot_list">
+                        {{if data.digit && data.digit.sport}}
+                        {{each data.digit.sport.list item}}
+                            <li>
+                                <a href="/rule/{{item.code}}-{{data.digit.sport.type}}" class="tl_lin">
+                                    <span class="ll_im"><img style="width: 45px" src="{{cdnUrl}}/pic/logo/logo_{{item.code}}.png" alt=""></span>
+                                    <i class="ll_f">{{item.name}}玩法</i>
+                                </a>
+                            </li>
+                        {{/each}}
+                        {{/if}}
+					</ul>
+				</div>
+				<div class="rp_lotB">
+                    <p class="lot_tit"><span>高频彩</span></p>
+                    {{if data.high.list}}
+                    {{each data.high.list item}}
+                    <div class="lot_linList">
+                        <ul>
+                            <li style="width: 100%;">
+                                <p class="in_t">{{item.name}}</p>
+                                <span class="in_f">
+                                    {{each item.children lottery}}
+                                    <a href="/rule/{{lottery.code}}-{{data.high.type}}">{{lottery.name}}</a>
+                                    {{/each}}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    {{/each}}
+                    {{/if}}
+                </div>
+				<div class="rp_lotB">
+                    <p class="lot_tit"><span>地方彩</span></p>
+                    {{if data.other && data.other.page}}
+                    {{each data.other.page item}}
+                    <div class="lot_linList">
+                        <ul>
+                            {{each item lotteryList}}
+                            <li>
+                                <p class="in_t">{{lotteryList.name}}</p>
+                                <span class="in_f">
+                                    {{each lotteryList.children lottery}}
+                                    <a href="/rule/{{lottery.code}}-{{data.other.type}}-{{lotteryList.provinceId}}">{{lottery.name}}</a>
+                                    {{/each}}
+                                </span>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/each}}
+                    {{/if}}
+				</div>
+			</div>
+		</div>
+    
+        <!--相关推荐-->
+        {{ include '../partials/recommend.html' }}
+		
+    </div>
+</div>

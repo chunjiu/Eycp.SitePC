@@ -1,0 +1,307 @@
+<div class="eyu100-main main-articlePage">
+    <div class="main-centerSection">
+
+        <!--热点导航-->
+        {{ include '../template/components/articleHotNav.component.art' }}
+
+
+        <div class="ap-mainB ap-articleHome">
+            <div class="mb-l">
+                <div class="ah-b1">
+                    <div class="ah-banner" id="banner">
+                        <div class="list" >
+                            <ul>
+                                {{if adBanner[0].data }}
+
+                                        {{if adBanner[0].data.length > 0}}
+
+                                            {{each adBanner[0].data list index}}
+                                                    {{if index > 3 }}
+                                                        break;
+                                                    {{else}}
+                                            <li data-index="{{@index}}"><a href="{{@list.url}}" target="_blank" rel="nofollow"><img src="{{@list.content}}" alt="{{@list.description}}" /></a></li>
+                                                    {{/if}}
+                                            {{/each}}
+                                        {{else}}
+                                            <li><img src="{{cdnUrl}}/images/index/bannerIndex_defult.png" alt="" /></li>
+                                        {{/if}}
+                                    {{else}}
+                                    <li><img src="{{cdnUrl}}/images/index/bannerIndex_defult.png" alt="" /></li>
+                                {{/if}}
+                            </ul>
+                        </div>
+                        <div class="banner-dot" id="page">
+                        </div>
+                    </div>
+                    <div class="public-articleList ah-hotzx">
+                        <div class="public-titleBlock">
+                            <i class="icon-hotzx"></i>
+                            <span class="name">热门资讯</span>
+                            <a href="/article/list-0-5-p1" class="more"  target="_blank">更多热门资讯&gt;&gt;</a>
+                        </div>
+                        <div class="al_listBlock">
+
+
+                                {{if hotArticle}}
+                                   <ul>
+                                   {{each hotArticle  list}}
+                                      <li><a href="/article/detail-{{@list.categoryId}}-{{@list.id}}.html" class="title" target="_blank">{{@list.title}}</a><span class="date">{{@formateDelYearAndHour(list.createDate)}}</span></li>
+                                   {{/each}}
+                                   </ul>
+                                {{else}}
+                                     <div style="width:100%; min-height: 250px; color: #999; text-align: center; font-size: 14px; line-height:250px;">暂无任何热门资讯</div>
+                                {{/if}}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="ah-b2">
+                    <div class="public-recommendZhuiHao">
+                        <div class="public-titleBlock">
+                            <i class="icon-zh"></i>
+                            <span class="name">追号推荐</span>
+                            <a href="/plan" class="more"  target="_blank">更多&gt;&gt;</a>
+                        </div>
+                        <div class="rzh-table" id="plan"  data-systime="{{@systime}}">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <th>彩种</th>
+                                    <th>期号</th>
+                                    <th>玩法</th>
+                                    <th width="35%">追号推荐</th>
+                                    <th>6期命中</th>
+                                </tr>
+                                {{if recentplan}}
+                                    {{if recentplan.length > 0}}
+                                      {{each recentplan  list}}
+                                        <tr onclick="window.open('/plan/{{@list.lotteryCode}}/{{@list.pageType}}','_blank')" style="cursor: pointer;">
+                                            <td>{{@list.name}}</td>
+                                            <td>{{@list.period}}期</td>
+                                            <td>{{@list.type}}</td>
+                                            <td>
+                                                <div class="number">
+                                                    {{@formateContent(list.content,list.lotteryCode,list.pageType)}}
+                                                </div>
+                                            </td>
+                                            <td class="font-red">{{ if list.winRate == '-1%'}}---{{else}}{{@list.winRate}}{{/if}}</td>
+                                        </tr>
+                                       {{/each}}
+                                    {{/if}}
+                                {{else}}
+                                    <tr>
+                                         <td colspan="5" align="center">暂无任何追号推荐</td>
+                                    </tr>
+                                {{/if}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="public-articleList ah-mrtd">
+                        <div class="public-titleBlock">
+                            <i class="icon-td"></i>
+                            <span class="name">每日提点</span>
+                            <a href="/point" class="more"  target="_blank">更多&gt;&gt;</a>
+                        </div>
+                        <div class="al_listBlock" id="point">
+                            <ul>
+                                {{ include '../template/point/pointList.component.art' }}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                {{if articleArrayList}}
+                  {{each articleArrayList  list }}
+                    <div class="ah-skillIntroduce">
+                        <div class="public-titleBlock">
+                            <i class="line"></i>
+                            <span class="name">{{list.name}}</span>
+                            <!--<a href="/article/list-{{list.code}}-6-p1" class="more"  target="_blank">更多最新资讯&gt;&gt;</a>-->
+                        </div>
+                        <div class="si-menu">
+                            <a href="javascript:void(0)" class="name active" data-index="0">{{list.name}}专家预测</a>
+                            <i class="line">/</i>
+                            <a href="javascript:void(0)" class="name" data-index="1">{{list.name}}免费推荐</a>
+                            <i class="line">/</i>
+                            <a href="javascript:void(0)" class="name" data-index="2">{{list.name}}杀号定胆</a>
+                            <i class="line">/</i>
+                            <a href="javascript:void(0)" class="name" data-index="3">{{list.name}}技巧</a>
+                        </div>
+                        <div class="public-articleList si-b1">
+                            <div class="al_listBlock">
+                                {{if list.articleList}}
+
+                                <ul>
+                                    {{if list.articleList.zjtj }}
+                                       {{if list.articleList.zjtj.length > 0}}
+                                            {{each  list.articleList.zjtj  lis index}}
+                                                {{if index <= 6}}
+                                                   <li><a href="/article/detail-{{@lis.categoryId}}-{{@lis.id}}.html" class="title" target="_blank">{{@lis.title}}</a><span class="date">{{@formateDelYearAndHour(lis.createDate)}}</span></li>
+                                                {{else}}
+                                                   <li><a href="/article/list-{{list.code}}-{{lis.categoryId}}-p1" class="title" target="_blank" style="color: #e33d3d">更多{{list.name}}专家预测</a></li>
+                                                {{/if}}
+                                           {{/each}}
+                                        {{else}}
+                                           <div style="width:100%; min-height: 130px; color: #999; text-align: center; font-size: 14px; line-height:130px;">暂无任何专家预测</div>
+                                        {{/if}}
+                                    {{else}}
+                                        <div style="width:100%; min-height: 130px; color: #999; text-align: center; font-size: 14px; line-height:130px;">暂无任何专家预测</div>
+                                    {{/if}}
+                                </ul>
+
+                                <ul style="display: none;">
+                                    {{if list.articleList.mfck }}
+                                    {{if list.articleList.mfck.length > 0}}
+                                        {{each  list.articleList.mfck  lis index}}
+                                           {{if index <= 6}}
+                                               <li><a href="/article/detail-{{@lis.categoryId}}-{{@lis.id}}.html" class="title" target="_blank">{{@lis.title}}</a><span class="date">{{@formateDelYearAndHour(lis.createDate)}}</span></li>
+                                          {{else}}
+                                              <li><a href="/article/list-{{list.code}}-{{lis.categoryId}}-p1" class="title" target="_blank" style="color: #e33d3d">更多{{list.name}}免费推荐</a></li>
+                                           {{/if}}
+                                        {{/each}}
+                                    {{else}}
+                                    <div style="width:100%; min-height: 130px; color: #999; text-align: center; font-size: 14px; line-height:130px;">暂无任何免费推荐</div>
+                                    {{/if}}
+                                    {{else}}
+                                        <div style="width:100%; min-height: 130px; color: #999; text-align: center; font-size: 14px; line-height:130px;">暂无任何免费推荐</div>
+                                    {{/if}}
+                                </ul>
+
+                                <ul style="display: none;">
+                                    {{if list.articleList.shdd }}
+                                    {{if list.articleList.shdd.length > 0}}
+                                        {{each  list.articleList.shdd  lis index}}
+                                             {{if index <= 6}}
+                                               <li><a href="/article/detail-{{@lis.categoryId}}-{{@lis.id}}.html" class="title" target="_blank">{{@lis.title}}</a><span class="date">{{@formateDelYearAndHour(lis.createDate)}}</span></li>
+                                            {{else}}
+                                                <li><a href="/article/list-{{list.code}}-{{lis.categoryId}}-p1" class="title" target="_blank" style="color: #e33d3d">更多{{list.name}}杀号定胆</a></li>
+                                            {{/if}}
+                                        {{/each}}
+                                    {{else}}
+                                    <div style="width:100%; min-height: 130px; color: #999; text-align: center; font-size: 14px; line-height:130px;">暂无杀号定胆</div>
+                                    {{/if}}
+                                    {{else}}
+                                    <div style="width:100%; min-height: 130px; color: #999; text-align: center; font-size: 14px; line-height:130px;">暂无杀号定胆</div>
+                                    {{/if}}
+                                </ul>
+
+                                <ul style="display: none;">
+                                    {{if list.articleList.jq }}
+                                    {{if list.articleList.jq.length > 0}}
+                                        {{each  list.articleList.jq  lis index}}
+                                            {{if index <= 6}}
+                                                <li><a href="/article/detail-{{@lis.categoryId}}-{{@lis.id}}.html" class="title" target="_blank">{{@lis.title}}</a><span class="date">{{@formateDelYearAndHour(lis.createDate)}}</span></li>
+                                            {{else}}
+                                                <li><a href="/article/list-{{list.code}}-{{lis.categoryId}}-p1" class="title" target="_blank" style="color: #e33d3d">更多{{list.name}}技巧</a></li>
+                                            {{/if}}
+                                        {{/each}}
+                                    {{else}}
+                                    <div style="width:100%; min-height: 130px; color: #999; text-align: center; font-size: 14px; line-height:130px;">暂无技巧</div>
+                                    {{/if}}
+                                    {{else}}
+                                        <div style="width:100%; min-height: 130px; color: #999; text-align: center; font-size: 14px; line-height:130px;">暂无技巧</div>
+                                    {{/if}}
+                                </ul>
+
+                                {{else}}
+                                     <div style="width:100%; min-height: 130px; color: #999; text-align: center; font-size: 14px; line-height:130px;">暂无任何资讯</div>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                  {{/each}}
+                {{/if}}
+
+
+            </div>
+
+            <div class="mb-r">
+                <!--最新资讯-->
+                <div class="public-articleList ap-newzx">
+                    <div class="public-titleBlock">
+                        <i class="icon-newzx"></i>
+                        <span class="name">最新资讯</span>
+                        <a href="/article/list-0-6-p1" class="more">更多&gt;&gt;</a>
+                    </div>
+                    <div class="al_listBlock">
+                        {{if newArticle}}
+                        <ul>
+                            {{each newArticle  list}}
+                               <li><a href="/article/detail-{{@list.categoryId}}-{{@list.id}}.html" class="title" target="_blank" rel="nofollow">{{@list.title}}</a><span class="date">{{@formateDelYearAndHour(list.createDate)}}</span></li>
+                            {{/each}}
+                        </ul>
+                        {{else}}
+                                <div style="width:100%; min-height: 250px; color: #999; text-align: center; font-size: 14px; line-height:250px;">暂无任何最新资讯</div>
+                        {{/if}}
+                    </div>
+                </div>
+
+                <!--最新技巧-->
+                <div class="public-articleList ap-newzx" style="padding-top: 30px;">
+                    <div class="public-titleBlock">
+                        <i class="icon-newzx"></i>
+                        <span class="name">最新技巧</span>
+                        <a href="/article/list-0-8-p1" class="more">更多&gt;&gt;</a>
+                    </div>
+                    <div class="al_listBlock">
+                        {{if newSkill}}
+                        <ul>
+                            {{each newSkill  list}}
+                               <li><a href="/article/detail-{{@list.categoryId}}-{{@list.id}}.html" class="title" target="_blank" rel="nofollow">{{@list.title}}</a><span class="date">{{@formateDelYearAndHour(list.createDate)}}</span></li>
+                            {{/each}}
+                        </ul>
+                        {{else}}
+                             <div style="width:100%; min-height: 90px; color: #999; text-align: center; font-size: 14px; line-height:90px;">暂无任何最新技巧</div>
+                        {{/if}}
+                    </div>
+                </div>
+                <!--走势图-->
+
+                {{if chartArray}}
+                   {{each chartArray list}}
+                        <div class="ap-trend">
+                            <div class="public-titleBlock">
+                                <i class="line"></i>
+                                <a href="/chart/{{list.id}}/{{list.chart[0].code}}" class="name" rel="nofollow">{{list.name}}走势图</a>
+                                <a href="/chart/{{list.id}}/{{list.chart[0].code}}" class="more" rel="nofollow">更多&gt;&gt;</a>
+                            </div>
+                            <div class="listBlock">
+                                <div class="ulB" >
+                                    {{if list.chart}}
+                                        {{each list.chart  lis  index}}
+                                            {{if index <= 9}}
+                                              <h2 class="titleB"><a href="/chart/{{list.id}}/{{lis.code}}" class="title" target="_blank" rel="nofollow">{{lis.name}}</a></h2>
+                                            {{/if}}
+                                        {{/each}}
+                                    {{else}}
+                                         <div style="width:100%; min-height: 173px; color: #999; text-align: center; font-size: 14px; line-height:173px;">暂无任何走势</div>
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </div>
+                {{/each}}
+            {{/if}}
+
+            </div>
+        </div>
+        <!--相关推荐-->
+        {{ include '../partials/recommend.html' }}
+         {{ include '../partials/friendlink.html' }}
+
+    </div>
+</div>
+
+
+<script>
+
+    var pathArray = [
+        'core/views/containers/article/index.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize();
+    })
+</script>

@@ -1,0 +1,38 @@
+[2019-05-29 00:00:00.565] [INFO] console - 现在时间： 2019-05-28T16:00:00.565Z
+[2019-05-29 09:34:18.222] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-29 09:34:18.224] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-29 09:51:38.532] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-29 09:51:38.533] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-29 09:51:49.137] [ERROR] console - Api-URL:http://172.31.15.184:8087/feedback/GetGuId--->undefined---------------error
+[2019-05-29 09:51:49.140] [ERROR] console - Error: Request failed with status code 500
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1056:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[2019-05-29 09:51:49.144] [ERROR] console - Debug:internal, implementation, error
+    Error: Failed to encode cookie (uuid) value: Converting circular structure to JSON
+    at internals.encode (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\statehood\lib\index.js:455:34)
+    at process.nextTick (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\statehood\node_modules\hoek\lib\index.js:862:22)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[2019-05-29 10:58:27.004] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-29 10:58:27.015] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-29 11:08:21.803] [INFO] console - Server running at:http://iZj6c74lqepn0tZ:8038
+[2019-05-29 12:14:45.792] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-29 12:14:45.793] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)

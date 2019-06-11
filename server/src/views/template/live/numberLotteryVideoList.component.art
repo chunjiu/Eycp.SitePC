@@ -1,0 +1,9 @@
+{{each lotteryList list}}
+                        <li>
+                            <a class="sort" href="/digit/{{@list.lottery_code}}" target="_blank">[{{@list.lottery_name}}]</a>
+                            <a class="title newTit" href="/live/{{@list.lottery_code}}-detail-{{@list.issue_no}}.html" target="_blank">第{{@list.issue_no}}期开奖视频</a>
+                            <a class="site" href="/live/{{@list.lottery_code}}-detail-{{@list.issue_no}}.html" target="_blank">本站</a>
+                            <i class="website">官方</i>
+                            <a class="notice" href="/digit/{{@list.lottery_code}}/detail-{{@list.issue_no}}" target="_blank">公告</a>
+                        </li>
+{{/each}}

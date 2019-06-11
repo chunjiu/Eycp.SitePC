@@ -1,0 +1,17 @@
+<div class="public-videoBlock">
+                                 <div class="videoB">
+                                                                <a class="maskLayer" href="/live/{{@awardtimes.lotteryCode}}-detail" target="_blank"><i class="videoBtn"></i></a>
+                                                                <img src="{{cdnUrl}}/pic/lotteryVideo/{{@awardtimes.lotteryCode}}.jpg" alt="{{@awardtimes.lotteryName}}" class="img" />
+                                                                <span class="nameB"><b class="name">{{@awardtimes.lotteryName}}</b><i class="issue">{{@awardtimes.next.period}}期</i></span>
+                                                            </div>
+                                                            <div class="timeB">
+                                                                <span class="time">距离<b data-time="{{@awardtimes.awardTimeInterval}}" class="countDownTime">{{@getCountDownTime(awardtimes.awardTimeInterval)}}</b></span>
+                                                                {{if getCountDownTimeDay(awardtimes.awardTimeInterval) == '00:00' }}
+                                                                   <a href="/live/{{@awardtimes.lotteryCode}}-detail" target="_blank" class="textBtn" style="display: none">开始直播</a>
+                                                                   <i class="timeText" style="display: block">正在直播中...</i>
+                                                                {{else}}
+                                                                   <a href="/live/{{@awardtimes.lotteryCode}}-detail" target="_blank" class="textBtn" style="display: block">开始直播</a>
+                                                                   <i class="timeText" style="display: none">正在直播中...</i>
+                                                                {{/if}}
+       </div>
+  </div>

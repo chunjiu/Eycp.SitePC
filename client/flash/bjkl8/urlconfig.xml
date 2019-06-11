@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<path>
+	<!-- local       本地接口地址			一般用于开发人员本地测试-->
+	<!--unLocal   非本地接口地址 -->
+	<dataURL local="http://eycp.product.1396c.com/video/GetAwardData?lotteryCode=bjkl8" unLocal="http://eycp.product.1396c.com/video/GetAwardData?lotteryCode=bjkl8"/>
+</path>

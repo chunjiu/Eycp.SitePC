@@ -1,0 +1,3 @@
+本期销量：<span class="font_red">{{if history.allAmount}}{{@formatMoney(history.allAmount)}}{{else}} -- {{/if}}元</span>
+<b>|</b>
+奖池滚存：<span class="font_orange">{{if history.poolAmount}}{{@formatMoney(history.poolAmount)}}{{else}} -- {{/if}}元</span>

@@ -1,0 +1,15 @@
+{{ each resultList  historyList}}
+                            <tr>
+                                <td>{{@historyList.issueNo}}期</td>
+                                <td>{{@formatDate(historyList.awardDate)}}</td>
+                                <td>
+                                      {{ each historyList.result.split(',')  his}}
+                                                <span class="public-number-k3" style='position:relative; top:3px;'>
+                                                  <span class="num0{{@his}}"></span>
+                                                </span>
+                                     {{/each }}
+                                        <span style='position:relative; top:-3px;'>( {{@historyList.result }} )</span>
+                                 </td>
+                                 <td>{{@resultSum( historyList.result ) }}</td>
+                            </tr>
+{{/each }}

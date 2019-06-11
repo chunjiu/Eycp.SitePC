@@ -1,0 +1,84 @@
+<div class="eyu100-main main-lotteryHistoryPage">
+    <div class="main-centerSection">
+        <div class="public-lotteryLatestInfo">
+            {{ include '../template/components/lotteryTimer.component.art' }}
+        </div>
+        <!--历史开奖区域-->
+        <div class="lotteryHistoryBlock">
+            <div class="lotteryHistory">
+                <div class="videoDetailsPage">
+                    <div class="lh-titleBlock">
+
+
+                        <span class="titleText" data-issueno="{{if issueno}}{{@issueno}}{{/if}}">
+
+                                 {{if issueno}}
+                                       {{@awardTime.lotteryName}}{{@issueno}}期开奖视频
+                                 {{else}}
+                                        {{@awardTime.lotteryName}}开奖视频
+                                  {{/if}}
+
+                        </span>
+
+
+                        <div class="title-right"  id="shareButton">
+                            <span class="lh-funBtn"><i class="share"></i>分享</span>
+                            <div class="lh-superposedLayer" style="display: none" id="shareConent">
+                                <i class="arrow"></i>
+                                <div class="shareBlock">
+                                    <a id="qzone" target="_blank" class="lis first"><i class="qzone"></i>QQ空间</a>
+                                    <a id="weibo" target="_blank" class="lis"><i class="sina"></i>新浪微博</a>
+                                    <!-- <a href="http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;url={{@lotteryCode}}/live/{{@lotteryCode}}/{{@issueno}}.html" class="lis last"><i class="tqq"></i>腾讯微博</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vd-video" style="height: 630px;width: 980px;" id="livePlay">
+
+                        {{if issueno}}
+
+                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="100%" height="100%">
+                            <param name="quality" value="high">
+                            <param name="flashvars" value="pagetype=1&amp;period={{@issueno}}&amp;lotterycode={{@lotteryCode}}&amp;counter=0&amp;host={{@website.pcSiteUrlTwo}}&amp;ver=20180615">
+                            <param name="movie" value="{{@cdnUrl}}/flash/{{@lotteryCode}}/{{@lotteryCode}}.swf">
+                            <param name="wmode" value="transparent">
+                            <embed src="{{@cdnUrl}}/flash/{{@lotteryCode}}/{{@lotteryCode}}.swf?ver=20180615" width="100%" height="100%" align="center" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" flashvars="pagetype=1&amp;period={{@issueno}}&amp;host={{@website.pcSiteUrlTwo}}&amp;lotterycode={{@lotteryCode}}&amp;counter=0&amp;ver=20180615">
+                        </object>
+
+                        {{else}}
+
+                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="100%" height="100%">
+                            <param name="quality" value="high">
+                            <param name="wmode" value="transparent">
+                            <param name="align" value="center">
+                            <param name="quality" value="high">
+                            <param name="movie" value="{{@cdnUrl}}/flash/{{@lotteryCode}}/{{@lotteryCode}}.swf">
+                            <param name="flashvars" value="pagetype=2&amp;period=&amp;counter=1&amp;lotterycode={{@lotteryCode}}&amp;host={{@website.pcSiteUrlTwo}}&amp;ver=20180615">
+                            <embed src="{{@cdnUrl}}/flash/{{@lotteryCode}}/{{@lotteryCode}}.swf?ver=20180615" width="100%" height="100%" align="center" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" flashvars="pagetype=2&amp;period=&amp;counter=1&amp;host={{@website.pcSiteUrlTwo}}&amp;lotterycode={{@lotteryCode}}&amp;ver=20180615">
+                        </object>
+
+                        {{/if}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--开灯之后的遮罩层-->
+        <div class="history-maskLayer"></div>
+
+        <!--相关推荐-->
+        {{ include '../partials/recommend.html' }}
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/live/detail.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize('{{lotteryCode}}', '{{@classify}}', {{@isAwarding}}, {{@nowPeriod}});
+    })
+</script>

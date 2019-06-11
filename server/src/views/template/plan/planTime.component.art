@@ -1,0 +1,57 @@
+<!--正在开奖-->
+<div class="beProgressing" {{if isAwarding}}style="display: block;"{{else}}style="display: none;"{{/if}}>
+    <p class="text"><i>第{{if isAwarding}}{{awardTime.current.period}}{{else}}{{awardTime.next.period}}{{/if}}期:</i><span>正在开奖</span></p>
+    <div class="history">
+        <span class="issue last-period">第{{if isAwarding}}{{awardResult.period}}{{else}}{{awardTime.current.period}}{{/if}}期：</span>
+        {{if awardResult && awardResult.resultList}}
+        <div class="number{{if lotteryCode == 'bjkl8'}} kl8{{/if}}" style="display: block">
+            {{each awardResult.resultList result}}
+                <span>{{result}}</span>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+</div>
+<!--已开奖-->
+<div class="preterite" {{if !isAwarding}}style="display: block;"{{else}}style="display: none;"{{/if}}>
+    <span class="pre_title"><i>第{{awardTime.current.period}}期</i>开奖：</span>
+    {{if awardResult && awardResult.resultList}}
+        {{if groupId == 2}}
+        <div class="number k3" style="display: block">
+            {{each awardResult.resultList result}}
+                <span class="num0{{result}}"></span>
+            {{/each}}
+        </div>
+        <!--快乐10分-->
+        {{else if groupId == 3}}
+        <div class="number {{if lotteryCode == 'xync'}}xync{{else if lotteryCode == 'hnkl10'}}zoology{{/if}}" style="display: block">
+            {{each awardResult.resultList result}}
+                {{if lotteryCode == 'xync' || lotteryCode == 'hnkl10'}}
+                <span class="num{{result}}"></span>
+                {{else}}
+                <span class="red">{{result}}</span>
+                {{/if}}
+            {{/each}}
+        </div>
+        {{else if lotteryCode == 'bjpk10'}}
+        <div class="number pk10" style="display: block">
+            {{each awardResult.resultList result}}
+                <span class="num{{result}}"></span>
+            {{/each}}
+        </div>
+        {{else if lotteryCode == 'bjkl8'}}
+        <div class="number kl8" style="display: block">
+            <i>X{{awardResult.frisbee}}</i>
+            {{each awardResult.resultList result}}
+                <span>{{result}}</span>
+            {{/each}}
+        </div>
+        {{else}}
+        <div class="number" style="display: block">
+            {{each awardResult.resultList result}}
+                <span class="red">{{result}}</span>
+            {{/each}}
+        </div>
+        {{/if}}
+    {{/if}}
+</div>

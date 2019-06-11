@@ -1,0 +1,11 @@
+{{ each history  historyList}}
+                            <tr>
+                                <td>{{@historyList.issueNo}}期</td>
+                                <td>{{@formatDate(historyList.awardDate)}}</td>
+                                <td>
+									<span class="ball_num">
+                                         {{@stringChangeBall(historyList.result) }}
+									</span>
+                                </td>
+                            </tr>
+{{/each }}

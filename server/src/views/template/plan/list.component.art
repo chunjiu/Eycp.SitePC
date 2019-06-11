@@ -1,0 +1,22 @@
+{{each planList plan}}
+<tr>
+    <td>{{plan.period}}期</td>
+    <td>
+        <span class="lis_num">
+            {{@planListContent(plan,lotteryCode,type)}}
+        </span>
+    </td>
+    <td {{if plan.state == 3}}class="font-red"{{else if plan.state == 2}}class="font-gray"{{/if}}>
+        {{if plan.state == 0}}
+        等待开奖
+        {{else if plan.state == 1}}
+        进行中，已追{{plan.total}}期
+        {{else if plan.state == 3}}
+            成功，{{if plan.total == 1}}当期中出{{else}}第{{plan.total}}期中出{{/if}}
+        {{else}}
+        失败
+        {{/if}}
+    </td>
+    <td><a href="/plan/detail-{{plan.id}}g{{groupId}}s{{plan.state}}.html" class="touch" target="_blank">详情</a></td>
+</tr>
+{{/each}}

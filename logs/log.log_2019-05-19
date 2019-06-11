@@ -1,0 +1,22 @@
+[2019-05-19 00:00:00.003] [INFO] console - 现在时间： 2019-05-18T16:00:00.003Z
+[2019-05-19 15:18:08.838] [ERROR] console - Api-URL:http://172.31.15.184:8086/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-19 15:18:09.410] [ERROR] console - Error: Request failed with status code 500
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1056:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[2019-05-19 15:18:59.962] [ERROR] console - Api-URL:http://172.31.15.184:8086/home/GetAdData--->{"codes":"eycp_article_banner"}---------------error
+[2019-05-19 15:18:59.963] [ERROR] console - Error: Request failed with status code 500
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1056:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[2019-05-19 17:44:26.331] [INFO] console - Server running at:http://iZj6c74lqepn0tZ:8038

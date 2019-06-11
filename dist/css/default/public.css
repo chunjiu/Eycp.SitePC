@@ -1,0 +1,511 @@
+@charset "UTF-8";
+.header_navigation .bc_select .cs_block a {
+  white-space: nowrap; }
+
+.body_center, .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_center, .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_add, .header_navigation .bc_select .cs_block, .public_videoList .text1, .public_videoList .text2 {
+  height: 1%;
+  display: block; }
+
+.body_center:after, .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_center:after, .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_add:after, .header_navigation .bc_select .cs_block:after, .public_videoList .text1:after, .public_videoList .text2:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*--------------- banner start ---------------*/
+.header_navigation ul > a.home, .header_navigation li > a.home {
+  background: url("../images/iconHome14.png") no-repeat 30px center; }
+
+.footer_nav .nav_content p, .footer_nav .nav_content p.helpCenter, .footer_nav .nav_content p.business, .footer_nav .nav_content p.relation, .footer_nav .nav_content .add a, .footer_nav .nav_relation span, .footer_nav .nav_relation a {
+  background: url("../images/footer_icon.png") no-repeat 0 0; }
+
+.public_videoList .text2 {
+  background: url("../images/vidoe_icon1.png") no-repeat left center; }
+
+.public_videoList .maskLayer i {
+  background: url("../images/videoBtn60.png") no-repeat center; }
+
+.public_videoList .maskLayer {
+  background: url("../images/opacity3Black.png"); }
+
+.fixation_Stick li a {
+  background: url("../images/sidebar_iconbg.png") no-repeat; }
+
+/*--------------- information start ---------------*/
+/*--------------- information end ---------------*/
+/*--------------- dataTrend start ---------------*/
+/*--------------- dataTrend end ---------------*/
+/*--------------- feedback start ---------------*/
+/*--------------- feedback end ---------------*/
+/*--------------- data_videoList start ---------------*/
+/*--------------- data_videoList end ---------------*/
+/*--------------- banner end ---------------*/
+.header_logo .MyLottery .ml_a {
+  background: url("../images/personalCenter_bg.png") no-repeat 0 0; }
+
+.header_logo .MyLottery .ml_a:hover, .header_logo .MyLottery .ml_a:active {
+  background: url("../images/personalCenter_bg.png") no-repeat 0 -32px; }
+
+.header_logo .MyLottery .ml_contentBlock .cb_top {
+  background: url("../images/MyLottery_topbg.png") no-repeat 0 0; }
+
+.header_logo .MyLottery .ml_contentBlock .cb_center {
+  background: url("../images/MyLottery_centerbg.png") repeat-y 0 0; }
+
+.header_logo .MyLottery .ml_contentBlock .cb_down {
+  background: url("../images/MyLottery_downbg.png") no-repeat 0 0; }
+
+.header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_center {
+  background: url("../images/lineBottom.gif") repeat-x bottom; }
+
+.header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_center li {
+  background: url("../images/ecp_rounds.jpg") no-repeat left center; }
+
+.header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_add li {
+  background: url("../images/ecP_dataList_03.jpg") no-repeat; }
+
+/*初始化所有样式函数*/
+body, p, h1, h2, h3, h4, h5, h6, ul, menu, dir, ol, dl, dd, form, input, textarea, keygen, select, button, hr, blockquote, pre, fieldset, figure, dialog {
+  margin: 0; }
+
+ul, menu, dir, ol, input, textarea, button, option, fieldset, legend, dialog {
+  padding: 0; }
+
+h1, h2, h3, h4, h5 {
+  font-size: 12px;
+  font-weight: normal; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a, input, button, select {
+  outline: none; }
+
+textarea {
+  outline: none;
+  resize: none;
+  border: none; }
+
+ul, ol, menu, dir {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  border: none; }
+
+li {
+  display: block; }
+
+img {
+  border: 0; }
+
+i {
+  font-style: normal; }
+
+body {
+  font-family: '宋体','Microsoft YaHei', 'STHeiti', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #333333;
+  background: #FFFFFF; }
+
+html, body {
+  min-width: 1200px; }
+
+.body_center {
+  margin: 0 auto;
+  width: 1200px; }
+
+/*--------------- header start ---------------*/
+.header_nav {
+  background: #f5f5f5;
+  border-bottom: 1px solid #e4e4e4;
+  height: 32px;
+  line-height: 32px;
+  font-family: '宋体'; }
+  .header_nav .h_n_l {
+    display: block;
+    float: left; }
+    .header_nav .h_n_l b {
+      float: left;
+      color: #666666;
+      margin-right: 10px;
+      font-weight: normal; }
+    .header_nav .h_n_l a {
+      float: left;
+      color: #037fc2;
+      text-decoration: none; }
+      .header_nav .h_n_l a:hover {
+        color: #037fc2;
+        text-decoration: none; }
+    .header_nav .h_n_l i {
+      float: left;
+      color: #037fc2;
+      padding: 0 6px; }
+  .header_nav .h_n_r {
+    float: right; }
+    .header_nav .h_n_r ul, .header_nav .h_n_r li {
+      float: left; }
+    .header_nav .h_n_r a {
+      color: #666666;
+      text-decoration: none; }
+      .header_nav .h_n_r a:hover {
+        color: #037fc2;
+        text-decoration: none; }
+    .header_nav .h_n_r i {
+      color: #666666;
+      padding: 0 6px; }
+
+.header_logo .logo {
+  float: left;
+  display: block;
+  margin-right: 20px;
+  padding-top: 10px; }
+.header_logo .advertising {
+  float: left;
+  display: block; }
+.header_logo .MyLottery {
+  float: right;
+  padding: 31px 0;
+  position: relative;
+  z-index: 9999; }
+  .header_logo .MyLottery .ml_a {
+    display: block;
+    width: 106px;
+    height: 32px; }
+  .header_logo .MyLottery .ml_contentBlock {
+    display: none;
+    width: 420px;
+    position: absolute;
+    top: 73px;
+    left: -154px;
+    z-index: 9999; }
+    .header_logo .MyLottery .ml_contentBlock .cb_top {
+      width: 420px;
+      height: 9px; }
+    .header_logo .MyLottery .ml_contentBlock .cb_center {
+      width: 420px;
+      margin: 0 auto; }
+      .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title {
+        width: 385px;
+        margin: 0 auto; }
+        .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_font {
+          width: 385px;
+          height: 30px;
+          line-height: 30px;
+          border-bottom: 1px solid #eee; }
+          .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_font span {
+            float: left;
+            font-weight: bold;
+            color: #333; }
+          .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_font a {
+            float: right;
+            color: #999;
+            text-decoration: none; }
+            .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_font a:hover {
+              color: #d61939;
+              text-decoration: none; }
+        .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_none {
+          border: none; }
+        .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_center {
+          width: 385px; }
+          .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_center li {
+            width: 58px;
+            height: 58px;
+            float: left;
+            margin: 10px 0 10px 15px;
+            text-align: center;
+            cursor: pointer; }
+            .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_center li a {
+              width: 58px;
+              height: 58px;
+              display: block; }
+        .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_add {
+          width: 385px;
+          padding: 10px 0 5px 0; }
+          .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_add li {
+            width: 85px;
+            height: 28px;
+            float: left;
+            margin: 0 15px 10px 0;
+            text-align: center;
+            line-height: 28px;
+            cursor: pointer; }
+          .header_logo .MyLottery .ml_contentBlock .cb_center .bc_title .bc_add .bc_liBlock {
+            margin: 0; }
+    .header_logo .MyLottery .ml_contentBlock .cb_down {
+      width: 420px;
+      height: 11px; }
+
+.header_navigation {
+  background: #fa5900;
+  font-family: 'Microsoft YaHei'; }
+  .header_navigation ul, .header_navigation li {
+    float: left;
+    padding-right: 16px;
+    position: relative;
+    z-index: 999; }
+    .header_navigation ul > a, .header_navigation li > a {
+      display: block;
+      width: 100px;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      color: #ffffff;
+      text-decoration: none; }
+      .header_navigation ul > a:hover, .header_navigation li > a:hover {
+        color: #ffffff;
+        text-decoration: none; }
+      .header_navigation ul > a.home, .header_navigation li > a.home {
+        padding-left: 20px;
+        width: 80px; }
+      .header_navigation ul > a:hover, .header_navigation ul > a.active, .header_navigation li > a:hover, .header_navigation li > a.active {
+        background-color: #e03204; }
+  .header_navigation .bc_select {
+    display: none;
+    width: 360px;
+    padding: 0 22px 19px;
+    border: 1px solid #fa5900;
+    background: #fffdf3;
+    position: absolute;
+    top: 39px;
+    left: 0;
+    z-index: 999; }
+    .header_navigation .bc_select .cs_block {
+      border-bottom: 1px dashed #d8d8d8;
+      line-height: 25px;
+      padding: 11px 0;
+      font-size: 12px; }
+      .header_navigation .bc_select .cs_block strong {
+        display: block;
+        color: #fa5900; }
+      .header_navigation .bc_select .cs_block a {
+        float: left;
+        color: #333;
+        padding-right: 12px;
+        color: #333333;
+        text-decoration: none; }
+        .header_navigation .bc_select .cs_block a:hover {
+          color: #fa5900;
+          text-decoration: underline; }
+    .header_navigation .bc_select .cs_borNone {
+      border: none; }
+
+/*--------------- header end ---------------*/
+/*--------------- main start ---------------*/
+/*--------------- main end ---------------*/
+/*--------------- footer start ---------------*/
+.footer_nav {
+  background: #f8f8f8;
+  border-top: 1px solid #dce1e5;
+  border-bottom: 1px solid #dce1e5;
+  padding: 30px 0; }
+  .footer_nav .nav_content {
+    height: 110px;
+    padding: 0 58px 0 43px;
+    border-right: 1px dashed #dce1e5;
+    float: left; }
+    .footer_nav .nav_content p {
+      height: 33px;
+      line-height: 33px;
+      padding-left: 41px;
+      font-family: "微软雅黑";
+      font-weight: bold;
+      font-size: 18px;
+      background-position: 0 -20px; }
+      .footer_nav .nav_content p.helpCenter {
+        background-position: 0 -54px; }
+      .footer_nav .nav_content p.business {
+        background-position: 0 -88px; }
+      .footer_nav .nav_content p.relation {
+        background-position: 0 -122px; }
+    .footer_nav .nav_content ul {
+      padding-top: 6px;
+      padding-left: 43px; }
+      .footer_nav .nav_content ul li {
+        line-height: 26px; }
+        .footer_nav .nav_content ul li a {
+          font-size: 12px;
+          color: #333;
+          color: #333333;
+          text-decoration: none; }
+          .footer_nav .nav_content ul li a:hover {
+            color: #fa5900;
+            text-decoration: underline; }
+    .footer_nav .nav_content .add {
+      position: relative; }
+      .footer_nav .nav_content .add a {
+        display: inline-block;
+        width: 44px;
+        height: 18px;
+        background-position: 0 0;
+        position: absolute;
+        top: 4px;
+        *top: 0px;
+        right: -20px; }
+  .footer_nav .nav_relation {
+    padding: 0 55px 0 0px;
+    float: right;
+    height: 110px; }
+    .footer_nav .nav_relation span {
+      display: block;
+      height: 37px;
+      line-height: 20px;
+      padding-left: 45px;
+      margin-bottom: 13px;
+      font-family: "微软雅黑";
+      background-position: 0 -156px; }
+      .footer_nav .nav_relation span b {
+        display: block;
+        font-size: 22px;
+        color: #fa5900; }
+      .footer_nav .nav_relation span i {
+        display: block; }
+    .footer_nav .nav_relation a {
+      display: block;
+      width: 176px;
+      height: 51px;
+      background-position: 0 -195px; }
+
+.footer_info .img {
+  padding: 25px 10px 17px;
+  overflow: hidden; }
+  .footer_info .img span {
+    float: left;
+    padding: 0 10px; }
+.footer_info .text {
+  text-align: center;
+  font-size: 12px;
+  color: #333333;
+  line-height: 24px; }
+  .footer_info .text a {
+    line-height: 26px;
+    font-size: 12px;
+    color: #333333; }
+
+/*--------------- footer end ---------------*/
+/*--------------- page start ---------------*/
+.app_blockPage {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0; }
+  .app_blockPage .pageBlock {
+    display: inline-block;
+    text-align: center; }
+    .app_blockPage .pageBlock a {
+      width: 28px;
+      height: 28px;
+      text-align: center;
+      line-height: 28px;
+      display: inline-block;
+      border: 1px solid #d6d6d6;
+      border-radius: 2px;
+      float: left;
+      margin: 0 2px;
+      color: #666; }
+      .app_blockPage .pageBlock a:hover, .app_blockPage .pageBlock a.hover {
+        background-color: #fa5900;
+        color: #fff;
+        border: 1px solid #fa5900; }
+      .app_blockPage .pageBlock a.first {
+        width: 60px; }
+      .app_blockPage .pageBlock a.last {
+        width: 60px; }
+
+/*--------------- page end ---------------*/
+/*--------------- public_videoList start ---------------*/
+.public_videoList {
+  float: left; }
+  .public_videoList li {
+    float: left;
+    width: 218px;
+    position: relative; }
+  .public_videoList .img {
+    display: block;
+    height: 141px;
+    font-size: 0px;
+    line-height: 0px;
+    overflow: hidden; }
+    .public_videoList .img img {
+      width: 218px;
+      height: 141px; }
+  .public_videoList .maskLayer {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 138px;
+    height: 101px;
+    padding: 40px 0 0 80px; }
+    .public_videoList .maskLayer i {
+      display: block;
+      width: 60px;
+      height: 60px;
+      cursor: pointer; }
+  .public_videoList .text1 {
+    display: block;
+    line-height: 34px;
+    padding-top: 2px; }
+    .public_videoList .text1 b {
+      float: left;
+      font-size: 14px; }
+    .public_videoList .text1 i {
+      float: right; }
+  .public_videoList .text2 {
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    padding-left: 27px; }
+    .public_videoList .text2 span {
+      float: left; }
+      .public_videoList .text2 span i {
+        padding-left: 10px;
+        color: #fa5900;
+        font-family: 'Microsoft YaHei';
+        font-weight: bold; }
+    .public_videoList .text2 b {
+      float: right;
+      font-family: 'Microsoft YaHei';
+      color: #fa5900; }
+    .public_videoList .text2 a {
+      float: right;
+      color: #333333;
+      text-decoration: none; }
+      .public_videoList .text2 a:hover {
+        color: #fa5900;
+        text-decoration: none; }
+
+/*--------------- public_videoList end ---------------*/
+/*右侧固定TOP*/
+.fixation_Stick {
+  width: 61px;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  z-index: 8888;
+  margin: -122px -680px 0 0; }
+  .fixation_Stick li a {
+    display: block;
+    height: 61px;
+    width: 61px; }
+    .fixation_Stick li a.qq {
+      height: 62px;
+      background-position: 0 0; }
+      .fixation_Stick li a.qq:hover {
+        background-position: -61px 0; }
+    .fixation_Stick li a.weiXin {
+      background-position: 0 -62px; }
+      .fixation_Stick li a.weiXin:hover {
+        background-position: -61px -62px; }
+    .fixation_Stick li a.fanKui {
+      background-position: 0 -123px; }
+      .fixation_Stick li a.fanKui:hover {
+        background-position: -61px -123px; }
+    .fixation_Stick li a.top {
+      background-position: 0 -184px; }
+      .fixation_Stick li a.top:hover {
+        background-position: -61px -184px; }
+
+/*# sourceMappingURL=public.css.map */

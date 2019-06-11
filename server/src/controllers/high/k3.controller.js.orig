@@ -1,0 +1,267 @@
+/***********************************************************************************
+ *
+ *                                      快3控制器;
+ *
+ ***********************************************************************************/
+'use strict';
+
+import {BaseController} from '../public/base.controller';
+import {LotteryService} from  '../../services/public/lottery.service';
+import {K3Service} from '../../services/high/k3.service';
+import DealWithCommonService from  '../../services/public/dealWithCommon.service';
+
+
+/**Controller for 'main'*/
+class K3Controller extends BaseController {
+
+    constructor(){
+
+        super();
+
+    }
+    /**
+     * 入口
+     * @param {*} request 
+     * @param {*} reply
+     */
+    async index(request, reply) {
+
+        let _code = `${request.params.area}k3`;
+        // 获取对应彩种SEO
+        let _option = {
+            pageCode : 'eycp_site_lottery_high',
+            option : {
+                lotteryName: DealWithCommonService.getLotteryName(_code, this.configService.config.province)
+            }
+        }
+
+        let _context = {};
+        let _seo = this.getBaseContext(_option);
+
+        _context.lotteryCode = _code;
+        let _service = new K3Service(_code);
+        let _data = await _service.getHighLotteryMain();
+
+        if(_data.tecInfo && _data.tecInfo.length > 6) _data.tecInfo = _data.tecInfo.slice(0, 6);
+        _data.staticBound = this.configService.config.lotteryMainStatic['k3'];
+        _data.rule.introduceContent = _data.rule &&  _data.rule.introduceContent.substr(0, 410) + '...';
+        
+        if(_data.awardResult && _data.awardResult.resultList) {
+            _data.awardResult.resultList = _data.awardResult.resultList.map(item => {
+                return item >= 10 ? item : '0' + item;
+            })
+        }
+        
+        /** 获取导航信息 */
+        _context.mainNav = DealWithCommonService.mainNavData(this.configService.config.province);
+        // 获取底部推荐
+        _context.recommend = await DealWithCommonService.showRecommend('high');
+        _context.type = 'k3';
+        _context = Object.assign(_context, _seo, _data);
+
+        return this.render(`high/k3/index`, _context, request, reply);
+    }
+
+    /**
+     * 开奖之后页面内容获取
+     * @param {*} request 
+     * @param {*} reply 
+     */
+    async indexPage(request, reply) {
+
+        let _code = `${request.params.area}k3`;
+        let _service = new K3Service(_code);
+        let _context = {};
+        _context = await _service.pageHistory(request.query.date);
+        _context.lotteryCode = _code;
+        _context.type = 'k3';
+
+        let _timer = __template(this.path.join(__dirname, '../../views/template/components/lotteryTimer.component.art'), _context);
+        let _history = __template(this.path.join(__dirname,'../../views/template/high/k3/history.art'), _context);
+        let _index = __template(this.path.join(__dirname, '../../views/template/high/k3/index.art'), _context);
+        let _detail   = __template(this.path.join(__dirname, '../../views/template/high/k3/detail.art'), _context);
+        
+        return this.json({ 
+            timer: _timer, 
+            history: _history,
+            index: _index,
+            detail: _detail
+        }, request, reply);
+    }
+
+    /**
+     * 开奖历史的处理
+     * @param {*} request 
+     * @param {*} reply 
+     */
+    async history(request, reply){
+
+        let _code = `${request.params.area}k3`;
+
+        // 获取对应彩种SEO
+        let _option = {
+            pageCode : 'eycp_site_lottery_high_history',
+            option : {
+                lotteryName: DealWithCommonService.getLotteryName(_code, this.configService.config.province)
+            }
+        }
+
+        let _context = this.getBaseContext(_option);
+
+        _context.lotteryCode = _code;
+        _context.type = 'k3';
+        let _service = new K3Service(_code);
+        let _data = await _service.pageHistory();
+        _context.history = _data.history;
+        _context.resultList = _data.resultList;
+        _context.awardTime = _data.awardTime;
+        _context.awardResult = _data.awardResult;
+        _context.isAwarding = _data.isAwarding;
+        _context.lotteryType = 'high';
+        if(_context.resultList.length > 0) {
+            _context.date = (new Date()).format('yyyy-MM-dd');
+        } else {
+            let _date = new Date();
+            _date.setDate(_date.getDate() - 1);
+            _context.date = _date.format('yyyy-MM-dd');
+        }
+
+        /** 获取导航信息 */
+        _context.mainNav = DealWithCommonService.mainNavData(this.configService.config.province);
+        // 获取底部推荐
+        _context.recommend = await DealWithCommonService.showRecommend('high');
+
+        return this.render(`high/k3/history`, _context, request, reply);
+
+    }
+
+    /**
+     * 直播的处理
+     * @param {*} request 
+     * @param {*} reply 
+     */
+    live(request, reply){
+
+    }
+
+
+    /**
+     * 开奖详细
+     * @param {*} request
+     * @param {*} reply
+     */
+    async detail(request, reply) {
+
+
+        let _code = `${request.params.area}k3`;
+
+        /** 获取对应彩种SEO */
+        let _option = {
+            pageCode : 'eycp_site_lottery_high_detail',
+            option : {
+                lotteryName: DealWithCommonService.getLotteryName(_code, this.configService.config.province)
+            }
+        }
+
+        let _context = this.getBaseContext(_option);
+
+        _context.lotteryCode = _code;
+
+        /** 获取导航信息 */
+        _context.mainNav = DealWithCommonService.mainNavData(this.configService.config.province);
+
+        /** 获取省份信息 */
+        _context.province  = this.configService.config.province;
+
+        /** 获取这个code是属于那个彩种的 */
+        _context.classify= DealWithCommonService.getLotteryClassify(_code, _context.province);
+
+        /** 获取这个code是属于那个大类得类型 */
+        _context.lotteryType = DealWithCommonService.getLotteryCodeType(_code, _context.province);
+
+        /** 通过分类，然后控制详情页左边导航那大类显示 */
+        DealWithCommonService.showDetailLeftNav(_context, _context.classify);
+
+
+        /** 初始化LotteryService */
+        let lotteryService = new LotteryService(_code);
+
+        try{
+
+            /** 获取开奖时间 */
+            _context.awardtimes =  lotteryService.resultForm(await lotteryService.getAwardTimes());
+
+            /** 获取底部推荐 */
+            _context.recommend = await DealWithCommonService.showRecommend(_context.classify);
+
+
+            /** 获取历史开奖数据 */
+            _context.history = lotteryService.resultForm(await lotteryService.history({
+                type: 1,
+                sortFiled: 3,
+                day: (new Date()).format('yyyy-MM-dd')
+            }));
+
+            return this.render(`${_context.classify}/${_context.lotteryType}/detail`, _context, request, reply);
+
+        }catch(ex){
+
+            console.error(ex);
+
+        }
+    }
+
+
+    /**
+     *  获取开奖时间
+     */
+    async getawardtimes(request, reply) {
+
+        let _option = {};
+        let _context = this.getBaseContext(_option);
+
+        try{
+
+
+            this.lotteryService.lotteryCode = request.params.lotteryCode;
+            let  getawardtimes = this.lotteryService.resultForm(await this.lotteryService.getAwardTimes());
+
+            return this.json(getawardtimes , request, reply)
+
+        }catch (ex){
+
+            console.error(ex);
+
+        }
+
+    }
+
+
+    /**
+     *  获取开奖数据
+     */
+    async getawarddata(request, reply) {
+
+        let _option = {};
+        let _context = this.getBaseContext(_option);
+
+        try{
+
+            this.lotteryService.lotteryCode = request.params.lotteryCode;
+            let  getawarddata = this.lotteryService.resultForm(await this.lotteryService.getAwardData());
+
+            return this.json(getawarddata , request, reply)
+
+        }catch (ex){
+
+            console.error(ex);
+
+        }
+
+    }
+
+
+
+}
+
+module.exports = K3Controller

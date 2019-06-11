@@ -1,0 +1,37 @@
+<!--中间独立-->
+<div class="eyu100-main main-aboutPageBlock">
+	<div class="main-centerSection">
+		<!--一级栏目-->
+		<div class="ld-publicNav">
+			<ul>
+                {{each titleList title idx}}
+				<li>
+					<a href="/about/{{title.type}}" class="sort{{if title.id == id}} active{{/if}}"><i class="{{title.icon}}"></i>{{title.name}}</a>
+                    {{if idx < 3}}
+                    <i class="line"></i>
+                    {{/if}}
+                </li>
+                {{/each}}
+			</ul>
+		</div>
+		<!--关于我们-->
+		<div class="about_block">
+			<p class="ab_title">{{title}}</p>
+			<div class="ab_center">
+                {{if data}}
+                {{@ data.content}}
+                {{/if}}
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/about/index.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize();
+    })
+</script>

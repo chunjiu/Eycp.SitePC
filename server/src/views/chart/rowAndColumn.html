@@ -1,0 +1,101 @@
+<div class="eyu100-main main-lotteryTrendPage" id="mainContainer"  max-period="{{@maxPeriod}}" data-lotteryCode="{{@lotteryCode}}"  data-flot={{@flot}}>
+    <div class="main-centerSection">
+        <div class="public-lotteryLatestInfo">
+            {{ include '../template/components/lotteryTimer.component.art' }}
+        </div>
+        <!--分布走势-->
+        <div class="lt-trendRowPage">
+
+                <!--功能集合-->
+                <div class="public-allFunBlock">
+                    <div class="afb-titleB">
+                        <span class="title active"><i class="zouShi"></i>走势分析</span>
+                        <i class="line"></i>
+                        <a class="title" data-type="omissionTrend" href="/omission/{{lotteryCode}}/{{omissionDefultFlot}}"><i class="yiLou"></i>遗漏分析</a>
+                    </div>
+                    <div class="afb-contentB">
+                        {{ each trend trendItem}}
+                        <div class="liB">
+                            <h2 class="title">{{trendItem.name}}：</h2>
+
+
+                            {{ each trendItem.child trendChild idx}}
+
+                                {{if lotteryCode == 'ssq'}}
+
+                                    {{if trendChild.queryDay }}
+                                    <a href="/chart/{{lotteryCode}}/{{trendChild.code}}?queryDay={{trendChild.queryDay}}" class="name  {{trendChild.queryDay==queryDay? 'active': ''}}">{{trendChild.name}}</a>
+                                    {{else}}
+                                    <a href="/chart/{{lotteryCode}}/{{trendChild.code}}" class="name {{trendChild.code == flot && !queryDay ? 'active': ''}}">{{trendChild.name}}</a>
+                                    {{/if}}
+
+                                {{else}}
+                                    <a href="/chart/{{lotteryCode}}/{{trendChild.code}}" class="name {{trendChild.code == flot ? 'active': ''}}">{{trendChild.name}}</a>
+                                {{/if}}
+
+                                {{ if idx !== trendItem.child.length -1 }}
+                                  <i class="line">|</i>
+                                {{ /if }}
+                            {{ /each }}
+
+
+                        </div>
+                        {{ /each }}
+                    </div>
+                </div>
+
+                <div class="lt-toolBlock">
+
+                    <div class="public-float-left">
+                        <span class="toolText public-float-left" style="padding-right: 10px;">目前更新到<i class="font-red">{{awardTime.current.period}}</i>期</span>
+                        <label class="public-checkboxBlock public-float-left public-m-r10" data-value="groupThree"  id="autoRefresh"><i class="checkbox" ></i><span class="checkbox-text">自动刷新</span></label>
+                    </div>
+
+                    <div class="public-float-right" id="getPeriodsNumber">
+                        <span class="toolText public-float-left">期数选择：&nbsp;&nbsp;</span>
+                       <!--  <span class="public-btnBlock public-float-left public-m-r10 button" data-num="1">近1期</span> -->
+                        {{if flot == 43}}
+                            <span class="public-btnBlock public-float-left public-m-r10 button active" data-num="30">近30期</span>
+                            <span class="public-btnBlock public-float-left public-m-r10 button" data-num="50">近50期</span>
+                            <span class="public-btnBlock public-float-left public-m-r10 button" data-num="100">近100期</span>
+                        {{else}}
+                            <span class="public-btnBlock public-float-left public-m-r10 button active" data-num="50">近50期</span>
+                            <span class="public-btnBlock public-float-left public-m-r10 button" data-num="100">近100期</span>
+                            <span class="public-btnBlock public-float-left public-m-r10 button" data-num="200">近200期</span>
+                            <span class="public-btnBlock public-float-left public-m-r10 button" data-num="300">近300期</span>
+                            <span class="public-btnBlock public-float-left button" data-num="500">近500期</span>
+                        {{/if}}
+
+                    </div>
+
+                </div>
+
+
+                <div  id="container"></div>
+
+
+                <!--参数说明-->
+                <div class="lt-explainBlock">
+                    <div class="elb-titleB"><i class="icon"></i><span class="text">{{@awardTime.lotteryName}}走势参数说明</span></div>
+                    <div class="elb-contentB">
+                        {{@helpObject}}
+                    </div>
+                </div>
+    </div>
+    <!--相关推荐-->
+    {{ include '../partials/recommend.html' }}
+
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/chart/index.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize('{{@lotteryCode}}', '{{@lotteryClassify}}', {{@flot}}, '{{@classify}}', {{@isAwarding}}, {{@nowPeriod}}, {{@theadObject}}, {{@cssObject}} , {{@budgetary}} );
+    })
+</script>

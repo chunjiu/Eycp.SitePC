@@ -1,0 +1,1 @@
+define(["require","exports","module"],function(t,r,i){var e={on:function(t,r){this[t]=this[t]||new Array,this[t].push(r)},emit:function(t){var r=arguments.length>1?Array.prototype.slice.call(arguments,1):[];this[t]&&Array.prototype.forEach.call(this[t],function(t){t.apply(this,r)})}};i.exports=e});

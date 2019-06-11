@@ -1,0 +1,9 @@
+ {{if points }}
+      {{if points.length > 0}}
+           {{each points  list}}
+                <li><a href="/point/detail-{{@list.id}}.html" class="title" style="width: 100%;" target="_blank">{{@list.title}}</a></li>
+            {{/each}}
+      {{/if}}
+  {{else}}
+      <li style="color: #999; width: 100%;text-align: center;">暂无任何提点</li>
+ {{/if}}

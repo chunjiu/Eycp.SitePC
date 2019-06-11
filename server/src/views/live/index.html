@@ -1,0 +1,65 @@
+<div class="eyu100-main main-videoHomePage">
+
+
+    <div class="main-centerSection" id="mainVideo">
+        <div class="public-titleBlock">
+            <i class="icon-gp"></i>
+            <span class="name">高频彩</span>
+            <!--<a href="/live/ssq/list/page_1" class="more" rel="nofollow">更多&gt;&gt;</a>-->
+        </div>
+
+
+        <div class="vh-b1" id="topVideo">
+
+            {{ include '../template/live/topVideo.component.art' }}
+
+        </div>
+
+        <div class="vh-b2" id="navVideoList">
+            <ul>
+                {{ include '../template/live/navVideoList.component.art' }}
+            </ul>
+        </div>
+        <div class="vh-b3">
+            <div class="b3-l">
+                <div class="public-titleBlock">
+                    <i class="icon-sz"></i>
+                    <span class="name">数字彩</span>
+                </div>
+                <div class="b3-videoList" id="numberVideoList">
+                    <ul>
+                        {{ include '../template/live/numberVideoList.component.art' }}
+                    </ul>
+                </div>
+            </div>
+            <div class="b3-r">
+                <div class="public-titleBlock">
+                    <i class="icon-sp"></i>
+                    <span class="name">数字彩开奖视频</span>
+                    <a href="/live/ssq-list-p1" class="more"  target="_blank" rel="nofollow">更多&gt;&gt;</a>
+                </div>
+                <div class="b3-textList">
+                    <ul>
+                        {{ include '../template/live/numberLotteryVideoList.component.art' }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--相关推荐-->
+        {{ include '../partials/recommend.html' }}
+         {{ include '../partials/friendlink.html' }}
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/live/index.container'
+    ];
+
+    require(pathArray, function(_callBack) {
+        _callBack.initialize();
+    })
+</script>

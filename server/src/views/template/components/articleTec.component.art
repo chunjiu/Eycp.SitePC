@@ -1,0 +1,51 @@
+{{if articleSelection}}
+<div class="ad_pubList">
+    <div class="pl_tit">
+        {{each articleSelection.title item idx}}
+            <a class="{{if categoryId == item.categoryId}}active{{/if}} pubList-category" data-id="{{item.categoryId}}">{{item.name}}</a>
+            {{if idx < 4}}
+            <i>/</i>
+            {{/if}}
+        {{/each}}
+    </div>
+    <div class="pl_lis">
+        {{each articleSelection.content item}}
+        <ul {{if categoryId == item.categoryId}}style="display:show;"{{else}}style="display:none;"{{/if}} data-id="{{item.categoryId}}">
+            {{each item.list list idx}}
+            {{if idx == 0 || idx == 5}}
+            <li>
+                <div class="li_fon">
+                    <a href="/article/detail-{{list.categoryId}}-{{list.id}}.html"  title="{{list.title}}">
+                        <span class="f_l">{{((list.shortTitle!=null && list.shortTitle.length>0)?list.shortTitle:list.title)}}</span>
+                        <span class="f_r">{{list.createDate | articleLotteryDate}}</span>
+                    </a>
+            {{else}}
+                <a href="/article/detail-{{list.categoryId}}-{{list.id}}.html" title="{{list.title}}">
+                    <span class="f_l">{{((list.shortTitle!=null && list.shortTitle.length>0)?list.shortTitle:list.title)}}</span>
+                    <span class="f_r">{{list.createDate | articleLotteryDate}}</span>
+                </a>
+            {{/if}}
+            {{if idx == 4 || idx == 8}}
+                {{if idx == 8}}
+                <a target="_blank" href="{{item.categoryId | getTecUrl}}" class="skip" rel="nofollow">更多{{list.categoryName}}  >></a>
+                {{/if}}
+                </div>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/each}}
+    </div>
+</div>
+{{/if}}
+
+<script type="text/javascript">
+    require(['jquery'], function(){
+        $(document).on('click', '.pubList-category', function(){
+            $('.pubList-category').removeClass('active');
+            $(this).addClass('active');
+            $('.pl_lis ul').hide();
+            $('.pl_lis ul[data-id="'+ $(this).data('id') +'"]').fadeIn('fast');
+        });
+    });
+</script>

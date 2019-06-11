@@ -1,0 +1,199 @@
+ <div class="expertsRecommendBlock">
+
+            {{if hmtjData}}
+                {{each hmtjData hmtjList hmtjIndex}}
+                <div class="erb-lis">
+                    <div class="erb-titleB">
+
+                        {{if hmtjIndex == 0}}
+                        <div class="public_selectPlugIn">
+                            <span class="selectArrow"></span>
+                            <span class="selectedText">近{{quantity}}期统计</span>
+                            <div class="selectOption">
+
+                                {{if lotteryCode=='pl3' || lotteryCode == 'fc3d' }}
+
+                                    <span class="lis" data-num="10">近10期统计</span>
+                                    <span class="lis" data-num="20">近20期统计</span>
+                                    <span class="lis" data-num="50">近50期统计</span>
+
+                                {{else}}
+
+                                    <span class="lis" data-num="20">近20期统计</span>
+                                    <span class="lis" data-num="30">近30期统计</span>
+                                    <span class="lis" data-num="50">近50期统计</span>
+
+                                {{/if}}
+
+                            </div>
+                        </div>
+                        {{/if}}
+
+                        <span class="title {{ hmtjIndex == 0 ? 'font-red': ''}}">{{ hmtjIndex == 0 ? '【当前期】': ''}}第 {{@hmtjList.issueNo}} 期号码推荐</span>
+                    </div>
+                    <div class="public-table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th width="10%">专家名称</th>
+
+                                {{if lotteryCode=='ssq'}}
+
+                                        <th>推荐红球号码</th>
+                                        <th>推荐蓝球号码</th>
+
+                                {{else if lotteryCode=="dlt"}}
+
+                                      <th>前区推荐号码</th>
+                                      <th>后区推荐号码</th>
+
+                                {{else if lotteryCode=="qlc"}}
+
+                                      <th>号码推荐</th>
+
+                                {{/if}}
+                               
+                                <th width='15%'>
+
+                                    {{if hmtjIndex == 0}}
+                                        <div class="lt-tableThBlock">
+                                            <div class="thBlock">
+                                                <span class="thName">4等奖及以上概率</span><span class="thArrow"><i class="top"></i><i class="bottom active"></i></span>
+                                            </div>
+                                        </div>
+                                    {{else}}
+                                        <div class="lt-tableThBlock">
+                                            <div class="thBlock">
+                                                <span class="thName">中奖号码情况</span><span class="thArrow"><i class="top"></i><i class="bottom"></i></span>
+                                            </div>
+                                        </div>
+                                    {{/if}}
+
+                                </th>
+                                <th width= '12%'>
+
+                                    {{if hmtjIndex == 0}}
+                                        <div class="lt-tableThBlock">
+                                            <div class="thBlock">
+                                                <span class="thName">历史最好成绩</span>
+                                                <span class="thArrow">
+                                                    <i class="top"></i><i class="bottom"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    {{else}}
+                                        <div class="lt-tableThBlock">
+                                            <div class="thBlock">
+                                                <span class="thName">奖项情况</span><!--<span class="thArrow"><i class="top"></i><i class="bottom"></i></span>-->
+                                            </div>
+                                        </div>
+                                    {{/if}}
+
+                                </th>
+                                <th width="10%">更多</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{if hmtjList.details}}
+                               {{each hmtjList.details  hmtjListDetails  hmtjListDetailsIndex }}
+
+
+                                    <tr data-code="{{hmtjListDetails.expertId}}">
+                                        <td>{{hmtjListDetails.expertName}}</td>
+
+                                         {{if hmtjIndex == 0}}
+                                             <td>
+                                             <span class="font-red fontWidth">
+                                                     {{if hmtjListDetails.redRecommend }}
+                                                        {{each hmtjListDetails.redRecommend  redBall  redBallIndex }}
+                                                             {{if hmtjListDetails.redRecommend.length-1 == redBallIndex}}<span>{{@redBall}}</span>{{else}}<span>{{@redBall}}<i class="font-red">,</i></span>{{/if}}
+                                                        {{/each}}
+                                                    {{/if}}
+                                                </span>
+                                            </td>
+                                            {{if lotteryCode!="qlc"}}
+                                             <td>
+                                                 <span class="font-blue fontWidth">
+                                                     {{if hmtjListDetails.blueRecommend }}
+                                                        {{each hmtjListDetails.blueRecommend  blueBall  blueBallIndex }}
+                                                             {{if hmtjListDetails.blueRecommend.length-1 == blueBallIndex}}<span>{{@blueBall}}</span>{{else}}<span>{{@blueBall}}<i class="font-blue">,</i></span>{{/if}}
+                                                        {{/each}}
+                                                    {{/if}}
+                                                 </span>
+                                             </td>
+                                            {{/if}}
+                                              <td data-value = '{{hmtjListDetails.pobability*100}}'>
+                                                {{@ (hmtjListDetails.pobability*100).toFixed(0)}}%
+                                              </td>
+                                              <td data-value ="{{ hmtjListDetails.historyBestResult =='一等奖' ? 1: ''}}{{ hmtjListDetails.historyBestResult =='二等奖' ? 2: ''}}{{ hmtjListDetails.historyBestResult =='三等奖' ? 3: ''}}{{ hmtjListDetails.historyBestResult =='四等奖' ? 4: ''}}">{{@ hmtjListDetails.historyBestResult}}</td>
+                                         {{else}}
+                                             
+                                              {{if lotteryCode=="qlc"}}
+                                                  <td>
+                                                    <span class="font-gray fontWidth" >
+                                                         {{if hmtjListDetails.redRecommend }}{{each hmtjListDetails.redRecommend  redBall  redBallIndex }}{{if hmtjListDetails.redRecommend.length-1 == redBallIndex}}<span {{if hmtjList.result.indexOf("|"+redBall)>=0}} class='font-blue' {{else if hmtjList.result.indexOf(redBall)>=0}} class='font-red' {{/if}}>{{@redBall}}</span>{{else}}<span {{if hmtjList.result.indexOf("|"+redBall)>=0}} class='font-blue' {{else if hmtjList.result.indexOf(redBall)>=0}} class='font-red' {{/if}}>{{@redBall}}<i class="font-gray">,</i></span>{{/if}}{{/each}}
+                                                         {{/if}}
+                                                    </span>
+                                                 </td>
+                                                
+                                              {{else}}
+                                                 <td>
+                                                    <span class="font-gray fontWidth">
+                                                         {{if hmtjListDetails.redRecommend }}
+                                                            {{each hmtjListDetails.redRecommend  redBall  redBallIndex }}
+                                                                 {{if hmtjListDetails.redRecommend.length-1 == redBallIndex}}<span {{if hmtjList.redResult.indexOf(redBall)>=0}}  class='font-red' {{/if}}>{{@redBall}}</span>{{else}}<span {{if hmtjList.redResult.indexOf(redBall)>=0}} class='font-red' {{/if}}>{{@redBall}}<i class="font-gray">,</i></span>{{/if}}
+                                                            {{/each}}
+                                                        {{/if}}
+                                                    </span>
+                                                     </td>
+                                                     <td>
+                                                        <span class="font-gray fontWidth">{{if hmtjListDetails.blueRecommend }}{{each hmtjListDetails.blueRecommend  blueBall  blueBallIndex }}{{if hmtjListDetails.blueRecommend.length-1 == blueBallIndex}}<span {{if hmtjList.blueResult.indexOf(blueBall)>=0}}  class='font-blue' {{/if}}>{{@blueBall}}</span>{{else}}<span {{if hmtjList.blueResult.indexOf(blueBall)>=0}} class='font-blue' {{/if}}>{{@blueBall}}<i class="font-gray">,</i></span>{{/if}}{{/each}}{{/if}}</span>
+                                                 </td>
+                                              {{/if}}
+                                              <td data-value = '{{@summationValue( hmtjListDetails.hitResult ) }}'>
+                                                {{@hmtjListDetails.hitResult}}
+                                              </td>
+                                              <td>{{@hmtjListDetails.winningDetails.replace(/\|/g,'<br/>')}}</td>
+                                         {{/if}}
+
+                                        <td><a href="/hmtj/{{lotteryCode}}/{{stype}}_{{hmtjListDetails.expertId}}" class="more">历史推荐</a></td>
+                                 </tr>
+                              {{/each}}
+                            {{/if}}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                {{/each}}
+            {{/if}}
+
+            </div>
+
+
+       <style type='text/css'>
+
+            .fontWidth{
+                   width: 93%;
+                   text-align: center;
+                   display: inline-block !important;
+            }
+
+            span.font-red, span.font-blue, span.font-gray{
+                   font-size: 0px;
+                   display:inline-block;
+                   word-break:break-all;
+            }
+
+            span.font-red  span,  span.font-blue span, span.font-gray span{
+                   font-size:14px;
+                   white-space: nowrap;
+                   text-align: center;
+                   display: inline-block;
+            }
+
+           .font-gray i, .font-red i, .font-blue i{
+                  font-size:14px;
+                  white-space: nowrap;
+           }
+       </style>

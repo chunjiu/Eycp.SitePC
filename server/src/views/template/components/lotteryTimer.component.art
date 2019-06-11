@@ -1,0 +1,163 @@
+
+<div class="logoBlock"><a href="/{{lotteryType}}/{{lotteryCode}}"><img src="{{cdnUrl}}/pic/logo/logo_{{lotteryCode}}.png" alt=""></a></div>
+<div class="newInfoBlock">
+    <div class="info"><h1 class="name"><a href="/{{lotteryType}}/{{lotteryCode}}">{{awardTime.lotteryName}}</a></h1><span class="latestIssue">第<i class="font-red current-period"> {{if lotteryCode == 'fc3d'}}{{awardResult.period}}{{else}} {{awardTime.current.period}} {{/if}}</i>期</span>
+
+    {{if lotteryType == 'digit'}}
+       <span style='font-size:14px; padding-left: 10px;'>{{@transformationWeekDay(awardResult.awardTime)}}</span>
+    {{/if}}
+
+    <span id="lotteryTimerTime" class="data" {{if lotteryType == 'digit'}}style="display: none;"{{/if}}>{{awardTime.current.awardTime | awardDateFormat}}</span></div>
+    <!--已开奖-->
+    <div class="preterite" {{if !isAwarding}}style="display: block"{{else}}style="display: none;"{{/if}}>
+        {{if awardResult && awardResult.resultList}}
+
+            {{if type == 'k3'}}
+            <div class="number k3" style="display: block">
+                {{each awardResult.resultList result}}
+                    <span class="num{{ result }}"></span>
+                {{/each}}
+            </div>
+            <div style='float:left; padding-top: 17px;'>{{@awardResult.resultSumValue ?  awardResult.resultSumValue : '' }}</div>
+
+            <!--快乐10分-->
+            {{else if type == 'kl10'}}
+            <div class="number {{if lotteryCode == 'xync'}}xync{{else if lotteryCode == 'hnkl10'}}zoology{{/if}}" style="display: block">
+                {{each awardResult.resultList result}}
+                    {{if lotteryCode == 'xync' || lotteryCode == 'hnkl10'}}
+                    <span class="num{{ result  }}"></span>
+                    {{else}}
+                    <span class="red">{{result}}</span>
+                    {{/if}}
+                {{/each}}
+            </div>
+            {{else if type == 'pk10'}}
+            <div class="number pk10" style="display: block">
+                {{each awardResult.resultList result}}
+                    <span class="num{{result}}"></span>
+                {{/each}}
+            </div>
+            {{else if type == 'kl8'}}
+            <div class="number kl8" style="display: block">
+                <i>X{{awardResult.frisbee}}</i>
+                {{each awardResult.resultList result}}
+                    <span>{{result}}</span>
+                {{/each}}
+            </div>
+            {{else}}
+            <div class="number" style="display: block">
+
+                {{if lotteryType == 'digit'}}
+
+                    {{if lotteryCode == 'fc3d'}}
+
+                        <!-- 如果是福彩3d -->
+                         {{if awardResult  &&  awardResult.redResultList.length > 0 &&  awardResult.redResultList[0] !='' }}
+
+                              {{each awardResult.redResultList result}}
+                                    <span class="red">{{result}}</span>
+                               {{/each}}
+
+                          {{else}}
+                                     <!-- 因为有试机号，所以需要这样子处理 -->
+                                     <span class="red">--</span>
+                                     <span class="red">--</span>
+                                     <span class="red">--</span>
+                          {{/if}}
+
+                   {{else}}
+                        <!-- 如果不是福彩3d -->
+                        {{if awardResult && awardResult.redResultList.length > 0 }}
+
+                            {{each awardResult.redResultList result}}
+                                   <span class="red">{{result}}</span>
+                            {{/each}}
+
+                        {{/if}}
+
+                   {{/if}}
+
+
+                    {{if lotteryCode == 'fc3d'}}
+                          <!-- 如果是福彩3d，要把篮球做成试机号 -->
+                          {{if awardResult && awardResult.blueResultList.length > 0}}
+                             <div class="testNumber">
+                                  试机号：
+                                 <i class="font-red">
+                                     {{each awardResult.blueResultList result}}
+                                         {{result}}&nbsp;
+                                     {{/each}}
+                                 </i>
+                             </div>
+                         {{/if}}
+
+                     {{else}}
+                           <!-- 如果不是福彩3d，直接把篮球原样输出 -->
+                          {{if awardResult && awardResult.blueResultList}}
+                               {{each awardResult.blueResultList result}}
+                                   <span class="blue">{{result}}</span>
+                               {{/each}}
+                         {{/if}}
+
+                    {{/if}}
+
+                {{else}}
+                    {{each awardResult.resultList result}}
+                        <span class="red">{{result}}</span>
+                    {{/each}}
+                {{/if}}
+            </div>
+            {{/if}}
+        {{/if}}
+    </div>
+    <!--正在开奖-->
+    <div class="beProgressing" {{if isAwarding}}style="display: block"{{else}}style="display: none;"{{/if}}>
+        <p class="text"><span>正在开奖</span></p>
+        <div class="history">
+            <span class="issue last-period">第{{if isAwarding}}{{awardResult.period}}{{else}}{{awardTime.current.period}}{{/if}}期：</span>
+            {{if awardResult && awardResult.resultList}}
+            <div class="number{{if lotteryCode == 'bjkl8'}} kl8{{/if}}" style="display: block">
+                <i>X{{awardResult.frisbee}}</i>
+                {{each awardResult.resultList result}}
+                    <span>{{result}}</span>
+                {{/each}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>
+<div class="videoBlock">
+    {{if 'hn481,nx11x5,hn11x5,qh11x5,sxkl10,shxkl10,hljkl10,jlk3,gzk3,nmgk3,hnk3'.indexOf(lotteryCode)==-1}}
+    <a href="/live/{{lotteryCode}}-detail" class="video">
+        <i class="zhiBo"></i><i class="btn"></i>
+    </a>
+    {{/if}}
+    <!-- <img src="{{cdnUrl}}/pic/lotteryVideo/{{lotteryCode}}.jpg" onerror="this.src='{{cdnUrl}}/pic/lotteryVideo/default.png';this.parentNode.removeAttribute('href');" alt=""> -->
+    {{if lotteryCode == 'hn481'}}
+         <img src="{{cdnUrl}}/pic/lotteryVideo/{{lotteryCode}}.jpg" onerror="this.src='{{cdnUrl}}/pic/lotteryVideo/default.png';this.parentNode.removeAttribute('href');" alt="">
+    {{else}}
+         <img src="{{cdnUrl}}/pic/lotteryVideo/{{lotteryCode}}.jpg" onerror="this.src='{{cdnUrl}}/pic/lotteryVideo/default.png';" alt="">
+    {{/if}}
+</div>
+<div class="timeBlock">
+    <p class="latestIssue">当前第<i class="font-red next-period">{{awardTime.next.period}}期</i></p>
+    <p class="time">{{@ awardTime.awardTimeInterval | awardTimer}}</p>
+    {{if lotteryType == 'digit'}}
+         {{if lotteryCode == 'dlt'}}
+            <p class="issue">每周一、三、六 20:30开奖</p>
+         {{else if lotteryCode == 'ssq'}}
+            <p class="issue">每周二、四、日21:15分开奖</p>
+         {{else if lotteryCode == 'qxc'}}
+            <p class="issue">每周二、五、日 20:30开奖</p>
+         {{else if lotteryCode == 'qlc'}}
+            <p class="issue">每周一、三、五 21:15开奖</p>
+         {{else if lotteryCode == 'fc3d'}}
+            <p class="issue">每天 20:30开奖</p>
+         {{else if lotteryCode == 'pl3' || lotteryCode == 'pl5'}}
+            <p class="issue">每天 20:30开奖</p>
+         {{/if}}
+    {{else}}
+    <p class="issue">每日销售<i class="font-red" id="maxPeriod" data-max="{{awardTime.totalPeriod}}">{{awardTime.totalPeriod}}期</i>&nbsp;&nbsp;今日剩余<i class="font-red">{{awardTime.overPeriod}}期</i></p>
+    {{/if}}
+</div>
+<span class="line"></span>

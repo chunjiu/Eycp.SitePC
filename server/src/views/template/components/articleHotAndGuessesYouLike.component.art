@@ -1,0 +1,57 @@
+            <div class="ad-hotArticle">
+                    <div class="public-titleBlock">
+                        <i class="icon-hotzx"></i>
+                        <span class="name">热门文章</span>
+                        <a href="/article/list-{{@codeType}}-5-p1" class="more" rel="nofollow">更多&gt;&gt;</a>
+                    </div>
+                    <div class="public-articleList">
+                        <div class="al_listBlock">
+                            {{if rmzx }}
+                            <ul>
+                                {{each rmzx  list  index}}
+                                {{if index < 6 }}
+                                <li>
+                                    <a href="/article/detail-{{ list.categoryId }}-{{ list.id }}.html" class="title"  title="{{ list.title }}">{{ list.title }}</a>
+                                    <span class="date">{{ list.createDate | formatDateTime 'MM-dd' }}</span>
+                                </li>
+                                {{/if}}
+                                {{/each}}
+                            </ul>
+                            {{else}}
+                            <div style="width:100%; min-height: 90px; color: #999; text-align: center; font-size: 14px; line-height:90px;">暂无任何文章</div>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ad-guessLike">
+                    <div class="public-titleBlock">
+                        <i class="icon-jq"></i>
+                        <span class="name">猜你喜欢</span>
+                    </div>
+                    <div class="public-articleList">
+                        <div class="al_listBlock">
+
+                            {{if cnxh}}
+                            <ul>
+                                {{each cnxh list index}}
+
+                                    {{if index < 9}}
+                                    <li>
+                                        <a href="{{ list.url }}" class="title"  target="_blank"  title="{{ list.title }}">{{ list.title }}</a>
+                                    </li>
+                                    {{/if}}
+
+                                {{/each}}
+                            </ul>
+                            {{else}}
+
+                            <div style="width:100%; min-height: 90px; color: #999; text-align: center; font-size: 14px; line-height:90px;">暂无任何资讯</div>
+
+                            {{/if}}
+
+
+                        </div>
+                    </div>
+                </div>

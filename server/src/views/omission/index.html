@@ -1,0 +1,129 @@
+<div class="eyu100-main main-lotteryYiLouPage" id="mainContainer"  max-period="{{@maxPeriod}}" data-lotteryCode="{{@lotteryCode}}"  data-flot={{@flot}}>
+    <div class="main-centerSection">
+        <div class="public-lotteryLatestInfo">
+            {{ include '../template/components/lotteryTimer.component.art' }}
+        </div>
+        <!--分布走势-->
+        <div class="lt-statisticsPage">
+        <!--功能集合-->
+        <div class="public-allFunBlock">
+
+            <!--tab切换栏-->
+            {{@commonTab( 1, lotteryCode, [chartDefultFlot, '', shddDefultFlot, hmtjDefultFlot] ) }}
+
+
+            <!--遗漏图表-->
+            <div class="afb-contentB" id="omissionTrend">
+             {{if omission}}
+                {{ each omission trendItem}}
+                <div class="liB">
+                    <h2 class="title">{{trendItem.name}}：</h2>
+                    <div class="nameBlock">
+                      {{if trendItem.child}}
+                        {{ each trendItem.child trendChild idx}}
+                            <a  href="/omission/{{lotteryCode}}/{{trendChild.code}}" class="name {{if trendChild.children }}{{if trendChild.children.length > 0 }}third{{/if}}{{/if}}
+                                 {{ if threeLevel}}
+                                    {{if threeLevel.code}}
+                                        {{threeLevel.code == trendChild.code ? 'active': ''}}
+                                    {{/if}}
+                                 {{else}}
+                                    {{ trendChild.code == flot ? 'active': ''}}
+                                 {{/if}}
+                            ">
+                                {{trendChild.name}}
+                            </a>
+                            {{ if idx !== trendItem.child.length -1 }}
+                               <i class="line">|</i>
+                            {{ /if }}
+                        {{ /each }}
+                     {{/if}}
+                    </div>
+                </div>
+                {{ /each }}
+             {{/if}}
+            </div>
+        </div>
+
+
+
+                {{if threeLevel}}
+                <div class="lt-thirdMenuB">
+                    <span class="menuText">{{threeLevel.parentName}}&gt;{{threeLevel.name}}：</span>
+                    <div class="menuNameB">
+                        {{if threeLevel.children}}
+                            {{each threeLevel.children  threeLevelChild}}
+
+                                   <a class="public-btnBlock public-float-left {{threeLevelChild.code == flot ? 'active': ''}} " href="/omission/{{lotteryCode}}/{{threeLevelChild.code}}">{{threeLevelChild.name}}</a>
+
+                            {{/each}}
+                        {{/if}}
+                    </div>
+                </div>
+               {{/if}}
+
+
+        <div class="lt-toolBlock">
+            <div class="toolInfoBlock">
+                {{if omissionData}}{{if omissionData.length > 0}}<span class="toolText public-float-left">更新到<i class="font-red" id="lastPeriod">{{@omissionData[0].lastPeriod}}</i>期</span>{{/if}}{{/if}}
+                <label class="public-checkboxBlock public-float-left public-m-l20" data-value="groupThree" id="autoRefresh"><i class="checkbox"></i><span class="checkbox-text">自动刷新</span></label>
+            </div>
+
+
+            {{@renderOmissionNumberBall( omission , flot,  lotteryClassify)}}
+
+
+            <div class="toolBtnBlock" id="getPeriodsNumber">
+                <span class="toolText public-float-left">期数：</span>
+                <span class="public-btnBlock public-float-left public-m-r5 button active" data-num="500">近500期</span>
+                <span class="public-btnBlock public-float-left public-m-r5 button" data-num="1000">近1000期</span>
+                <span class="public-btnBlock public-float-left public-m-r5 button" data-num="3000">近3000期</span>
+                <span class="public-btnBlock public-float-left button" data-num="-999">全部</span>
+            </div>
+        </div>
+
+
+        <div class="statistics-tableBlock" id="areaContainer">
+
+            {{include '../template/omission/omission.component.art'}}
+
+            
+        </div>
+
+
+
+        <!--参数说明-->
+        <div class="lt-explainBlock">
+            <div class="elb-titleB"><i class="icon"></i><span class="text">遗漏参数说明</span></div>
+            <div class="elb-contentB">
+                {{@helpConfig}}
+            </div>
+        </div>
+    </div>
+    <!--相关推荐-->
+
+
+</div>
+</div>
+<style type="text/css">
+    .main-lotteryYiLouPage .lt-toolBlock .toolNumberBlock .toolNumber.more .numberB .lis{
+        width: 100%;
+        display: block;
+        float: none;
+        clear: both;
+        overflow: hidden;
+        padding-bottom: 5px;
+    }
+</style>
+
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/omission/index.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize( '{{@lotteryCode}}', '{{@lotteryClassify}}', {{@flot}}, '{{@classify}}', {{@isAwarding}}, {{@nowPeriod}});
+    })
+</script>
+
+
+

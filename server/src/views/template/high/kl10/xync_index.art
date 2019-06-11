@@ -1,0 +1,7 @@
+{{each history item}}
+    <tr>
+        <td>{{item.issueNo}}期</td>
+        <td>{{item.awardDate | lotteryDate}}</td>
+        {{@ item.result | xyncHistoryIndex}}
+    </tr>
+{{/each}}

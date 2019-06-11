@@ -1,0 +1,63 @@
+<div class="public-allFunBlock">
+
+    <!--tab切换栏-->
+    {{@commonTab( 0, lotteryCode, [chartDefultFlot, omissionDefultFlot,'',''] ) }}
+
+
+    <div class="afb-contentB" id="chartTrend">
+        {{ each trend trendItem}}
+        <div {{if lotteryCode.indexOf('11x5') == -1}}class="liB"{{else}}class="liB specialLottery"{{/if}}>
+            <h2 class="title">{{trendItem.name}}：</h2>
+            <div class="nameBlock">
+                {{ each trendItem.child trendChild idx}}
+                <a target="_blank" href="/chart/{{lotteryCode}}/{{trendChild.code}}" class="name">{{trendChild.name}}</a>
+                {{ if idx !== trendItem.child.length -1 }}
+                <i class="line">|</i>
+                {{ /if }}
+                {{ /each }}
+            </div>
+        </div>
+        {{ /each }}
+    </div>
+
+
+    <!-- 遗漏图表 -->
+    <div class="afb-contentB" id="omissionTrend" style="display:none;">
+        {{ each omission trendItem}}
+        <div class="liB">
+            <h2 class="title">{{trendItem.name}}：</h2>
+            <div class="nameBlock">
+                {{ each trendItem.child trendChild idx}}
+                <a target="_blank" href="/omission/{{lotteryCode}}/{{trendChild.code}}" {{if trendChild.hasChild}}class="name third"{{else}}class="name"{{/if}}>
+                    {{trendChild.name}}
+                </a>
+                {{ if idx !== trendItem.child.length -1 }}
+                <i class="line">|</i>
+                {{ /if }}
+                {{ /each }}
+            </div>
+        </div>
+    {{ /each }}
+    </div>
+
+
+    <!--杀号定胆-->
+    <div class="afb-funBtnB afb-contentB" id="shddTrend"  style="display:none;">
+           {{if shddDataThreeLevel}}
+                {{each shddDataThreeLevel  list}}
+                       <a target="_blank" class="public-btnBlock {{list.code == stype ? 'active': ''}}" href="/shdd/{{ lotteryCode }}/{{list.code}}">{{@list.name}}</a>
+                {{/each}}
+           {{/if}}
+    </div>
+
+    <!--号码推荐-->
+    <div class="afb-funBtnB afb-contentB" id="hmtjTrend"  style="display:none;">
+          {{if hmtjDataThreeLevel}}
+              {{each hmtjDataThreeLevel  list}}
+                   <a target="_blank" class="public-btnBlock {{list.code == stype ? 'active': ''}}" href="/hmtj/{{ lotteryCode }}/{{list.code}}">{{@list.name}}</a>
+              {{/each}}
+           {{/if}}
+     </div>
+
+
+</div>

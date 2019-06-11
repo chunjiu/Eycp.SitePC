@@ -1,0 +1,150 @@
+
+<div class="mb-r">
+    <!--开奖公告-数字彩-->
+    <div class="public-szLotteryNotice">
+        <div class="public-titleBlock">
+            <i class="icon-kjgg"></i>
+            <span class="name">开奖公告</span>
+            <a href="/lottery" class="more" target="_blank" rel='nofollow'>更多>></a>
+        </div>
+        <div class="la-list" data-json="{{articleRight.award}}">
+
+            {{if articleRight.award}}
+            <div style="width:100%; min-height: 83px; color: #999; text-align: center; font-size: 14px; line-height:83px;" class='loading'>正在加载中....</div>
+            <ul style='display:none;'>
+                {{each articleRight.award item idx}}
+                <li class="{{if idx == 0}}first{{/if}}" onclick="javascript:window.open('/digit/{{@item.lotteryCode }}/detail', '_blank');">
+                    <span class="textB">
+                            <a href="/digit/{{item.lotteryCode}}/detail" class="name" target="_blank" rel='nofollow' >{{item.lotteryName}}</a>
+                            <i class="issue">{{item.issueNo}}期&nbsp;{{item.week}}&nbsp;{{@formatDateTime(item.awardDatetime,"MM-dd hh:mm")}}</i>
+                    </span>
+                    {{@digitHistoryIndex(item.awardResult,item.lotteryCode)}}
+                </li>
+                {{/each}}
+            </ul>
+            {{else}}
+                <div style="width:100%; min-height: 83px; color: #999; text-align: center; font-size: 14px; line-height:83px;" >暂无任何公告</div>
+            {{/if}}
+
+        </div>
+    </div>
+
+
+   <div class="public-articleList ap-newzx">
+					<div class="public-titleBlock">
+						<i class="icon-newzx"></i>
+						<span class="name">最新资讯</span>
+						<a href="/article/list-0-6-p1" class="more" rel='nofollow' >更多&gt;&gt;</a>
+					</div>
+					<div class="al_listBlock">
+
+					     {{if zxzx}}
+						<ul>
+						    {{each zxzx list index}}
+
+						       {{if index < 9}}
+							       <li><a href="/article/detail-{{ list.categoryId }}-{{ list.id }}.html" class="title"  rel='nofollow'   target="_blank">{{ list.title }}</a></li>
+                               {{/if}}
+
+							{{/each}}
+						</ul>
+						{{else}}
+
+						    <div style="width:100%; min-height: 90px; color: #999; text-align: center; font-size: 14px; line-height:90px;">暂无任何资讯</div>
+
+						{{/if}}
+
+				</div>
+	</div>
+
+
+   <div class="ap-trend">
+					<div class="public-titleBlock">
+						<i class="line"></i>
+						<a  class="name" >{{@detail ? (detail.lotteryName ? detail.lotteryName: ''): ''}}走势图</a>
+						<a href="#" class="more" rel="nofollow" >更多&gt;&gt;</a>
+					</div>
+					<div class="listBlock">
+						<div class="ulB">
+
+						     {{if trend}}
+						         {{each trend list}}
+						             {{if list.child}}
+						                {{each list.child  childList}}
+							               <h2 class="titleB"><a href="/chart/{{lotteryClassity}}/{{childList.code}}" class="title">{{childList.name}}</a></h2>
+							            {{/each}}
+							         {{/if}}
+                                 {{/each}}
+                              {{else}}
+                                    <div style="width:100%; min-height: 90px; color: #999; text-align: center; font-size: 14px; line-height:90px;">暂无任何走势图</div>
+                             {{/if}}
+
+						</div>
+					</div>
+	</div>
+
+<div class="ap-trend">
+					<div class="public-titleBlock">
+						<i class="line"></i>
+						<a  class="name" >全国彩</a>
+						<a href="#" class="more" rel="nofollow">更多&gt;&gt;</a>
+					</div>
+					<div class="listBlock">
+						<div class="ulB">
+
+					     {{if qgczs}}
+						<ul>
+						    {{each qgczs list index}}
+
+						       {{if index < 9}}
+							       <li><a href="/article/detail-{{ list.categoryId }}-{{ list.id }}.html" class="title"  rel='nofollow'   target="_blank">{{ list.title }}</a></li>
+                               {{/if}}
+
+							{{/each}}
+						</ul>
+						{{else}}
+
+						    <div style="width:100%; min-height: 90px; color: #999; text-align: center; font-size: 14px; line-height:90px;">暂无任何资讯</div>
+
+						{{/if}}
+
+
+						</div>
+					</div>
+	</div>
+
+	<div class="ap-trend">
+    					<div class="public-titleBlock">
+    						<i class="line"></i>
+    						<a  class="name" >高频彩</a>
+    						<a href="#" class="more" rel="nofollow">更多&gt;&gt;</a>
+    					</div>
+    					<div class="listBlock">
+    						<div class="ulB">
+
+    						        {{if gpczs}}
+                                 		 <ul>
+                                        	{{each gpczs list index}}
+
+                                 				{{if index < 9}}
+                                 						<li><a href="/article/detail-{{ list.categoryId }}-{{ list.id }}.html" class="title"  rel='nofollow'   target="_blank">{{ list.title }}</a></li>
+                                                {{/if}}
+
+                                 				{{/each}}
+                                 		 </ul>
+                                 		{{else}}
+
+                                 				<div style="width:100%; min-height: 90px; color: #999; text-align: center; font-size: 14px; line-height:90px;">暂无任何资讯</div>
+
+                                 		{{/if}}
+
+    						</div>
+    					</div>
+    	</div>
+
+
+
+
+
+</div>
+

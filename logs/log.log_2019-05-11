@@ -1,0 +1,147 @@
+[2019-05-11 00:00:00.002] [INFO] console - 现在时间： 2019-05-10T16:00:00.002Z
+[2019-05-11 00:00:13.380] [ERROR] console - Api-URL:http://172.31.15.184:8082/totalpoint/getpoints--->{"pagesize":500,"page":1}---------------error
+[2019-05-11 00:00:13.381] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-05-11 00:00:13.383] [ERROR] console - TypeError: Cannot read property 'items' of null
+    at DealWithCommonService._callee13$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:1636:30)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[2019-05-11 16:54:20.798] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-11 16:54:20.899] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:449:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-11 16:54:21.019] [ERROR] console - Api-URL:http://172.31.15.184:8081/data/seo.json--->undefined---------------error
+[2019-05-11 16:54:21.022] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:459:23)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-11 16:54:30.909] [ERROR] console - Api-URL:http://eycp.ad.1396c.comhome/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-11 16:54:30.910] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-05-11 16:54:40.913] [ERROR] console - Api-URL:http://172.31.15.184:8082/chaseplan/getrecentplan--->undefined---------------error
+[2019-05-11 16:54:40.916] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-05-11 16:54:53.323] [ERROR] console - Api-URL:http://172.31.15.184:8082//totalpoint/GetRecentPoints--->undefined---------------error
+[2019-05-11 16:54:53.324] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-05-11 16:54:58.599] [ERROR] console - TypeError: Cannot read property 'awardTimes' of null
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:228:48)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[2019-05-11 16:56:20.897] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-11 16:56:20.899] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:449:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-11 16:56:20.905] [ERROR] console - Api-URL:http://172.31.15.184:8081/data/seo.json--->undefined---------------error
+[2019-05-11 16:56:20.906] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:459:23)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-11 16:56:30.905] [ERROR] console - Api-URL:http://eycp.ad.1396c.comhome/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-11 16:56:30.906] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-05-11 16:56:40.909] [ERROR] console - Api-URL:http://172.31.15.184:8082/chaseplan/getrecentplan--->undefined---------------error
+[2019-05-11 16:56:40.910] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-05-11 16:56:51.605] [ERROR] console - Api-URL:http://172.31.15.184:8082//totalpoint/GetRecentPoints--->undefined---------------error
+[2019-05-11 16:56:51.606] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-05-11 16:56:54.936] [ERROR] console - TypeError: Cannot read property 'awardTimes' of null
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:228:48)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at process._tickCallback (internal/process/next_tick.js:68:7)

@@ -1,0 +1,15 @@
+ <div class="ld-publicNav" id="tab">
+            <ul>
+                <li>
+                                <a  class="sort {{@activeDetailLeft(isShowDigitDetailLeft)}}" data-tab="digit"><i class="qg"></i>全国彩</a>
+                                <i class="line"></i>
+                            </li>
+                            <li>
+                                <a  class="sort {{@activeDetailLeft(isShowHighDetailLeft)}}" data-tab="high"><i class="gp"></i>高频彩</a>
+                                <i class="line"></i>
+                            </li>
+                            <li>
+                                <a  class="sort {{@activeDetailLeft(isShowLocalDetailLeft)}}" data-tab="local"><i class="df"></i>地方彩</a>
+                            </li>
+            </ul>
+        </div>

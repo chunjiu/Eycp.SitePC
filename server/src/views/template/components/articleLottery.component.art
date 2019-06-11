@@ -1,0 +1,129 @@
+<div class="mb-r">
+    <!--开奖公告-数字彩-->
+    <div class="public-szLotteryNotice">
+        <div class="public-titleBlock">
+            <i class="icon-kjgg"></i>
+            <span class="name">开奖公告</span>
+            <a href="/lottery" class="more" target="_blank" rel="nofollow">更多>></a>
+        </div>
+        <div class="la-list">
+            <ul>
+                {{each articleRight.award item idx}}
+                <li class="{{if idx == 0}}first{{/if}}" onclick="javascript:window.open('/digit/{{@item.lotteryCode }}/detail', '_blank');">
+                    <span class="textB"><a href="/digit/{{item.lotteryCode}}/detail" class="name" target="_blank">{{item.lotteryName}}</a><i class="issue">{{item.issueNo}}期&nbsp;{{item.week}}&nbsp;{{@formatDateTime(item.awardDatetime,"MM-dd hh:mm")}}</i></span>
+                    {{@ item.awardResult| digitHistoryIndex}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <!--开奖直播-->
+    <div class="ap-videoList">
+        <div class="public-titleBlock">
+            <i class="icon-zb"></i>
+            <span class="name">正在直播</span>
+            <a href="/live" class="more" target="_blank" rel="nofollow">更多>></a>
+        </div>
+        <div class="listB">
+            <ul>
+                {{if articleRight.video}}
+                {{each articleRight.video item idx}}
+                <li>
+                    <div class="public-videoBlock">
+                        <div class="videoB">
+                            <a class="maskLayer" href="/live/{{item.lotteryCode}}-detail" target="_blank"><i class="videoBtn"></i></a>
+                            <img src="{{cdnUrl}}/pic/lotteryVideo/{{item.lotteryCode}}.jpg" onerror="this.src='{{cdnUrl}}/pic/lotteryVideo/default.png'" alt="" class="img">
+                            <span class="nameB"><b class="name">{{item.lotteryName}}</b><i class="issue">{{item.next.period}}期</i></span>
+                        </div>
+                        <div class="timeB">
+                            <span class="time">距离<b data-type="{{item.type}}" data-time="{{item.awardTimeInterval}}">{{item.times}}</b></span>
+                            <a href="/live/{{item.lotteryCode}}-detail" target="_blank" class="textBtn">开始直播</a>
+                            <i class="timeText">正在直播中...</i>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    require(['jquery', 'String', 'request'], function($, _String, _Request){
+        var allTimers = [];
+
+        function timerGo() {
+            $('[data-time]').each(function(idx) {
+                var $this = $(this),
+                    _type = $this.data('type'),
+                    _time = parseFloat($this.data('time'));
+                var times;
+                
+                // 区分数字彩和高频彩
+                if(_type == 'digit') {
+                    times = setInterval(function(){
+                        var _timeString = _time.toString().SecondsTohhmmss();
+                        var _tmp = _timeString.split(':');
+                        var _result = '';
+
+                        // 时间是否有小时
+                        if(parseInt(_tmp[0]) == 0) {
+                            _result = _tmp[1] + ':' + _tmp[2];
+                        } else {
+                            _result = _tmp[0] + ':' + _tmp[1] + ':' + _tmp[2];
+                        }
+
+                        $this.html(_result);
+                        _time--;
+                        if(_time <= 0) {
+                            clearAllTimer();
+                            var op = {
+                                url : '/home/articleLotteryRight?type=digit',
+                                dataType: 'text',
+                                success: function(html) {
+                                    $('.ap-videoList').html(html);
+                                    timerGo();
+                                }
+                            }
+
+                            _Request.get(op);
+
+                        }
+                    },1000);
+                } else {
+                    times = setInterval(function(){ 
+                        $this.html(_time.toString().SecondsTommss());
+                        _time--;
+                        if(_time <= 0) {
+                            clearAllTimer();
+                            var op = {
+                                url : '/home/articleLotteryRight?type=high',
+                                dataType: 'text',
+                                success: function(html) {
+                                    $('.ap-videoList').html(html);
+                                    timerGo();
+                                }
+                            }
+
+                            _Request.get(op);
+                        }
+                    },1000);
+                }
+
+                allTimers.push(times);
+            });
+        }
+
+        /**
+         * 清除所有的定时器
+         * */
+        function clearAllTimer(){
+            for(var i = 0; i < allTimers.length; i++) {
+                clearInterval(allTimers[i]);
+            }
+        }
+
+        timerGo();
+    });
+</script>

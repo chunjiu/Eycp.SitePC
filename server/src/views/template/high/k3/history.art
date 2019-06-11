@@ -1,0 +1,8 @@
+{{each resultList d}}
+    <tr>
+        <td>{{d.issueNo}}期</td>
+        <td>{{ lotteryDate(d.awardDate) }}</td>
+        {{@k3HistoryResult(d.resultList) }}
+        <td>{{d.sum}}</td>
+    </tr>
+{{/each}}

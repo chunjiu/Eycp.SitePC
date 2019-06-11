@@ -1,0 +1,9 @@
+syntax: glob
+node_modules/
+package-lock.json
+.vscode/
+logs/*
+*.orig
+client/htmlfile/*
+.idea/
+dist/*

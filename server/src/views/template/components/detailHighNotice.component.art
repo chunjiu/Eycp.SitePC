@@ -1,0 +1,11 @@
+<div class="mc_notice">
+        <div class="cn_ice">
+                            <span class="nt_t">{{@awardtimes.lotteryName}}开奖公告</span>
+                            <div class="public_selectPlugIn public-float-left public-m-l5" style="width: 95px;" id="selectPlugIn" data-value="{{@formatDate(awardtimes.time)}}">
+                                <span class="selectArrow"></span>
+                                <span class="selectedText">0000-00-00</span>
+                            </div>
+                            <span class="nt_da">2分钟后如未更新到最新开奖，请手动刷新</span>
+                           
+        </div>
+</div>

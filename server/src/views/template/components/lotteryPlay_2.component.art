@@ -1,0 +1,123 @@
+{{if type == '11x5'}}
+<div class="public-table">
+    <table>
+        <tr>
+            {{each staticBound.header item}}
+                <th>{{item}}</th>
+            {{/each}}
+        </tr>
+        {{each staticBound.content item}}
+            <tr>
+                <td>{{item.level}}</td>
+                <td>{{item.probability}}</td>
+                <td>{{item.bonus}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
+{{else if type == 'k3'}}
+<div class="public-table">
+    <table>
+        <tr>
+            {{each staticBound.header item}}
+                <th>{{item}}</th>
+            {{/each}}
+        </tr>
+        {{each staticBound.content item}}
+            <tr>
+                <td width="60">{{item.method}}</td>
+                {{if !item.jumpSpan}}
+                <td width="350" {{if item.isRowSpan}}rowspan="2"{{/if}}>{{item.number}}</td>
+                {{/if}}
+                <td width="50">{{item.choose}}</td>
+                <td width="60">{{item.bonus}}</td>
+                <td width="78">{{item.probability}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
+{{else if type == 'ssc'}}
+<div class="public-table">
+    <table>
+        <tr>
+            <th width="60" rowspan="2">奖级设置</th>
+            <th width="100" rowspan="2">中奖条件</th>
+            <th width="60" rowspan="2">中奖金额（元）</th>
+            <th width="378" colspan="3">投注方式</th>
+        </tr>
+        <tr>
+            <th width="126">单选</th>
+            <th width="126">组合复式</th>
+            <th width="126">复选复式</th>
+        </tr>
+        {{each staticBound.content item}}
+            <tr>
+                <td>{{item.level}}</td>
+                <td>{{item.condition}}</td>
+                <td>{{item.bonus}}</td>
+                <td>{{item.singleChoose}}</td>
+                <td>{{item.combinationChoose}}</td>
+                <td>{{item.duplexChoose}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
+{{else if type == 'kl10'}}
+{{if lotteryCode == 'gxkl10'}}
+{{else}}
+{{/if}}
+<div class="public-table">
+    {{if lotteryCode == 'gxkl10'}}
+    <table>
+        <tr>
+            {{each staticBound.header item}}
+                <th>{{item}}</th>
+            {{/each}}
+        </tr>
+        {{each staticBound.content item}}
+            <tr>
+                <td width="250">{{item.method}}</td>
+                <td width="150">{{item.probability}}</td>
+                <td>{{item.bonus}}</td>
+            </tr>
+        {{/each}}
+    </table>
+    {{else}}
+    <table>
+        <tr>
+            {{each staticBound.header item}}
+                <th>{{item}}</th>
+            {{/each}}
+        </tr>
+        {{each staticBound.content item}}
+            <tr>
+                <td width="60">{{item.method}}</td>
+                <td width="200">{{item.betting}}</td>
+                <td width="200">{{item.winning}}</td>
+                <td width="60">{{item.bonus}}</td>
+                <td width="78">{{item.probability}}</td>
+            </tr>
+        {{/each}}
+    </table>
+    {{/if}}
+</div>
+{{/if}}
+
+
+ {{ include './playIntroduction.component.art' }}
+
+
+<script type="text/javascript">
+    require(['jquery'], function($) {
+        var _height = $('.otherTable').height();
+        _height -= $('#ruleContent').parent().find('.title').height();
+        $('#ruleContent').css({height: (_height - 25) + 'px'});
+    });
+</script>
+<style>
+    .howToPlay .content {
+        position: relative;
+        max-height: 467px;
+        overflow: hidden;
+    }
+</style>

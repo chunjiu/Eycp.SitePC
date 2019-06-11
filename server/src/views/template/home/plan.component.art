@@ -1,0 +1,21 @@
+ {{if recentplan}}
+      {{if recentplan.length > 0}}
+                                {{each recentplan  list}}
+                                    <tr onclick="javascript:window.open('/plan/{{@list.lotteryCode}}/{{@list.pageType}}','_blank')" style="cursor: pointer;">
+                                        <td>{{@list.lotteryName}}</td>
+                                        <td>{{@list.period}}期</td>
+                                        <td>{{@list.type}}</td>
+                                        <td>
+                                            <div class="number">
+                                                {{@formateContent(list.content,list.lotteryCode,list.pageType)}}
+                                            </div>
+                                        </td>
+                                        <td class="font-red">{{ if list.winRate == '-1%' || list.winRate == '0%'}}--{{else}}{{@list.winRate}}{{/if}}</td>
+                                    </tr>
+                                {{/each}}
+          {{/if}}
+    {{else}}
+                                <tr>
+                                    <td colspan="5" align="center">暂无任何追号推荐</td>
+                                </tr>
+   {{/if}}

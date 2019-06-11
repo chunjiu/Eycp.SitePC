@@ -1,0 +1,27 @@
+<div class="public-titleBlock">
+    <i class="icon-zb"></i>
+    <span class="name">正在直播</span>
+    <a href="/live" class="more" rel="nofollow">更多>></a>
+</div>
+<div class="listB">
+    <ul>
+        {{if articleRight.video}}
+        {{each articleRight.video item idx}}
+        <li>
+            <div class="public-videoBlock">
+                <div class="videoB">
+                    <a class="maskLayer" href="/live/{{item.lotteryCode}}-detail" target="_blank"><i class="videoBtn"></i></a>
+                    <img src="{{cdnUrl}}/pic/lotteryVideo/{{item.lotteryCode}}.jpg" onerror="this.src='{{cdnUrl}}/pic/lotteryVideo/default.png'" alt="" class="img">
+                    <span class="nameB"><b class="name">{{item.lotteryName}}</b><i class="issue">{{item.next.period}}期</i></span>
+                </div>
+                <div class="timeB">
+                    <span class="time">距离<b data-type="{{item.type}}" data-time="{{item.awardTimeInterval}}">{{item.times}}</b></span>
+                    <a href="#" target="_blank" class="textBtn">开始直播</a>
+                    <i class="timeText">正在直播中...</i>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+        {{/if}}
+    </ul>
+</div>

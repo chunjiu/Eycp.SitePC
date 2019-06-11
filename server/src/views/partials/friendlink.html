@@ -1,0 +1,15 @@
+<!--友情链接-->
+{{if friendlink!=null && friendlink.result!=null}}
+	<div class="public-recommendLottery">
+			<p class="title">友情链接</p>
+			<div class="recommendLottery">
+
+				{{each friendlink.result item index}}
+					<a href="{{@item.url}}" target="_blank" class="name">{{@item.name}}</a>
+					{{if index !=friendlink.result.length-1}}
+						<i class="line">|</i>
+					{{/if}}					
+				{{/each}}
+		</div>
+		</div>
+{{/if}}

@@ -1,0 +1,64 @@
+<!--中间独立-->
+<div class="eyu100-main main-articlePage">
+    <div class="main-centerSection">
+        <!--面包屑-->
+        <div class="public-crumbsBlock">
+            <a href="/article" class="link">彩票资讯</a><i class="arrow">&gt;</i><span class="unlink">更多每日提点</span>
+        </div>
+        <div id="pointContainer" class="ap-mainB" data-groupId="{{groupId}}" data-lotteryCode="{{lotteryCode}}">
+            <div class="mb-l ap-articleList">
+                    <!--彩种系列选择-->
+                    <div class="public-lotteryMenuB">
+                        {{each highChilds item idx}}
+                            <a href="javascript:;" data-id="{{item.id}}" data-name="{{item.name}}" class="name{{if idx == groupId}} active{{/if}} point-category">{{item.name}}</a>
+                            {{if idx < 4}}
+                            <i class="line"></i>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                    <!--彩种彩种-->
+                    {{each tree lottery}}
+                    {{each lottery.children item idx}}
+                    <div class="al-btnB" data-name="{{item.name}}" {{if idx + 1 != groupId}}style="display: none;"{{/if}}>
+                        {{each item.children lotteryItem}}
+                            <a href="javascript:;" class="btn second-lottery{{if lotteryItem.code == lotteryCode}} active{{/if}}" data-code="{{lotteryItem.code}}">{{lotteryItem.name}}</a>
+                        {{/each}}
+                    </div>
+                    {{/each}}
+                    {{/each}}
+                    <!--列表-->
+                    <div class="public-articleList al-listB">
+                        <div class="al_listBlock">
+                            <ul>
+                                {{if list.items}}
+                                {{each list.items item}}
+                                <li>
+                                    <a style="padding: 0 10px;" href="/point/detail-{{item.id}}.html" class="title">{{item.title}}</a>
+                                    <span class="date">{{@formatDateTime(item.createTime,"yyyy.MM.dd hh:mm")}}</span>
+                                    <span class="text">鳄鱼彩票</span>
+                                </li>
+                                {{/each}}
+                                {{/if}}
+                            </ul>
+                        </div>
+
+                        {{if list.pageCount >1}}
+                           {{@ list.pageCount | page pageIndex}}
+                        {{/if}}
+
+                    </div>
+            </div>
+            {{ include '../template/components/articleLottery_2.component.art' }}
+        </div>
+        {{ include '../partials/recommend.html' }}
+    </div>
+</div>
+<script>
+    var pathArray = [
+        'core/views/containers/point/index.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize('{{@lotteryCode}}', true);
+    })
+</script>

@@ -1,0 +1,11 @@
+{{each resultList d}}
+    <tr>
+        <td>{{d.issueNo}}期</td>
+        <td>{{d.awardDate | lotteryDate}}</td>
+        {{@ d.resultList | sscHistoryResult}}
+        <td {{if d.tenPlace.sizeRed}}style="color:red"{{/if}}>{{d.tenPlace.size}}</td>
+        <td {{if d.tenPlace.unitRed}}style="color:red"{{/if}}>{{d.tenPlace.unit}}</td>
+        <td {{if d.onePlace.sizeRed}}style="color:red"{{/if}}>{{d.onePlace.size}}</td>
+        <td {{if d.onePlace.unitRed}}style="color:red"{{/if}}>{{d.onePlace.unit}}</td>
+    </tr>
+{{/each}}

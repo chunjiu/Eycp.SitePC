@@ -1,0 +1,17 @@
+[2019-05-10 00:00:00.370] [INFO] console - 现在时间： 2019-05-09T16:00:00.370Z
+[2019-05-10 00:00:13.760] [ERROR] console - Api-URL:http://172.31.15.184:8082/totalpoint/getpoints--->{"pagesize":500,"page":1}---------------error
+[2019-05-10 00:00:13.761] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-05-10 00:00:13.763] [ERROR] console - TypeError: Cannot read property 'items' of null
+    at DealWithCommonService._callee13$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:1636:30)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at process._tickCallback (internal/process/next_tick.js:68:7)

@@ -1,0 +1,1 @@
+define(["underscore","jquery","backbone","String","../services/event.service","../actions/public/lotteryTimer.action"],function(e,t,n,o,i,r){return n.Model.extend({defaults:{lotteryCode:"bjpk10",lotteryType:2,timer:null,data:{}},initialize:function(){this.on("change:lotteryCode",function(){console.log(this.get("lotteryCode"))})},countTimer:function(){}})});

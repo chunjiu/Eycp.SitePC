@@ -1,0 +1,56 @@
+<div class="eyu100-main main-videoListPage">
+    <div class="main-centerSection">
+
+        <div class="public-lotteryMenuB" id="tab">
+            {{@renderTab(digitObject, lotteryCode)}}
+        </div>
+
+        <div class="vl-listB" id="list"  data-lotterycode="{{@lotteryCode}}">
+            <ul>
+                {{if videoList.issueNo}}
+                {{each videoList.issueNo list}}
+                    <li>
+                        <div class="public-videoBlock">
+                            <div class="videoB">
+                                <a class="maskLayer" href="/live/{{@lotteryCode}}-detail-{{@list}}" target="_blank"><i class="videoBtn"></i></a>
+                                <img src="{{cdnUrl}}/pic/lotteryVideo/{{@lotteryCode}}.jpg" alt="" class="img" />
+                                <span class="nameB"><b class="name">{{@lotteryName}}</b><i class="issue">{{@list}}期</i></span>
+                            </div>
+                            <!--
+                            <div class="timeB">
+                                <span class="time">距离<b>00：07</b></span>
+                                <a href="#" target="_blank" class="textBtn" style="display: none">开始直播</a>
+                                <i class="timeText" style="display: block">正在直播中...</i>
+                            </div>
+                            -->
+                        </div>
+                    </li>
+                {{/each}}
+                {{else}}
+                    <li style="width: 100%; text-align: center; font-size: 14px; color: #999;">暂无任何视频</li>
+                {{/if}}
+
+            </ul>
+        </div>
+
+        {{if pageCount >1}}
+            {{@ pageCount | page pageNumber }}
+        {{/if}}
+
+        <!--相关推荐-->
+        {{ include '../partials/recommend.html' }}
+
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/live/list.container'
+    ];
+
+    require(pathArray, function(_callBack) {
+        _callBack.initialize();
+    })
+</script>

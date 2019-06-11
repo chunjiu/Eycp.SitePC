@@ -1,0 +1,1 @@
+define("core/views/containers/help/index.container",["jquery"],function(i){return{initialize:function(){this.initEvent()},initEvent:function(){i(document).on("click",".na_tit",function(){var n=i(this).parent();n.hasClass("active")?(n.removeClass("active"),n.find(".sel_d").hide()):(n.addClass("active"),n.find(".sel_d").show())})}}});

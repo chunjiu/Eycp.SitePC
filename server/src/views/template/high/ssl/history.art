@@ -1,0 +1,7 @@
+{{each resultList d}}
+    <tr>
+        <td>{{d.issueNo}}期</td>
+        <td>{{d.awardDate | lotteryDate}}</td>
+        {{@ d.resultList | _11x5historyResult}}
+    </tr>
+{{/each}}

@@ -1,0 +1,17 @@
+ {{ each resultList  historyList}}
+                                          <tr>
+                                              <td>{{@historyList.issueNo}}期</td>
+                                              <td>{{@formatDate(historyList.awardDate)}}</td>
+                                              {{ each historyList.result.split(',')  his}}
+                                                <td>
+                                                <div class="public-number-pk10">
+                                                  {{ if his == '10' }}
+                                                  <span class="num{{@his}}"></span>
+                                                  {{else}}
+                                                  <span class="num0{{@his}}"></span>
+                                                  {{/if}}
+                                                </div>
+                                                </td>
+                                              {{/each }}
+                                          </tr>
+                          {{/each }}

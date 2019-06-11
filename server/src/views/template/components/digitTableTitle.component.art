@@ -1,0 +1,52 @@
+<!--开灯灯按钮-->
+<span class="lh-putOn openLight">开灯</span>
+<div class="lh-titleBlock">
+    <div class="title-left">
+        <span class="lh-funBtn public-float-left public-m-r5 closeLight"><i class="light"></i>关灯</span>
+        <span class="lh-funBtn public-float-left public-m-r5 newTab"><i class="checkbox"></i>新选项卡</span>
+        <div class="exportBlock public-float-left public-m-r5">
+            <span class="lh-funBtn"><i class="export"></i>导出数据</span>
+            <div class="lh-superposedLayer">
+                <i class="arrow"></i>
+                <div class="exportInfo">
+                    <div class="public_selectPlugIn public-float-left" style="width: 50px;">
+                        <span class="selectArrow"></span>
+                        <span class="selectedText" data-value="{{nowYear}}" id="exportYear">{{nowYear}}年</span>
+                        <div class="selectOption">
+                            {{if yearList}}
+                                {{each yearList year}}
+                                <span class="lis" data-value="{{year}}">{{year}}年</span>
+                                {{/each}}
+                            {{/if}}
+                        </div>
+                    </div>
+                    <span class="text">导出</span>
+                    <span class="btn" data-export="txt">TXT</span>
+                    <span class="btn" data-export="xlsx">EXCEL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="titleText">{{awardTime.lotteryName}}历史开奖</span>
+    <div class="title-right">
+        <span class="lh-funBtn public-float-right public-m-l5" id="txtDigitQuery">查询</span>
+        <div class="public_selectPlugIn public-float-right public-m-l5" style="width: 70px;">
+            <span class="selectArrow"></span>
+            <span class="selectedText" data-value="{{nowYear}}" id="currYear">{{nowYear}}年</span>
+            <div class="selectOption">
+                {{if yearList}}
+                    {{each yearList year}}
+                    <span class="lis" data-value="{{year}}">{{year}}年</span>
+                    {{/each}}
+                {{/if}}
+            </div>
+        </div>
+        {{if weekDayList}}
+            {{each weekDayList day idx}}
+            <span class="lh-funBtn public-float-right public-m-l5 week-day {{if idx == 0}}active{{/if}}" data-value="{{day.value}}">{{day.name}}</span>
+            {{/each}}
+        {{else}}
+        <span class="lh-funBtn public-float-right public-m-l5 week-day active" style="display:none;" data-value="-1"></span>
+        {{/if}}
+    </div>
+</div>

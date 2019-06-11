@@ -1,0 +1,135 @@
+<!--彩种二级目录-->
+<div class="lh-btnB" data-category="2" {{if groupType == 2}}style="display:block;"{{else}}style="display:none;"{{/if}}>
+{{each highChilds item idx}}
+{{if item.name !== '其它'}}
+<span class="btn high-category{{if idx == 0}} active{{/if}}" data-id="{{item.id}}">
+    {{if item.name == "十一选五"}}11选5
+    {{else if item.name == "快三"}}快3
+    {{else}}{{item.name}}
+    {{/if}}
+</span>
+{{/if}}
+{{/each}}
+</div>
+
+<!--福利彩票-->
+{{if list.digital && list.digital.boon}}
+<div class="cp-trend">
+    <div class="bigTitle" data-type="1" {{if groupType != 0 && groupType != 1}}style="display:none;"{{/if}}>福利彩票</div>
+    <ul class="trend-ul" data-type="1" {{if groupType != 0 && groupType != 1}}style="display:none;"{{/if}}>
+        {{each list.digital.boon item idx}}
+        <li class="trend-li">
+            <div class="trend-left">
+                <a target="_blank" href="/digit/{{item.lotteryCode}}">
+                    <img alt="{{item.lotteryName}}" src="{{cdnUrl}}/pic/logo/logo_{{item.lotteryCode}}.png">
+                </a>
+            </div>
+            <div class="trend-right">
+                <p>{{item.lotteryName}}走势图表</p>
+                <ul class="trend-r-content">
+                    {{each boonTrend[idx].child boonItem index }}
+                    <li>
+                        <span>{{boonItem.name}} :</span>
+                        <div class="trend-choice">
+                            {{each boonItem.child boonChild i}}
+
+                               {{if boonChild.queryDay}}
+                                   <a href="/chart/{{item.lotteryCode}}/{{boonChild.code}}-{{boonChild.queryDay}}" target="_blank">{{boonChild.name}}</a>
+                                {{else}}
+                                    <a href="/chart/{{item.lotteryCode}}/{{boonChild.code}}" target="_blank">{{boonChild.name}}</a>
+                               {{/if}}
+
+                            {{if i !== boonItem.child.length-1}}
+                            <i class="gray-line">|</i>
+                            {{/if}}
+                            {{/each}}
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+{{/if}}
+<!--体育彩票-->
+{{if list.digital && list.digital.sport}}
+<div class="cp-trend">
+    <div class="bigTitle" data-type="1" {{if groupType != 0 && groupType != 1}}style="display:none;"{{/if}}>体育彩票</div>
+    <ul class="trend-ul" data-type="1" {{if groupType != 0 && groupType != 1}}style="display:none;"{{/if}}>
+        {{each list.digital.sport item idx}}
+        <li class="trend-li">
+            <div class="trend-left">
+                <a target="_blank" href="/digit/{{item.lotteryCode}}">
+                    <img alt="{{item.lotteryName}}" src="{{cdnUrl}}/pic/logo/logo_{{item.lotteryCode}}.png">
+                </a>
+            </div>
+            <div class="trend-right">
+                <p>{{item.lotteryName}}走势图表</p>
+                <ul class="trend-r-content">
+                    {{each sportTrend[idx].child sportItem index }}
+                    <li>
+                        <span>{{sportItem.name}} :</span>
+                        <div class="trend-choice">
+                            {{each sportItem.child sportChild i}}
+                            <a href="/chart/{{item.lotteryCode}}/{{sportChild.code}}" target="_blank">{{sportChild.name}}</a>
+                            {{if i !== sportItem.child.length-1}}
+                            <i class="gray-line">|</i>
+                            {{/if}}
+                            {{/each}}
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+{{/if}}
+<!-- 高频彩票 if item.groupChildId !== 5 -->
+{{if list.high}}
+<div class="cp-trend">
+    <div class="bigTitle lh-titleB" data-type="2" {{if groupType != 0 && groupType != 2}}style="display:none;"{{/if}}>高频彩票</div>
+    <ul class="trend-ul public-table" data-type="2" {{if groupType != 0 && groupType != 2}}style="display:none;"{{/if}}>
+        {{each list.high item idx}}
+        <li class="trend-li" data-highCategory="{{item.groupChildId}}">
+            <div class="trend-left">
+                <a target="_blank" href="/high/{{item.lotteryCode}}">
+                    <img alt="{{item.lotteryName}}" src="{{cdnUrl}}/pic/logo/logo_{{item.lotteryCode}}.png">
+                </a>
+            </div>
+            <div class="trend-right">
+                <p>{{item.lotteryName}}走势图表</p>
+                <ul class="trend-r-content">
+                   {{each highTrendData(item.groupChildId,item.lotteryCode).child highTrendItem idx}}
+                    <li>
+                        <span>{{highTrendItem.name}} :</span>
+                        <div class="trend-choice">
+                           {{each highTrendItem.child highTrendChild i}}
+                            <a href="/chart/{{item.lotteryCode}}/{{highTrendChild.code}}" target="_blank">{{highTrendChild.name}}</a>
+                            {{if i !== highTrendItem.child.length-1}}
+                            <i class="gray-line">|</i>
+                            {{/if}}
+                            {{/each}}
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+{{/if}}
+
+<!-- 电视台走势 -->
+<div class="cp-trend" style='display:none;'>
+    <a href='http://www.baibaotv.com/home/zstxz' target='_blank' style='margin-top:30px;display:block;'>
+        <img  src='{{cdnUrl}}/pic/other/tv_01.jpg' style='width:100%;display:block;'/>
+        <img  src='{{cdnUrl}}/pic/other/tv_02.jpg' style='width:100%;display:block;'/>
+        <img  src='{{cdnUrl}}/pic/other/tv_03.jpg' style='width:100%;display:block;'/>
+        <img  src='{{cdnUrl}}/pic/other/tv_04.jpg' style='width:100%;display:block;'/>
+    </a>
+</div>

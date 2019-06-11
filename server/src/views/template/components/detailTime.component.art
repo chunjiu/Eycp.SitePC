@@ -1,0 +1,60 @@
+<div class="mc_number">
+   <div class="mc_left" id="countDownTime">
+    <p class="mc_title"><b>{{@awardtimes.lotteryName}}</b><span>当前第<i>{{@awardtimes.next.period}}期</i></span></p>
+
+    <div class="mc_time" style="height: 36px;">
+
+       <div class="timeTemp" id="timeTemp">
+                  <span id="day" style="padding:0;">
+                          <span class="time">--</span>
+                          <span>--</span>
+                  </span>
+                  <span id="hour" style="padding:0;">
+                          <span class="time" >--</span>
+                          <span>--</span>
+                  </span>
+       </div>
+       <div id="timeBlock" style="display:none;">
+           <span id="day" style="padding:0;">
+                   <span class="time">--</span>
+                   <span>天</span>
+           </span>
+           <span id="hour" style="padding:0;">
+                   <span class="time" >--</span>
+                   <span>时</span>
+           </span>
+            <span  id="minute" style="padding:0;">
+                   <span class="time">--</span>
+                   <span>分</span>
+            </span>
+            <span  id="second" style="padding:0;">
+                   <span class="time">--</span>
+                   <span id="secondFont">秒</span>
+            </span>
+
+        </div>
+
+    </div>
+
+    {{ if classify == 'high' }}
+    <span class="mc_da"> 每日销售<i class="font_red">{{@awardtimes.totalPeriod}}期</i> <i class="font_gray"> | </i> 今日剩余<i class="font_red" id="surplus">{{@(awardtimes.overPeriod)}}期</i> </span>
+    {{/if}}
+
+   </div>
+   <div class="mc_right">
+      {{if lotteryCode && classify !='local'}}
+
+
+         {{if lotteryCode != 'hn481' }}
+             <a href="/live/{{@lotteryCode}}-detail"><i></i></a>
+             <img src="{{@cdnUrl}}/pic/lotteryVideo/{{@lotteryCode}}.jpg" alt="" />
+         {{else}}
+             <img src="{{@cdnUrl}}/images/default/noVideo.png" alt="" />
+         {{/if}}
+
+
+      {{else}}
+          <img src="{{@cdnUrl}}/images/default/noVideo.png" alt="" />
+      {{/if}}
+   </div>
+  </div>

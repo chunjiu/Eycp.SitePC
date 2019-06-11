@@ -1,0 +1,14 @@
+{{each history item}}
+    <tr>
+        <td>{{item.issue_no}}期</td>
+        <td>{{item.award_date | digitLotteryDate}}</td>
+        <td>{{@ item.result | digitHistoryIndex}}</td>
+        <td>{{item.all_amount | formatMoney}}</td>
+        <td>{{item.pool_amount | formatMoney}}</td>
+        <td>{{if item.award_count}}{{item.award_count.awardinfo[0].bet}}{{else}}0{{/if}}</td>
+        <td>{{if item.award_count}}{{item.award_count.awardinfo[0].amount}}{{else}}0{{/if}}</td>
+        <td>
+            <a href="/digit/{{lotteryCode}}/detail" class="touch">详情</a>
+        </td>
+    </tr>
+{{/each}}

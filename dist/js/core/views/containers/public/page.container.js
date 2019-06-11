@@ -1,0 +1,1 @@
+define(["underscore","jquery","backbone","../../../services/event.service"],function(e,i,n,t){return{initialize:function(){this.initEvent()},initEvent:function(){i(document).on("click",".public-pageBlock a",function(){t.emit("activePage_pageContainer",i(this).data("pageindex"))})}}});

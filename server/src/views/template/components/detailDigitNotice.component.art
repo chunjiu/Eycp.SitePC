@@ -1,0 +1,23 @@
+<div class="mc_notice">
+								<div class="cn_ice">
+									<span class="nt_t">开奖公告</span>
+									<div class="public_selectPlugIn public-float-left public-m-l5" style="width: 95px;" id="selectPlugIn" data-value="{{@periodsArray}}">
+                                           <span class="selectArrow"></span>
+                                            <span class="selectedText" data-active="{{if issueno}}{{@issueno}}{{/if}}">{{if issueno}}{{@issueno}}{{else}}-------{{/if}}</span>
+                                    </div>
+									<span class="nt_da" id="lotteryDateTime">
+									    {{ include '../digit/common/lotteryDateTime.art' }}
+									</span>
+								</div>
+
+                                 <div id="ballList">
+                                    {{ include '../digit/common/ballList.art' }}
+                                 </div>
+								<div class="cn_volume" id="amount">
+								       {{ include '../digit/common/amount.art' }}
+								</div>
+								<span class="cn_skip">
+									
+									<a href="/{{@classify}}/{{@lotteryCode}}/history"><i class="record"></i><span>开奖历史记录</span></a>
+								</span>
+</div>

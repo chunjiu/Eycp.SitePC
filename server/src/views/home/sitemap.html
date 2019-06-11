@@ -1,0 +1,183 @@
+<!--中间独立-->
+<div class="eyu100-main main-playingRulePage">
+	<div class="main-centerSection">
+		<!--一级栏目-->
+		<div class="ld-publicNav">
+			<ul>
+				<li>
+					<a href="javascript:void(0);" class="sort active"><i class="map"></i>网站地图</a>
+				</li>
+			</ul>
+		</div>
+		<div class="ld_pubListBlock">
+			<div class="rp_lotB">
+				<p class="lot_tit"><span>首页</span></p>
+				<div class="mapPage-lotList lotList1">
+					<ul>
+						<li><a href="/lottery">开奖大厅</a></li>
+						<li><a href="/live">开奖直播</a></li>
+						<li><a href="/article">彩票资讯</a></li>
+						<li><a href="/plan">追号推荐</a></li>
+						<li><a href="/rule">玩法规则</a></li>
+						<li><a href="/chart">走势图表</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="rp_lotB">
+				<p class="lot_tit"><span>开奖大厅</span></p>
+				<p class="mapPage-subTit16">全国彩</p>
+				<div class="mapPage-lotList lotList40">
+					<ul>
+						 {{each data.digit item}}	 
+								<li><a href="/digit/{{@item.code}}"  target="_blank">{{@item.name}}</a></li>		
+                         {{ /each }}
+					</ul>
+				</div>
+				<p class="mapPage-subTit16">高频彩</p>
+				<div class="mapPage-lotList lotList124">
+					<ul>
+						{{each data.high item}}
+						 	<li><a href="/high/{{@item.code}}"  target="_blank">{{@item.name}}</a></li>
+                         {{ /each }}
+						
+					</ul>
+				</div>
+				<p class="mapPage-subTit16">地方彩</p>
+				<div class="mapPage-lotList lotList124">
+				<ul>
+					{{each data.local item}}
+										<li><a href="/local/{{@item.code}}/detail-{{@item.provinceId}}"  target="_blank">{{@item.name}}</a></li>
+					{{ /each }}
+                    </ul>
+				</div>
+			</div>
+			<div class="rp_lotB">
+				<p class="lot_tit"><span>开奖直播</span></p>
+				<p class="mapPage-subTit16">全国彩直播</p>
+				<div class="mapPage-lotList lotList40">
+					<ul>
+					 {{each data.digit item}}	 
+								<li><a href="/live/{{@item.code}}-detail"  target="_blank">{{@item.name}}</a></li>		
+                     {{ /each }} 
+					</ul>
+				</div>
+				<p class="mapPage-subTit16">高频彩直播</p>
+				<div class="mapPage-lotList lotList124">
+					<ul>
+						{{each data.high item}}
+							{{if item.code!="hn481"}}
+						 		<li><a href="/live/{{@item.code}}-detail"  target="_blank">{{@item.name}}</a></li>
+						 	{{/if}}
+                         {{ /each }}
+					</ul>
+				</div>
+			</div>
+			<div class="rp_lotB">
+				<p class="lot_tit"><span>彩票资讯</span></p>
+				<p class="mapPage-subTit16">彩票技巧</p>
+				<div class="mapPage-lotList lotList36">
+					<ul>
+						<li><a href="/article/list-ssq-37-p1">双色球</a></li>
+						<li><a href="/article/list-fc3d-37-p1">福彩3D</a></li>
+						<li><a href="/article/list-qlc-37-p1">七乐彩</a></li>
+						<li><a href="/article/list-dlt-37-p1">大乐透</a></li>
+						<li><a href="/article/list-pl3-37-p1">排列三</a></li>
+						<li><a href="/article/list-pl5-37-p1">排列五</a></li>
+						<li><a href="/article/list-qxc-37-p1">七星彩</a></li>
+						<li><a href="/article/list-11x5-32-p1">11选5</a></li>
+						<li><a href="/article/list-k3-34-p1">快3</a></li>
+						<li><a href="/article/list-kl10-33-p1">快乐十分</a></li>
+						<li><a href="/article/list-ssc-35-p1">时时彩</a></li>
+						<li><a href="/article/list-other-36-p1">其它</a></li>
+					</ul>
+				</div>
+				<p class="mapPage-subTit16">每日提点</p>
+				<div class="mapPage-lotList lotList124">
+					{{each data.high item}}
+							{{if item.code.indexOf('kl10')>=0}}
+						 		<li><a href="/point/3-{{@item.code}}"  target="_blank">{{@item.name}}</a></li>
+						 	{{else if item.code.indexOf('k3')>=0}}
+						 		<li><a href="/point/2-{{@item.code}}"  target="_blank">{{@item.name}}</a></li>
+						 	{{else if item.code.indexOf('ssc')>=0}}
+						 		<li><a href="/point/4-{{@item.code}}"  target="_blank">{{@item.name}}</a></li>
+						 	{{else if item.code.indexOf('11x5')>=0}}
+						 		<li><a href="/point/1-{{@item.code}}"  target="_blank">{{@item.name}}</a></li>
+						 	{{/if}}
+                         {{ /each }}
+				</div>
+			
+			</div>
+			<div class="rp_lotB">
+				<p class="lot_tit"><span>玩法规则</span></p>
+				<p class="mapPage-subTit">全国福彩玩法</p>
+				<div class="mapPage-lotList">
+					<ul>
+						<li><a href="/rule/ssq-boon">双色球玩法</a></li>
+						<li><a href="/rule/fc3d-boon">福彩3D玩法</a></li>
+						<li><a href="/rule/qlc-boon">七乐彩玩法</a></li>
+					</ul>
+				</div>
+				<p class="mapPage-subTit">全国体彩玩法</p>
+				<div class="mapPage-lotList">
+					<ul>
+						<li><a href="/rule/dlt-boon">大乐透玩法</a></li>
+						<li><a href="/rule/pl3-boon">排列三玩法</a></li>
+						<li><a href="/rule/pl5-boon">排列五玩法</a></li>
+						<li><a href="/rule/qxc-boon">七星彩玩法</a></li>
+					</ul>
+				</div>
+				<p class="mapPage-subTit">高频彩玩法</p>
+				{{each lotteryAllTree item}}
+					{{if item.groupId==2}}
+						<div class="lot_linList">
+							<ul>
+								{{each item.children child}}
+									<li>
+										<p class="in_t">{{@child.name}}</p>
+										{{if child.children!=null}}
+												<span class="in_f">
+													{{each child.children list}}
+														<a href="/rule/{{@list.code}}-high">{{@list.name}}</a>
+													{{/each}}	
+												</span>
+										{{/if}}
+										
+									</li>
+								{{/each}}	
+							</ul>
+						</div>		
+					{{/if}}
+				{{/each}}
+
+				<p class="mapPage-subTit">地方彩玩法</p>
+				{{each lotteryAllTree item}}
+					{{if item.groupId==3}}
+						<div class="lot_linList">
+							<ul>
+								{{each item.children child}}
+									<li>
+										<p class="in_t">{{@child.name}}</p>
+										{{if child.children!=null}}
+												<span class="in_f">
+													{{each child.children list}}
+														<a href="/rule/{{@list.code}}-other-{{@child.provinceId}}">{{@list.name}}</a>
+													{{/each}}	
+												</span>
+										{{/if}}
+										
+									</li>
+								{{/each}}	
+							</ul>
+						</div>		
+					{{/if}}
+				{{/each}}
+
+				
+			</div>
+		</div>
+
+	 	<!--相关推荐-->
+        {{ include '../partials/recommend.html' }}
+		
+	</div>
+</div>

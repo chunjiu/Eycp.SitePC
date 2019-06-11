@@ -1,0 +1,18 @@
+<script type="text/html" id="planBlockList">
+    {{each list item}}
+    <tr>
+        <td>第{{item.num}}期</td>
+        <td>{{item.bet}}</td>
+        <td>
+            <div class="form_btnBlock">
+                <i data-arrow="left"><b class="bt_l"></b></i>
+                <span class="bt_ip"><input data-item="{{item}}" maxlength="4" type="text" value="{{item.multiple}}"></span>
+                <i data-arrow="right"><b class="bt_r"></b></i>
+            </div>
+        </td>
+        <td>{{item.totalMoney}}</td>
+        <td>{{item.money}}</td>
+        <td>{{item.profit}}%</td>
+    </tr>
+    {{/each}}
+</script>

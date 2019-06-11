@@ -1,0 +1,53 @@
+<div class="eyu100-main main-lotteryTrendPage" id="mainContainer"  max-period="{{@maxPeriod}}" data-lotteryCode="{{@lotteryCode}}"  data-flot={{@flot}}>
+    <div class="main-centerSection">
+        <div class="public-lotteryLatestInfo" >
+            {{ include '../template/components/lotteryTimer.component.art' }}
+        </div>
+
+        <div class="lt-trendPage" style="margin-bottom: 20px;">
+
+        <!--功能集合-->
+        <div class="public-allFunBlock">
+
+            <!--tab切换栏-->
+            {{@commonTab( 3, lotteryCode, [chartDefultFlot, omissionDefultFlot, shddDefultFlot ,''] ) }}
+
+
+            <!--杀号定胆-->
+            <div class="afb-funBtnB">
+                {{if hmtjDataThreeLevel}}
+                    {{each hmtjDataThreeLevel  list}}
+                            <a class="public-btnBlock  {{list.code == stype ? 'active': ''}}" href="/hmtj/{{ lotteryCode }}/{{list.code}}">{{@list.name}}</a>
+                    {{/each}}
+                {{/if}}
+            </div>
+
+        </div>
+
+        <!--杀号定胆-->
+        <div class="main-expertsRecommendPage">
+
+            {{ include '../template/hmtj/hmtjFc3dAndPl3.component.art' }}
+
+        </div>
+
+
+    </div>
+
+        <!--相关推荐-->
+        {{ include '../partials/recommend.html' }}
+
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/hmtj/index.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize('{{lotteryCode}}',{{stype}},  {{isAwarding}}, {{awardTime.current.period}});
+    })
+</script>

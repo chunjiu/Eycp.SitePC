@@ -1,0 +1,34 @@
+[2019-05-20 00:00:00.119] [INFO] console - 现在时间： 2019-05-19T16:00:00.119Z
+[2019-05-20 09:44:34.104] [ERROR] console - Api-URL:http://eycptms.api.1396c.comfeedback/GetGuId--->undefined---------------error
+[2019-05-20 09:44:34.107] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+[2019-05-20 09:44:41.140] [ERROR] console - Api-URL:http://eycptms.api.1396c.comfeedback/GetGuId--->undefined---------------error
+[2019-05-20 09:44:41.141] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+[2019-05-20 09:44:41.148] [ERROR] console - Debug:internal, implementation, error
+    Error: Failed to encode cookie (uuid) value: Converting circular structure to JSON
+    at internals.encode (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\statehood\lib\index.js:455:34)
+    at process.nextTick (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\statehood\node_modules\hoek\lib\index.js:862:22)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[2019-05-20 09:44:51.154] [ERROR] console - Api-URL:http://eycptms.api.1396c.comfeedback/GetGuId--->undefined---------------error
+[2019-05-20 09:44:51.155] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+[2019-05-20 09:44:51.160] [ERROR] console - Debug:internal, implementation, error
+    Error: Failed to encode cookie (uuid) value: Converting circular structure to JSON
+    at internals.encode (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\statehood\lib\index.js:455:34)
+    at process.nextTick (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\statehood\node_modules\hoek\lib\index.js:862:22)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)

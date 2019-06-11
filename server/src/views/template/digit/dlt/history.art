@@ -1,0 +1,25 @@
+{{each history d}}
+    <tr>
+        <td>{{d.issue_no}}期</td>
+        <td>{{d.award_date | digitLotteryDate}}</td>
+        {{@ d.redResultList | dltRedHistoryResult}}
+        {{@ d.blueResultList | dltBlueHistoryResult}}
+        {{if d.award_count}}
+            {{if d.award_count.awardinfo && d.award_count.awardinfo.length>0}}
+                <td>{{d.award_count.awardinfo[0].bet}}</td>
+                <td>{{d.award_count.awardinfo[0].amount | money}}</td>
+            {{else}}
+                <td>0</td>
+                <td>-</td>
+            {{/if}}
+            
+            <td>{{d.all_amount | money}}</td>
+            <td>{{d.pool_amount | money}}</td>
+        {{else}}
+            <td>0</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        {{/if}}
+    </tr>
+{{/each}}

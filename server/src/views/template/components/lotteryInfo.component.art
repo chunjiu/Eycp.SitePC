@@ -1,0 +1,61 @@
+<div class="public-articleList lh-lotterySkill2">
+    <div class="public-titleBlock">
+        <i class="icon-zx"></i>
+        <span class="name">技巧</span>
+        {{if type == '11x5'}}
+        <a href="/article/list-11x5-32-p1" class="more" rel="nofollow" target='_blank'>更多>></a>
+        {{else if type == 'k3'}}
+        <a href="/article/list-k3-34-p1" class="more" rel="nofollow" target='_blank'>更多>></a>
+        {{else if type == 'ssc'}}
+        <a href="/article/list-ssc-35-p1" class="more" rel="nofollow" target='_blank'>更多>></a>
+        {{else if type == 'kl10'}}
+        <a href="/article/list-kl10-33-p1" class="more" rel="nofollow" target='_blank'>更多>></a>
+        {{/if}}
+    </div>
+    <div class="al_listBlock">
+        <ul>
+            {{each tecInfo tec}}
+            {{if type == '11x5'}}
+            <li><a href="/article/detail-32-{{tec.id}}.html" class="title" target='_blank'>{{tec.title}}</a></li>
+            {{else if type == 'k3'}}
+            <li><a href="/article/detail-34-{{tec.id}}.html" class="title" target='_blank'>{{tec.title}}</a></li>
+            {{else if type == 'ssc'}}
+            <li><a href="/article/detail-35-{{tec.id}}.html" class="title" target='_blank'>{{tec.title}}</a></li>
+            {{else if type == 'kl10'}}
+            <li><a href="/article/detail-33-{{tec.id}}.html" class="title" target='_blank'>{{tec.title}}</a></li>
+            {{/if}}
+            {{/each}}
+            
+        </ul>
+    </div>
+</div>
+<div class="public-articleList lh-everydayRemind">
+    <div class="public-titleBlock">
+        <i class="icon-td"></i>
+        <span class="name">每日提点</span>
+        <a href="/point/{{groupId}}-{{lotteryCode}}" class="more" rel="nofollow" target='_blank'>更多>></a>
+    </div>
+    <div class="al_listBlock">
+        <ul>
+            {{each pointInfo.items point}}
+            <li>
+                <a href="/point/detail-{{point.id}}.html" style="width: 220px" class="title" target='_blank'>{{point.title}}</a></span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<div class="public-recommendZhuiHao">
+    <div class="public-titleBlock">
+        <i class="icon-zh"></i>
+        <span class="name">追号推荐</span>
+        {{if type == 'kl10'}}
+        <a href="/plan/{{lotteryCode}}/2" class="more" rel="nofollow" target='_blank'>更多>></a>
+        {{else}}
+        <a href="/plan/{{lotteryCode}}/1" class="more" rel="nofollow" target='_blank'>更多>></a>
+        {{/if}}
+    </div>
+    <div id="planTable" class="rzh-table">
+        {{ include '../high/common/planTable.art' }}
+    </div>
+</div>

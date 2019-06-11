@@ -1,0 +1,17 @@
+{{each history item}}
+    <tr>
+        <td>{{item.issue_no}}期</td>
+        <td>{{item.award_date | digitLotteryDate}}</td>
+        <td>{{@ item.result | digitHistoryIndex}}</td>
+        {{if lotteryCode=="fc3d"}}
+        <td>{{item.test_result}}</td>
+        {{/if}}
+        <td>{{item.all_amount | formatMoney}}</td>
+        <td>{{item.pool_amount | formatMoney}}</td>
+        <td>{{if item.award_count && item.award_count.awardinfo && item.award_count.awardinfo.length>0}}{{item.award_count.awardinfo[0].bet}}{{else}}0{{/if}}</td>
+        <td>{{if item.award_count && item.award_count.awardinfo && item.award_count.awardinfo.length>0}}{{item.award_count.awardinfo[0].amount}}{{else}}0{{/if}}</td>
+        <td>
+            <a href="/digit/{{lotteryCode}}/detail-{{item.issue_no}}" class="touch">详情</a>
+        </td>
+    </tr>
+{{/each}}

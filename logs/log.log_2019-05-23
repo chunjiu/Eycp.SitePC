@@ -1,0 +1,11 @@
+[2019-05-23 00:00:00.003] [INFO] console - 现在时间： 2019-05-22T16:00:00.003Z
+[2019-05-23 16:03:14.821] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-23 16:03:14.822] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-23 16:03:24.479] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-23 16:03:24.489] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)

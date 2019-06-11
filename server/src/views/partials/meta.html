@@ -1,0 +1,55 @@
+{{if seo}}
+<title>{{seo.title}}</title>{{/if}}
+<meta charset="utf-8"> {{if seo}}
+<meta name="keywords" content="{{seo.keyword}}" />{{/if}} {{if seo}}
+<meta name="description" content="{{seo.descripion}}" />{{/if}}
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="applicable-device" content="pc">
+<link rel="canonical" href="{{mobileSiteUrl}}{{urlParams}}" id="mobileSiteUrl">
+
+<meta name="baidu-site-verification" content="yg0wduj6kg" />
+<meta name="sogou_site_verification" content="0IGZpZ4nOp" />
+<meta name="360-site-verification" content="7244ad8b812768b74ed296c3df5df666" />
+<meta name="shenma-site-verification" content="8e5b476d9cb4cb0d12e3bb6920f85745_1540884397">
+
+
+<!-- <link rel="stylesheet" href="{{cdnUrl}}/css/bootstrap.min.css"> -->
+<link rel="shortcut icon" href="{{cdnUrl}}/favicon.ico" />
+<link rel="stylesheet" href="{{cdnUrl}}/css/default/loading.css?v={{vision}}" />
+<link rel="stylesheet" href="{{cdnUrl}}/css/style.css?v={{vision}}" />
+<link rel="stylesheet" href="{{cdnUrl}}/css/non-response.css">
+<!--[if lte IE 8]>
+        <script type="text/javascript" src="{{cdnUrl}}/js/libs/es5-shim.min.js?v={{vision}}"></script>
+        <script type="text/javascript" src="{{cdnUrl}}/js/libs/es5-sham.min.js?v={{vision}}"></script>
+        <script type="text/javascript" src="{{cdnUrl}}/js/libs/json3.min.js?v={{vision}}"></script>
+    <![endif]-->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1172981_jfclrdpzir.css">
+<script type="text/javascript" src="{{cdnUrl}}/js/libs/require.min.js?v={{vision}}"></script>
+<script type="text/javascript" src="{{cdnUrl}}/js/config/config.js?v={{vision}}"></script>
+<script type="text/javascript">
+    require.config({
+        baseUrl: "{{cdnUrl}}/js",
+        urlArgs: "v={{vision}}"
+    });
+
+    var _path = 'core/views/publicComponent/public/';
+
+    require([
+        _path + 'addUrlParamUtmMz.component',
+        _path + 'headerDropDownBox.component'
+    ], function(
+        _AddUrlParamUtmMzComponent,
+        _HeaderDropDownBoxComponent
+    ) {
+        /** 给url地址栏添加 utm=mz */
+        var addUrlParamUtmMzComponent = new _AddUrlParamUtmMzComponent('utm=mz');
+
+        var headerDropDownBoxComponent = new _HeaderDropDownBoxComponent();
+    });
+</script>

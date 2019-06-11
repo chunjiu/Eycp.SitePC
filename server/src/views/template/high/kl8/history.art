@@ -1,0 +1,7 @@
+{{each resultList d}}
+    <tr>
+        <td>{{d.issueNo}}期</td>
+        <td>X{{d.frisbee}}</td>
+        {{@ d.resultList | kl8HistoryResult}}
+    </tr>
+{{/each}}

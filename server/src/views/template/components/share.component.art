@@ -1,0 +1,57 @@
+<div class="ad-share">
+    <div class="sh_r">
+        <span>分享到：</span>
+        <a id="qzone" href="#" target="_blank" rel="nofollow" title="分享到QQ空间"><img src="/images/article/article_qqimg.png" alt=""></a>
+        <a id="qqShare" href="#" target="_blank" rel="nofollow" style="display: none;" title="分享到腾讯微博"><img src="/images/article/article_yximg.png" alt=""></a>
+        <a id="weibo" href="#" target="_blank" rel="nofollow" title="分享到新浪微博"><img src="/images/article/article_wbimg.png" alt=""></a>
+        <a id="wechat" rel="nofollow"><img src="/images/article/article_wximg.png" alt=""></a>
+    </div>
+    <div class="weChat_down" style="display: none;">
+        <div class="ch_center">
+            <span class="ch_im" id="qrcode"></span>
+            <span class="ch_fon">
+            <i>打开微信“扫一扫”</i>
+            <i>打开网页后点击屏幕</i>
+            <i>右上角“分享”按钮</i>
+        </span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    require(['jquery', 'qrcode'], function($, QRCode){
+        var url = encodeURIComponent(window.location.href);
+        var title = encodeURIComponent(document.title);
+        var _appkey = 801000271;
+        var obj = {
+            'qzone' : 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + url + '&title=' + title,
+            'qqShare' : 'http://share.v.t.qq.com/index.php?c=share&a=index&appkey=' + _appkey + '&url=' + url + '&title=' + title,
+            'weibo' : 'http://service.weibo.com/share/share.php?url=' + url + '&title=' + title
+        }
+
+        $('#qzone').attr('href', obj.qzone);
+        $('#qqShare').attr('href', obj.qqShare);
+        $('#weibo').attr('href', obj.weibo);
+        $('#qrcode').qrcode({
+            render: "table", //table方式 
+            size: 100,
+            text: window.location.href,
+            background: "#ffffff",
+            foreground: "#000000",
+            ecLevel : 'H'
+        });
+
+        $('#wechat').on('click', function(){
+            if($('.weChat_down').css('display') == 'none') {
+                $('.weChat_down').show();
+            } else {
+                $('.weChat_down').hide();
+            }
+        });
+
+        $('#qrcode > div').css({
+            'left': '-8px',
+            'top' : '-10px'
+        });
+    });
+</script>

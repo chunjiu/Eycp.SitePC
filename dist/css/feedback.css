@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/*****公用库*****/
+/*@function pxChangeRem($parameter) {
+
+  $number:$parameter / 64;
+  $string:'';
+  @if($number > 0 && $number<1){
+    $string: str-slice(($number+"") , 1, 4);
+  }@else{
+    $string: $number;
+  }
+  @return unquote($string)+'rem';
+
+}*/
+.main-centerSection, .eyu200-header, .main-feedbackPage .single-content {
+  height: 1%;
+  display: block; }
+
+.main-centerSection:after, .eyu200-header:after, .main-feedbackPage .single-content:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public-float-left {
+  float: left; }
+
+.public-float-right {
+  float: right; }
+
+.public-position-relative {
+  position: relative; }
+
+/*****imagesPath*****/
+/*%xxx{ background: url(../images/feedback/xxx.png) no-repeat left/right top/bottom; }*/
+.eyu200-header .ey-logo {
+  background: url(../images/feedback/ey-logo.png) no-repeat left center; }
+
+.eyu200-header .back-icon {
+  background: url(../images/feedback/back-icon.png) no-repeat; }
+
+.eyu200-footer .tencent-logo {
+  background: url(../images/feedback/tencent-contact.png) no-repeat; }
+
+.main-feedbackPage .single-content .upload-icon {
+  background: url(../images/feedback/upload-icon.png) no-repeat; }
+
+.main-feedbackPage .single-content .choice-item.active {
+  background: url(../images/feedback/active-icon.png) no-repeat right bottom; }
+
+.main-feedbackPage .single-content .close-btn {
+  background: url(../images/feedback/web_delete.png) no-repeat; }
+
+/*引入重置样式*/
+/*重置浏览器默认样式*/
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, form, hr, input, textarea, select, button {
+  margin: 0; }
+
+ul, ol, option, input, textarea, select, button {
+  padding: 0; }
+
+article, aside, footer, header, hgroup, main, nav, section, figure, li {
+  display: block; }
+
+input, textarea, select, button, iframe {
+  border: 1px solid gray; }
+
+input, textarea, select, button {
+  outline: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+del {
+  text-decoration: line-through; }
+
+/*基本的初始化样式*/
+html {
+  font-size: 100%;
+  /*用来防止IE和Opera浏览器下的Bug*/
+  overflow: auto;
+  /*隐藏滚动，垂直滚动根据内容自适应（去除IE默认垂直滚动条）*/
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  height: 100%;
+  /*在IE下body的百分高度需要在html设置此值*/ }
+
+body {
+  -webkit-font-smoothing: antialiased; }
+
+input, textarea, select, button {
+  outline: none;
+  font: 12px "Microsoft Yahei"; }
+
+fieldset, img {
+  /*IE下img标签被a标签嵌套时，img标签就会有边框*/
+  border: 0; }
+
+a img, img {
+  /*解决图片在IE7以及IE6下的缩放影响图片质量的问题*/
+  -ms-interpolation-mode: bicubic; }
+
+q:before, q:after {
+  content: ''; }
+
+i {
+  /*i标签让内容斜体，根据具体使用情况判断是否需要初始化为不倾斜*/
+  font-style: normal; }
+
+a:focus, area:focus {
+  /* 去掉链接时的虚框 for Firefox */
+  -moz-outline-style: none; }
+
+a {
+  cursor: pointer;
+  text-decoration: none; }
+
+a:active, li:active {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -ms-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -o-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  tap-highlight-color: rgba(0, 0, 0, 0) !important; }
+
+/*公共变量*/
+/*初始化适合此项目的样式*/
+body {
+  position: relative;
+  min-width: 1000px;
+  min-height: 100%;
+  overflow: hidden;
+  font-family: "Microsoft YaHei", Arial;
+  font-size: 12px;
+  color: #333333;
+  background-color: #f2f2f2; }
+
+.main-centerSection {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto; }
+
+/*全局居中*/
+/*header*/
+.eyu200-header {
+  height: 60px;
+  border-bottom: 1px solid #e33d3d;
+  background: #fff; }
+  .eyu200-header .ey-logo {
+    float: left;
+    display: inline-block;
+    width: 474px;
+    height: 60px; }
+  .eyu200-header .back {
+    float: right;
+    line-height: 60px;
+    font-size: 14px;
+    color: #666; }
+    .eyu200-header .back:hover {
+      color: #e33d3d; }
+  .eyu200-header .back-icon {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 7px; }
+
+/*footer*/
+.eyu200-footer {
+  height: 90px;
+  background: #666666; }
+  .eyu200-footer .feedback-concat {
+    float: left;
+    margin-top: 13px;
+    margin-right: 26px; }
+  .eyu200-footer .tencent-logo {
+    display: inline-block;
+    width: 206px;
+    height: 64px; }
+  .eyu200-footer .copyRight {
+    line-height: 90px;
+    font-size: 12px;
+    color: #fff; }
+
+/*main*/
+.eyu200-main {
+  /*background: #fff;*/ }
+
+/*反馈中心*/
+.main-feedbackPage {
+  margin: 11px 0 20px;
+  padding: 31px 108px;
+  background-color: #fff; }
+  .main-feedbackPage .single-content {
+    margin-bottom: 10px; }
+    .main-feedbackPage .single-content .content-left {
+      float: left;
+      margin-right: 3px;
+      line-height: 42px;
+      font-size: 16px; }
+    .main-feedbackPage .single-content .content-right {
+      float: left;
+      font-size: 0; }
+    .main-feedbackPage .single-content .choice-item {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 7px 30px;
+      line-height: 26px;
+      border: 1px solid #d6d6d6;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      font-size: 16px;
+      color: #333;
+      background-color: #fafafa; }
+      .main-feedbackPage .single-content .choice-item:hover, .main-feedbackPage .single-content .choice-item.active {
+        border-color: #e33d3d;
+        color: #e33d3d; }
+    .main-feedbackPage .single-content .feedback-answer {
+      width: 678px;
+      height: 212px;
+      padding: 5px 9px;
+      border: 1px solid #d6d6d6;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      resize: none;
+      font-size: 14px;
+      color: #333; }
+    .main-feedbackPage .single-content .upload-wrapper {
+      position: relative;
+      float: left;
+      width: 130px;
+      height: 70px;
+      margin-right: 20px;
+      border: 1px solid #d6d6d6;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      text-align: center;
+      background: #f2f2f2; }
+      .main-feedbackPage .single-content .upload-wrapper img {
+        width: 100%;
+        height: 100%; }
+    .main-feedbackPage .single-content .close-btn {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 20px;
+      height: 20px; }
+    .main-feedbackPage .single-content .upload-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -15px;
+      margin-left: -15px;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      cursor: pointer; }
+    .main-feedbackPage .single-content .upload-btn {
+      width: 100%;
+      height: 100%;
+      outline: none;
+      border: none;
+      filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+      filter: alpha(opacity=0);
+      opacity: 0;
+      cursor: pointer;
+      font-size: 0; }
+    .main-feedbackPage .single-content .concat-ways {
+      width: 371px;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 9px;
+      border: 1px solid #d6d6d6;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      font-size: 14px;
+      color: #999; }
+  .main-feedbackPage .feedback-btns {
+    padding-left: 83px;
+    margin-top: 20px;
+    font-size: 0; }
+  .main-feedbackPage .submit-btn, .main-feedbackPage .cancle-btn {
+    display: inline-block;
+    width: 168px;
+    height: 50px;
+    margin-right: 20px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px; }
+  .main-feedbackPage .submit-btn {
+    border: 1px solid #e33d3d;
+    background-color: #e33d3d;
+    color: #fff; }
+    .main-feedbackPage .submit-btn:hover {
+      background-color: #e65d5e; }
+  .main-feedbackPage .cancle-btn {
+    border: 1px solid #d6d6d6;
+    background-color: #fafafa;
+    color: #666; }
+    .main-feedbackPage .cancle-btn:hover {
+      background-color: #eee; }
+
+.tips {
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  margin-left: -140px;
+  width: 280px;
+  height: 90px;
+  line-height: 90px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  background: #666666; }
+
+/*# sourceMappingURL=feedback.css.map */

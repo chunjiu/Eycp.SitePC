@@ -1,0 +1,50 @@
+<!--中间独立-->
+<div class="eyu100-main main-lotteryHomePage">
+    <div class="main-centerSection">
+        <div class="public-lotteryLatestInfo">
+            {{ include '../../template/components/lotteryTimer.component.art' }}
+        </div>
+        <div class="lt-trendPage">
+            {{ include '../../template/components/lotteryTrend.component.art' }}
+        </div>
+        <div class="lh-articleListBlock">
+            {{ include '../../template/components/lotteryPlayforOther_2.component.art' }}
+        </div>
+        
+        <div class="lh-historyTableBlock">
+            <p class="ht-title"><a class="name"  href="/digit/{{lotteryCode}}/history">{{awardTime.lotteryName}}开奖记录</a><a href="/digit/{{lotteryCode}}/history" class="more" rel="nofollow">更多>></a></p>
+            <!--历史记录-->
+            <div class="public-table">
+                <table>
+                    {{@ lotteryCode | digitHeader}}
+                    <tbody class="history-body">
+                        {{ include '../../template/digit/common/index.art' }}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="publicToPlay_Block">
+                <p class="ht-title">
+                    <span class="name">{{awardTime.lotteryName}}玩法介绍</span>
+                    <a href="/rule/{{lotteryCode}}-high" class="more" rel="nofollow">更多&gt;&gt;</a>
+                </p>
+                <div class="ToPlay_con">
+                    {{@ rule.introduceContent}}
+                </div>
+            </div>
+
+        </div>
+        
+        <!--相关推荐-->
+        {{ include '../../partials/recommend.html' }}
+    </div>
+</div>
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/digit/common/index.container'
+    ];
+
+    require(pathArray, function(cb) {
+        cb.initialize('{{lotteryCode}}', {{isAwarding}}, {{awardTime.current.period}});
+    })
+</script>

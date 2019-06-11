@@ -1,0 +1,18 @@
+<!--开灯灯按钮-->
+<span class="lh-putOn openLight">开灯</span>
+<div class="lh-titleBlock">
+    <div class="title-left">
+        <span class="lh-funBtn public-float-left public-m-r5 closeLight"><i class="light"></i>关灯</span>
+        <span class="lh-funBtn public-float-left public-m-r5 newTab"><i class="checkbox"></i>新选项卡</span>
+    </div>
+    <span class="titleText">{{awardTime.lotteryName}}历史开奖</span>
+    <div class="title-right">
+        <div class="public_dateControl public-float-right public-m-l5">
+            <input id="txtDate" class="ipu-text" value="{{date}}" readonly/>
+            <span class="btn-l date-left"><i class="arrow-l"></i></span>
+            <span class="btn-r date-right"><i class="arrow-r"></i></span>
+        </div>
+        <span class="dateText public-float-right">选择日期</span>
+    </div>
+</div>
+<input type="hidden" id="txtHistoryLength" value="{{resultList.length}}" />

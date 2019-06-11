@@ -1,0 +1,74 @@
+[2019-05-15 00:00:00.003] [INFO] console - 现在时间： 2019-05-14T16:00:00.003Z
+[2019-05-15 09:56:19.352] [ERROR] console - Api-URL:http://172.31.15.184:8086/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-15 09:56:19.354] [ERROR] console - Error: Request failed with status code 500
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1056:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[2019-05-15 09:57:32.547] [ERROR] console - Api-URL:http://172.31.15.184:8086/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-15 09:57:32.549] [ERROR] console - Error: Request failed with status code 500
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1056:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[2019-05-15 09:58:21.982] [ERROR] console - Api-URL:http://eycptms.api.1396c.comfeedback/GetGuId--->undefined---------------error
+[2019-05-15 09:58:21.984] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+[2019-05-15 09:58:21.992] [ERROR] console - Debug:internal, implementation, error
+    Error: Failed to encode cookie (uuid) value: Converting circular structure to JSON
+    at internals.encode (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\statehood\lib\index.js:455:34)
+    at process.nextTick (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\statehood\node_modules\hoek\lib\index.js:862:22)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[2019-05-15 10:00:13.735] [ERROR] console - Api-URL:http://172.31.15.184:8086/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-15 10:00:13.736] [ERROR] console - Error: Request failed with status code 500
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1056:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[2019-05-15 10:04:55.721] [ERROR] console - Api-URL:http://172.31.15.184:8086/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-15 10:04:55.724] [ERROR] console - Error: Request failed with status code 500
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1056:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+[2019-05-15 10:05:07.929] [ERROR] console - getTrend: 参数_lotteryClassity不能为空或者类型需要是字符串类型！
+[2019-05-15 10:05:18.188] [ERROR] console - getTrend: 参数_lotteryClassity不能为空或者类型需要是字符串类型！
+[2019-05-15 10:10:52.947] [ERROR] console - dealWithStatistics：参数有问题！
+[2019-05-15 10:10:58.972] [ERROR] console - dealWithStatistics：参数有问题！
+[2019-05-15 10:11:04.296] [ERROR] console - dealWithStatistics：参数有问题！
+[2019-05-15 10:11:08.600] [ERROR] console - dealWithStatistics：参数有问题！
+[2019-05-15 10:11:09.890] [ERROR] console - dealWithStatistics：参数有问题！
+[2019-05-15 10:11:13.511] [ERROR] console - dealWithStatistics：参数有问题！
+[2019-05-15 10:11:14.541] [ERROR] console - dealWithStatistics：参数有问题！
+[2019-05-15 10:11:21.231] [ERROR] console - dealWithStatistics：参数有问题！
+[2019-05-15 10:55:16.841] [ERROR] console - Api-URL:http://172.31.15.184:8086/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-15 10:55:16.981] [ERROR] console - Error: Request failed with status code 500
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1056:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)

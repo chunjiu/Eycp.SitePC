@@ -1,0 +1,118 @@
+<div class="killNumberOnBileBlock">
+                <div class="public-table">
+                    <table>
+                        <tbody><tr>
+                            <th colspan="2">
+                                <div class="knob-thSelectBlock" style="position: relative; padding-left:85px;">
+                                    <div class="public_selectPlugIn" style="width: 50px;height: 36px;position: absolute;top: -8px;left: 0;border: 0;border-right: 1px solid #e9e9e9;border-radius: 0;padding: 0 24px 0 12px;">
+                                        <span class="selectArrow"></span>
+                                        <span class="selectedText">近{{quantity}}期</span>
+                                        <div class="selectOption">
+                                            <span class="lis" data-num="10">近10期</span>
+                                            <span class="lis" data-num="20">近20期</span>
+                                            <span class="lis" data-num="50">近50期</span>
+                                        </div>
+                                    </div>
+                                    <span style="width:60px; text-align: center; display:inline-block ; white-space: nowrap;">开奖号码</span>
+                                </div>
+                            </th>
+
+                            {{if hmtjData}}
+                                {{if hmtjData.length > 0 }}
+                                    {{each hmtjData[0].details list}}
+                                        <th>{{@list.expertName}}</th>
+                                    {{/each}}
+                                {{/if}}
+                            {{/if}}
+                            <th>统计</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">准确率</td>
+                            {{if hmtjData}}
+                                {{if hmtjData.accuracyOfCalculation}}
+                                   {{each hmtjData.accuracyOfCalculation list}}
+                                    <td>{{@list}}</td>
+                                   {{/each}}
+                                {{/if}}
+                             {{/if}}
+                            <td></td>
+                        </tr>
+
+                        {{if hmtjData}}
+                            {{if hmtjData.length > 0 }}
+                                {{each hmtjData list  index}}
+                                    <tr data-state ='{{list.state}}'  data-awardtime="{{list.awardDate}}" data-result='{{list.result}}'>
+                                        <td>{{@list.issueNo}}</td>
+
+                                        {{if index == 0 && list.state==0}}
+
+                                            <td>{{@formatDateTime(list.awardDate, 'hh:mm')}}开奖</td>
+                                        {{else if list.state==0}}
+                                            <td>--</td>
+                                        {{else}}
+                                            <td>{{@shddFormatResult(list.result)}}</td>
+                                        {{/if}}
+
+                                       <!-- 没有开奖的时候就显示黄色条 , 否则是白色( 这里只循环第一条 ) -->
+                                        {{if index == 0 && list.state==0 }}
+                                               {{each list.details  details}}
+                                                      <td class="{{ list.state == 0 ? 'bg-orange': ''}}">
+                                                            <span class='{{ list.state == 0? '' : 'font-gray'}}'>
+                                                                   {{each details.numbers  listNumber  sindex}}
+                                                                         {{if details.numbers.length-1 == sindex}}
+                                                                              <i class="{{listNumber.isSame==true? 'font-red': ''}}">{{@listNumber}}</i>
+                                                                          {{else}}
+                                                                              <i class="{{listNumber.isSame==true? 'font-red': ''}}">{{@listNumber}}</i><i>,</i>
+                                                                          {{/if}}
+                                                                   {{/each}}
+                                                             </span>
+                                                       </td>
+                                               {{/each}}
+                                               <td class="{{ list.state == 0 ? 'bg-orange': ''}}"></td>
+                                       {{/if}}
+
+                                        {{if list.awardNumber}}
+                                            {{each list.awardNumber  awardNumber}}
+                                            <td data-awardNumber= '{{list.awardBallLength}}'>
+                                                <span class="font-gray">
+                                                    {{each awardNumber  listNumber  sindex}}
+                                                              {{if awardNumber.length-1 == sindex}}
+                                                                   <i class="{{listNumber.isSame==true? 'font-red': ''}}">{{@listNumber.num}}</i>
+                                                             {{else}}
+                                                                   <i class="{{listNumber.isSame==true? 'font-red': ''}}">{{@listNumber.num}}</i><i>,</i>
+                                                              {{/if}}
+
+                                                    {{/each}}
+                                                </span>
+                                            </td>
+                                            {{/each}}
+                                            <td><span class="{{list.tips=='全中'? 'font-red': ''}}" style='width: 50px;display:inline-block;'>{{list.tips}}</span></td>
+                                        {{/if}}
+
+                                    </tr>
+                                {{/each}}
+                            {{/if}}
+                        {{/if}}
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <style type ='text/css'>
+
+             .bg-orange span{
+                 font-size:0px;
+              }
+             .bg-orange i{
+                  font-size:14px;
+             }
+            .font-gray{
+               font-size: 0px;
+            }
+            .font-gray i{
+               font-size:14px;
+            }
+            </style>

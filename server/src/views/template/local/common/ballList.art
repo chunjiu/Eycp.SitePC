@@ -1,0 +1,6 @@
+<div class="cn_ballNum">
+									<span class="bn_t">开奖号码：</span>
+									<span class="bn_ba" id='ballList'>
+										{{@stringChangeBall(history.result, 2)}}
+									</span>
+</div>

@@ -1,0 +1,36 @@
+<div class="eyu100-main main-lotteryTrendPage main-lotteryHallPage">
+    <div class="main-centerSection">
+        <div class="public-lotteryMenuB">
+            {{each category item idx}}
+            {{if item.id !== 3}}
+            <a href="javascript:;" data-id="{{item.id}}" class="name{{if groupType == idx}} active{{/if}} category">
+                {{if item.name == '数字彩'}}全国彩{{else}}{{item.name}}{{/if}}
+            </a>
+            {{if idx < 2}}
+            <i class="line"></i>
+            {{/if}}
+            {{/if}}
+            {{/each}}
+            <i class="line"></i>
+            <a href="javascript:;" data-id="3" class="name category">电视走势图</a>
+            <div class="funB">
+                <span class="ipuText"><input id="txtLottery" maxlength="10" type="text" placeholder="输入彩种"><i class="search"></i></span>
+                <span class="btn disabled" id="btnQuery">查询</span>
+            </div>
+        </div>
+        <div class="lt-aggregationPage" id="defaultData">
+            {{ include '../template/components/chartTrend.component.art' }}
+        </div>
+        <div class="lt-aggregationPage" id="searchData" style="display: none;"></div>
+        {{ include '../partials/recommend.html' }}
+    </div>
+</div>
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/chart/lotterySearch'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize();
+    })
+</script>

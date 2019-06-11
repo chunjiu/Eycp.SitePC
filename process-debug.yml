@@ -1,0 +1,22 @@
+﻿apps:
+     script: ./index.js
+     name: 'eycp-web-debug'
+     watch: false
+     instances: 4
+     exec_mode: cluster
+     max_memory_restart: '250M'
+     env: 
+       SITE: 'eycp-web'
+       NODE_ENV: development
+       HTTP_PORT: 8009
+       CDN: ''  #CDN地址
+       AD_WEBSITE: 76   #广告站点ID
+       VERSION: debug     
+       LOGGER_UDP_IP:  '192.168.10.12'
+       LOGGER_UDP_PORT: 20001
+       LOGGER_IS_SEND: true
+       INDEX: '' #打包目录 
+       SEO_EXPRIE_TIME: 30000 #SEO 过期时间毫秒为单位
+     log_date_format: 'YYYY-MM-DD HH:mm Z'
+     autorestart: true
+  

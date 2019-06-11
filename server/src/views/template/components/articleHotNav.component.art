@@ -1,0 +1,16 @@
+        <div class="ap-hotNav">
+            <span class="titleIcon"></span>
+            <span class="title">热点导航</span>
+            <div class="listB">
+                    {{if rddh}}
+                       <div class="ulB">
+                           {{each rddh list}}
+                            <h2 class="nameB"><a href="{{ list.url }}" class="name"   target="_blank">{{list.title}}</a></h2>
+                           {{/each}}
+                        </div>
+                    {{else}}
+                       <div style="width:100%; min-height: 90px; color: #999; text-align: center; font-size: 14px; line-height:90px;">暂无任何热点</div>
+                    {{/if}}
+
+            </div>
+        </div>

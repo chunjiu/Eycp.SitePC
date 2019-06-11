@@ -1,0 +1,50 @@
+<table>
+    <tr>
+        <th>彩种</th>
+        <th>期号</th>
+        <th>玩法</th>
+        <th width="35%">追号推荐</th>
+        <th>结果</th>
+    </tr>
+    {{if planInfo}}
+    {{each planInfo plan}}
+    <tr class="plan-state" data-code="{{lotteryCode}}" data-type="{{if type == '11x5' || type == 'kl10'}}3{{else}}1{{/if}}">
+        <td>{{lotteryName || awardTime.lotteryName}}</td>
+        <td>{{plan.period}}期</td>
+        {{if type == 'k3'}}
+        <td>和值</td>
+        {{else if type == '11x5' || type == 'kl10'}}
+        {{if lotteryCode == 'gxkl10'}}
+        <td>直二</td>
+        {{else}}
+        <td>任三</td>
+        {{/if}}
+        {{else}}
+        <td>一星</td>
+        {{/if}}
+        <td>
+            <div class="number">
+                {{@_11x5PlanWinGroup(plan,lotteryCode,type == 'k3'?1:0)}}
+            </div>
+        </td>
+        <td>{{@plan.state | planState plan.total}}</td>
+    </tr>
+    {{/each}}
+    {{/if}}
+</table>
+
+<script type="text/javascript">
+
+    require(['jquery'], function($) {
+        $(document).on('click', '.plan-state', function() {
+            window.open('/plan/' + $(this).data('code') + '/' + $(this).data('type'));
+        });
+    });
+
+</script>
+
+<style>
+    .plan-state:hover {
+        cursor: pointer;
+    }
+</style>

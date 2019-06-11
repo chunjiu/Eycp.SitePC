@@ -1,0 +1,73 @@
+<div class="eyu100-main main-articlePage">
+    <div class="main-centerSection">
+        <!--面包屑-->
+        <div class="public-crumbsBlock">
+            <a href="/" class="link" target="_blank">鳄鱼彩票</a><i class="arrow">&gt;</i><a href="/notice-p1" class="link" target="_blank">公告列表</a><i class="arrow">&gt;</i><span class="unlink" target="_blank">更多公告</span>
+        </div>
+        <div class="ap-mainB">
+            <div class="mb-l ap-articleDetails">
+                <div class="ad-titleB">
+                    <h1 class="ti_b">{{noticeDetail !=undefined ? noticeDetail.title: ""}}</h1>
+                    <div class="ti_z">
+						<span class="z_au">
+                            {{if noticeDetail}}
+							    <i><a href="/" target="_blank" style="color: #999;">鳄鱼彩票</a></i>
+							    <!--<i class="a_da">2天之前</i>-->
+							    {{@ noticeDetail.createDate | pointTime2}}
+                            {{/if}}
+						</span>
+                    </div>
+                </div>
+                <div class="ad_intro">
+                    {{if noticeDetail}}
+                        {{@noticeDetail.content}}
+                    {{else}}
+                        <div style="width: 100%; text-align: center;">暂无这篇文章内容！</div>
+                    {{/if}}
+                </div>
+                {{if noticeDetail}}
+                      {{ include '../template/components/share.component.art' }}
+                {{/if}}
+                <div class="ad-pag">
+					<span class="pa_l">
+                        {{if noticeDetail}}
+                            {{if noticeDetail.previousId != 0 && noticeDetail.previousTitle !=null}}
+                               <i>上一篇：</i><a href="/notice/detail-{{@noticeDetail.previousId}}.html">{{if noticeDetail}}{{@noticeDetail.previousTitle}}{{/if}}</a>
+                            {{else}}
+                               上一篇：没有了
+                            {{/if}}
+                        {{/if}}
+					</span>
+                    <span class="pa_r">
+                        {{if noticeDetail}}
+                            {{if noticeDetail.nextId != 0 && noticeDetail.nextTitle !=null}}
+                               <i>下一篇：</i><a href="/notice/detail-{{@noticeDetail.nextId}}.html">{{if noticeDetail}}{{@noticeDetail.nextTitle}}{{/if}}</a>
+                             {{else}}
+                               下一篇：没有了
+                             {{/if}}
+                        {{/if}}
+					</span>
+                </div>
+
+                    {{ include '../template/components/articleTec.component.art' }}
+
+                <!--  热门文章和猜你喜欢模块 -->
+                {{ include '../template/components/articleHotAndGuessesYouLike.component.art' }}
+
+            </div>
+            {{ include '../template/components/articleLottery_2.component.art' }}
+        </div>
+        <!--相关推荐-->
+        {{ include '../partials/recommend.html' }}
+    </div>
+</div>
+
+<script>
+    var pathArray = [
+        'core/views/containers/notice/detail.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize('{{@lotteryCode}}', true);
+    })
+</script>

@@ -1,0 +1,16 @@
+[2019-05-22 10:45:47.120] [INFO] console - Server running at:http://iZj6c74lqepn0tZ:8038
+[2019-05-22 10:46:11.740] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-22 10:46:11.742] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-22 11:31:34.904] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-22 11:31:34.919] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-22 15:12:01.815] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-22 15:12:01.834] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)

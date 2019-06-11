@@ -1,0 +1,301 @@
+[2019-05-03 00:00:00.026] [INFO] console - 现在时间： 2019-05-02T16:00:00.026Z
+[2019-05-03 00:00:00.762] [ERROR] console - Api-URL:http://172.31.15.184:8081/apiarticle/getArticles--->{"categoryId":0,"pageIndex":1,"pageSize":500}---------------error
+[2019-05-03 00:00:00.763] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:441:20)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:00:00.768] [ERROR] console - Api-URL:http://172.31.15.184:8081/apitotalpoint/getpoints--->{"pagesize":500,"page":1}---------------error
+[2019-05-03 00:00:00.769] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:441:20)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:00:00.770] [ERROR] console - TypeError: Cannot read property 'data' of null
+    at DealWithCommonService._callee13$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:1626:32)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[2019-05-03 00:02:58.868] [INFO] console - Server running at:http://iZj6c74lqepn0tZ:8082
+[2019-05-03 00:02:58.955] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 00:02:58.958] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:02:58.962] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 00:02:58.963] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:02:58.965] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 00:02:58.966] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:02:58.968] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}---------------error
+[2019-05-03 00:02:58.969] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:02:58.970] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryProvinceList--->undefined---------------error
+[2019-05-03 00:02:58.971] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:02:58.976] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}---------------error
+[2019-05-03 00:02:58.976] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:02:58.976] [ERROR] console - getProvince: provinceArray为空
+[2019-05-03 00:03:35.761] [INFO] console - Server running at:http://iZj6c74lqepn0tZ:8082
+[2019-05-03 00:03:35.794] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 00:03:35.799] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:03:35.802] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 00:03:35.804] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:03:35.807] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 00:03:35.808] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:03:35.811] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}---------------error
+[2019-05-03 00:03:35.812] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:03:35.815] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryProvinceList--->undefined---------------error
+[2019-05-03 00:03:35.816] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:03:35.824] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}---------------error
+[2019-05-03 00:03:35.825] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 00:03:35.827] [ERROR] console - getProvince: provinceArray为空
+[2019-05-03 15:08:33.927] [INFO] console - Server running at:http://iZj6c74lqepn0tZ:8082
+[2019-05-03 15:08:34.061] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 15:08:34.066] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:08:34.073] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 15:08:34.075] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:08:34.669] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 15:08:34.671] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:08:34.698] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryProvinceList--->undefined---------------error
+[2019-05-03 15:08:34.700] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:08:34.704] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}---------------error
+[2019-05-03 15:08:34.706] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:08:34.712] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}---------------error
+[2019-05-03 15:08:34.713] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:08:34.716] [ERROR] console - getProvince: provinceArray为空
+[2019-05-03 15:10:55.279] [INFO] console - Server running at:http://iZj6c74lqepn0tZ:8082
+[2019-05-03 15:10:55.343] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 15:10:55.348] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:10:55.353] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 15:10:55.355] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:10:55.358] [ERROR] console - Api-URL:http://172.31.15.184:8081data/seo.json--->undefined---------------error
+[2019-05-03 15:10:55.360] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:10:55.363] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}---------------error
+[2019-05-03 15:10:55.365] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:10:55.368] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryProvinceList--->undefined---------------error
+[2019-05-03 15:10:55.369] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:10:55.383] [ERROR] console - Api-URL:http://172.31.15.184:8081/lottery/GetLotteryAllTree--->{"groupId":0,"IsUpSet":true}---------------error
+[2019-05-03 15:10:55.384] [ERROR] console - Error: Request failed with status code 404
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at settle (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:201:11)
+    at IncomingMessage.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[2019-05-03 15:10:55.387] [ERROR] console - getProvince: provinceArray为空
+[2019-05-03 15:19:50.062] [INFO] console - Server running at:http://iZj6c74lqepn0tZ:8038
+[2019-05-03 15:19:50.845] [ERROR] console - getProvince: provinceArray为空
+[2019-05-03 15:20:22.213] [INFO] console - Server running at:http://iZj6c74lqepn0tZ:8038
+[2019-05-03 15:20:22.486] [ERROR] console - getProvince: provinceArray为空
+[2019-05-03 15:23:32.066] [ERROR] console - getBaseLotteryTree:函数出现问题！
+[2019-05-03 15:23:32.214] [ERROR] console - TypeError: _lotterySerives.getProvinceAsync is not a function
+    at DealWithCommonService._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:31:78)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at DealWithCommonService.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at DealWithCommonService.getBaseLotteryTree (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:14:31)
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:63:45)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14
+    at new Promise (<anonymous>)
+    at new F (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\core-js\library\modules\_export.js:36:28)
+    at HomeController.<anonymous> (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:14:12)
+    at HomeController.index (E:\dev-001\xq_eycp\Eycp.SitePC\server\src\controllers\home\home.controller.js:449:30)
+    at HomeRoutes.mapActions (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/routes/base.routes.js:58:58)
+    at Object.internals.handler (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\hapi\lib\handler.js:101:51)
+[2019-05-03 15:23:32.218] [WARN] console - mainNavData: 参数_lotteryAllTree为空, 这里会再次请求彩种树，所以只是警告！
+[2019-05-03 15:23:32.220] [ERROR] console - mainNavData: 出现请求异常！
+[2019-05-03 15:23:32.221] [ERROR] console - TypeError: Cannot read property 'length' of null
+    at DealWithCommonService.dealWithMainNav (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:723:44)
+    at DealWithCommonService._callee5$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/services/public/dealWithCommon.service.js:655:29)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[2019-05-03 15:23:42.227] [ERROR] console - Api-URL:http://eycp.ad.1396c.comhome/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-03 15:23:42.230] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-05-03 15:23:52.232] [ERROR] console - Api-URL:http://172.31.15.184:8082chaseplan/getrecentplan--->undefined---------------error
+[2019-05-03 15:23:52.233] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-05-03 15:24:02.243] [ERROR] console - Api-URL:http://172.31.15.184:8082/totalpoint/GetRecentPoints--->undefined---------------error
+[2019-05-03 15:24:02.246] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+[2019-05-03 15:24:02.487] [ERROR] console - dealWithTestNumberForHomeNotice：参数有问题！
+[2019-05-03 15:24:04.276] [ERROR] console - TypeError: Cannot read property 'awardTimes' of null
+    at HomeController._callee$ (E:/dev-001/xq_eycp/Eycp.SitePC/server/src/controllers/home/home.controller.js:228:48)
+    at tryCatch (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:62:40)
+    at Generator.invoke [as _invoke] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:296:22)
+    at Generator.prototype.(anonymous function) [as next] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\regenerator-runtime\runtime.js:114:21)
+    at step (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+    at E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\babel-runtime\helpers\asyncToGenerator.js:28:13
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[2019-05-03 15:26:05.960] [INFO] console - Server running at:http://iZj6c74lqepn0tZ:8038
+[2019-05-03 15:26:06.247] [ERROR] console - getProvince: provinceArray为空

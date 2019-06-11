@@ -1,0 +1,6 @@
+   {{ each resultList  historyList}}
+             <tr>
+                  <td>{{@historyList.issueNo}}期</td>
+                  {{@k8changeTable(historyList.result)}}
+             </tr>
+  {{/each }}

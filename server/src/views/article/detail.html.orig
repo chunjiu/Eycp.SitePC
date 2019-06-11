@@ -1,0 +1,85 @@
+<div class="eyu100-main main-articlePage">
+    <div class="main-centerSection">
+
+
+        <!--热点导航-->
+        {{ include '../template/components/articleHotNav.component.art' }}
+
+
+        <!--面包屑-->
+        <div class="public-crumbsBlock">
+            <a href="/article" class="link">彩票资讯</a><i class="arrow">&gt;</i><a href="/article/list-{{@codeType}}-{{@detail.categoryId}}-p1" class="link">{{@type}}列表</a><i class="arrow">&gt;</i><h1 class="unlink"><a href="/article/list-{{@codeType}}-{{@categoryId}}-p1" class="link">{{@detail ? (detail.lotteryName ? detail.lotteryName: ''): ''}}{{@type}}</a></h1>
+        </div>
+        <div class="ap-mainB">
+            <div class="mb-l ap-articleDetails">
+                <div class="ad-titleB">
+                    <h1 class="ti_b">{{@detail.title}}</h1>
+                    <div class="ti_z">
+						<span class="z_au">
+                            <i>鳄鱼彩票</i>
+							<!--<i>{{@detail.createUser}}</i>-->
+							<!--<i class="a_da">2天之前</i>-->
+							{{@ detail.createDate | pointTime}}
+						</span>
+                    </div>
+                </div>
+                <div class="ad_intro">
+                    {{@detail.content}}
+                </div>
+
+                {{ include '../template/components/share.component.art' }}
+
+                <div class="ad-pag">
+					<span class="pa_l">
+                        {{if detail.previousId != 0 && detail.previousTitle !=null}}
+						   <i>上一篇：</i><a href="/article/detail-{{@detail.categoryId}}-{{@detail.previousId}}.html">{{@detail.previousTitle}}</a>
+                        {{else}}
+                           上一篇：没有了
+                        {{/if}}
+					</span>
+                    <span class="pa_r">
+                        {{if detail.nextId != 0 && detail.nextTitle !=null}}
+						    <i>下一篇：</i><a href="/article/detail-{{@detail.categoryId}}-{{@detail.nextId}}.html">{{@detail.nextTitle}}</a>
+                         {{else}}
+                           下一篇：没有了
+                         {{/if}}
+					</span>
+                </div>
+
+                {{if isHigh}}
+
+                   {{ include '../template/components/articleTec.component.art' }}
+
+                {{else if lotteryType == 'high'}}
+
+                   {{@articleBottom(articleList, lotteryCode)}}
+
+                {{else}}
+
+                    {{@articleBottom(articleList, lotteryCode)}}
+                {{/if}}
+
+
+                <!--  热门文章和猜你喜欢模块 -->
+                {{ include '../template/components/articleHotAndGuessesYouLike.component.art' }}
+
+
+            </div>
+
+            {{ include '../template/components/articleLottery_2.component.art' }}
+
+        </div>
+        <!--相关推荐-->
+        {{ include '../partials/recommend.html' }}
+    </div>
+</div>
+
+<script>
+    var pathArray = [
+        'core/views/containers/article/detail.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize('{{@lotteryCode}}');
+    })
+</script>

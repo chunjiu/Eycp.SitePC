@@ -1,0 +1,49 @@
+{{if data}}
+    {{each data item idx}}
+    <div class="cr_listBlock" data-id="{{item.groupId}}">
+        <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="logo-header" width="15%" rowspan="3">
+                    <div class="lb_logo" data-code="{{item.lotteryCode}}">
+                        <span class="l_img"><img style="width: 80px;" src="{{cdnUrl}}/pic/logo/logo_{{item.lotteryCode}}.png" alt=""></span>
+                        <b>{{item.lotteryName}}</b>
+                    </div>
+                </td>
+                <td width="15%" rowspan="3" data-code="{{item.lotteryCode}}" data-playType="{{if item.groupId == 1 || item.groupId == 3}}2{{else}}1{{/if}}">
+                    <span class="tb_da">{{item.period}}期</span>
+                    <span class="tb_da">{{item.awardTime}}</span>
+                </td>
+                <td width="10%" data-code="{{item.lotteryCode}}" data-playType="{{if item.groupId == 1 || item.groupId == 3}}2{{else}}1{{/if}}">{{if item.groupId == 1 || item.groupId == 3}}{{if item.lotteryCode == 'gxkl10'}}直一推荐{{else}}任二推荐{{/if}}{{else if item.groupId == 2}}和值推荐{{else}}一星推荐{{/if}}</td>
+                <td width="60%" data-code="{{item.lotteryCode}}" data-playType="{{if item.groupId == 1 || item.groupId == 3}}2{{else}}1{{/if}}">
+                <span class="lb_num">
+                    {{@planListContent(item.list[0],item.lotteryCode,item.groupId == 2?1:3)}}
+                </span>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%" data-code="{{item.lotteryCode}}" data-playType="{{if item.groupId == 1 || item.groupId == 3}}3{{else}}2{{/if}}">{{if item.groupId == 1 || item.groupId == 3}}{{if item.lotteryCode == 'gxkl10'}}直二推荐{{else}}任三推荐{{/if}}{{else if item.groupId == 2}}二不同推荐{{else}}二星推荐{{/if}}</td>
+                <td width="60%" data-code="{{item.lotteryCode}}" data-playType="{{if item.groupId == 1 || item.groupId == 3}}3{{else}}2{{/if}}">
+                <span class="lb_num">
+                    {{@planListContent(item.list[1],item.lotteryCode,2)}}
+                </span>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%" colspan="2">
+                    <div class="lb_btn">
+                        {{each item.recommend recommend}}
+                            <span data-name="{{item.lotteryName}}" data-groupId="{{item.groupId}}" data-code="{{item.lotteryCode}}" data-recommendId="{{recommend.id}}">{{recommend.name}}</span>
+                        {{/each}}
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {{/each}}
+    {{/if}}
+
+    <style>
+    [data-playtype]:hover {
+        cursor: pointer;
+    }
+    </style>

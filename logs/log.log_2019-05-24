@@ -1,0 +1,52 @@
+[2019-05-24 00:00:00.121] [INFO] console - 现在时间： 2019-05-23T16:00:00.121Z
+[2019-05-24 12:34:12.426] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-24 12:34:12.428] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-24 15:59:27.622] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-24 15:59:27.623] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-24 15:59:42.621] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-24 15:59:42.622] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-24 16:04:09.214] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-24 16:04:09.215] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-24 16:13:02.031] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-24 16:13:02.032] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-24 16:19:47.404] [ERROR] console - Api-URL:http://localhost:35129/home/GetAdData--->{"codes":"eycp_home_banner"}---------------error
+[2019-05-24 16:19:47.405] [ERROR] console - Error: connect ECONNREFUSED 127.0.0.1:35129
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+[2019-05-24 16:25:24.024] [ERROR] console - Api-URL:http://172.31.15.184:8082//lottery/getawarddata--->{"lotterycode":"bjpk10"}---------------error
+[2019-05-24 16:25:24.026] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+[2019-05-24 16:25:24.214] [ERROR] console - Api-URL:http://172.31.15.184:8082//lottery/getawarddata--->{"lotterycode":"gxkl10"}---------------error
+[2019-05-24 16:25:24.215] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)
+[2019-05-24 16:25:43.212] [ERROR] console - Api-URL:http://172.31.15.184:8082//lottery/getawarddata--->{"lotterycode":"gxkl10"}---------------error
+[2019-05-24 16:25:43.213] [ERROR] console - Error: timeout of 10000ms exceeded
+    at createError (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\core\createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (E:\dev-001\xq_eycp\Eycp.SitePC\node_modules\axios\lib\adapters\http.js:216:16)
+    at ontimeout (timers.js:475:11)
+    at tryOnTimeout (timers.js:310:5)
+    at Timer.listOnTimeout (timers.js:270:5)

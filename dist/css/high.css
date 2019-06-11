@@ -1,0 +1,113 @@
+.number {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background: url(../images/ball/number_bjpk10_24.png) no-repeat 0 0;
+}
+
+.number-32 {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+    background: url(../images/ball/number_bjpk10_32.png) no-repeat 0 0;
+}
+
+.col {
+    color: #f02f22;
+}
+
+.num1 {
+    font-size: 0;
+    background-position: 0 0;
+}
+
+.num2 {
+    font-size: 0;
+    background-position: -26px 0;
+}
+
+.num3 {
+    font-size: 0;
+    background-position: -52px 0;
+}
+
+.num4 {
+    font-size: 0;
+    background-position: -78px 0;
+}
+
+.num5 {
+    font-size: 0;
+    background-position: -104px 0;
+}
+
+.num6 {
+    font-size: 0;
+    background-position: -130px 0;
+}
+
+.num7 {
+    font-size: 0;
+    background-position: -156px 0;
+}
+
+.num8 {
+    font-size: 0;
+    background-position: -182px 0;
+}
+
+.num9 {
+    font-size: 0;
+    background-position: -208px 0;
+}
+
+.num10 {
+    font-size: 0;
+    background-position: -234px 0;
+}
+
+.number-32.num2 {
+    font-size: 0;
+    background-position: -34px 0;
+}
+
+.number-32.num3 {
+    font-size: 0;
+    background-position: -68px 0;
+}
+
+.number-32.num4 {
+    font-size: 0;
+    background-position: -102px 0;
+}
+
+.number-32.num5 {
+    font-size: 0;
+    background-position: -136px 0;
+}
+
+.number-32.num6 {
+    font-size: 0;
+    background-position: -170px 0;
+}
+
+.number-32.num7 {
+    font-size: 0;
+    background-position: -204px 0;
+}
+
+.number-32.num8 {
+    font-size: 0;
+    background-position: -238px 0;
+}
+
+.number-32.num9 {
+    font-size: 0;
+    background-position: -272px 0;
+}
+
+.number-32.num10 {
+    font-size: 0;
+    background-position: -306px 0;
+}

@@ -1,0 +1,9 @@
+<div class="publicToPlay_Block">
+		<p class="ht-title">
+			<span class="name">{{awardTime.lotteryName}}玩法介绍</span>
+			<a href="/rule/{{lotteryCode}}-high" class="more" rel="nofollow" target='_blank'>更多&gt;&gt;</a>
+		</p>
+		<div class="ToPlay_con">
+			{{@ rule.introduceContent}}
+		</div>
+</div>

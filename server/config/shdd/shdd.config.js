@@ -1,0 +1,107 @@
+/*********************************************************************************************************
+ *
+ *                                              杀号定胆分类配置
+ *
+ *********************************************************************************************************/
+'use strict';
+module.exports = {
+
+    config:[{
+        name: '福利彩票',
+        id: 'digit',
+        child: [
+        {
+            name: '双色球',
+            id: 'ssq',
+            child: [
+                {name: '红球杀1码', code: 11},
+                {name: '红球杀2码', code: 12},
+                {name: '蓝球杀1码', code: 13},
+                {name: '蓝球杀2码', code: 14}
+            ]
+        },
+        {
+            name: '福彩3D',
+            id: 'fc3d',
+            child: [
+                {name: '个位杀号', code: 21},
+                {name: '十位杀号', code: 22},
+                {name: '百位杀号', code: 23},
+                {name: '不定位杀号', code: 24},
+                {name: '个位定3胆', code: 25},
+                {name: '十位定3胆', code: 26},
+                {name: '百位定3胆', code: 27},
+                {name: '和尾杀号', code: 28},
+                {name: '跨度杀码', code: 29}
+            ]
+        },{
+             name: '七乐彩',
+             id: 'qlc',
+             child: [
+                 {name: '红球杀1码', code: 31},
+                 {name: '红球杀2码', code: 32},
+                 {name: '特号杀1码', code: 33},
+                 {name: '特号杀2码', code: 34}
+             ]
+        }]
+
+    },{
+        name: '体育彩票',
+        id: 'digit',
+        child: [
+            {
+                name: '大乐透',
+                id: 'dlt',
+                child: [
+                    {name: '前区杀1码', code: 41},
+                    {name: '前区杀2码', code: 42},
+                    {name: '后区杀1码', code: 43},
+                    {name: '后区杀2码', code: 44},
+                ]
+            },
+            {
+                name: '排列3',
+                id: 'pl3',
+                child: [
+                    {name: '个位杀号', code: 21},
+                    {name: '十位杀号', code: 22},
+                    {name: '百位杀号', code: 23},
+                    {name: '不定位杀号', code: 24},
+                    {name: '个位定3胆', code: 25},
+                    {name: '十位定3胆', code: 26},
+                    {name: '百位定3胆', code: 27},
+                    {name: '和尾杀号', code: 28},
+                    {name: '跨度杀码', code: 29}
+                ]
+             },{
+                name: '排列5',
+                id: 'pl5',
+                child: [
+                    {name: '个位杀号', code: 51},
+                    {name: '十位杀号', code: 52},
+                    {name: '百位杀号', code: 53},
+                    {name: '千位杀号', code: 54},
+                    {name: '万位杀号', code: 55},
+                ]
+            },{
+                name: '七星彩',
+                id: 'qxc',
+                child: [
+                    {name: '第一位杀号', code: 61},
+                    {name: '第二位杀号', code: 62},
+                    {name: '第三位杀号', code: 63},
+                    {name: '第四位杀号', code: 64},
+                    {name: '第五位杀号', code: 65},
+                    {name: '第六位杀号', code: 66},
+                    {name: '第七位杀号', code: 67},
+                ]
+            }
+        ]
+
+    },{
+        name: '高频彩票',
+        id: 'high',
+        child: []
+    }]
+
+}

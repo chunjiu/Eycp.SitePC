@@ -1,0 +1,8 @@
+{{each history d}}
+    <tr>
+        <td>{{d.issue_no}}期</td>
+        <td>{{ digitLotteryDate(d.award_date) }}</td>
+        {{@fc3dHistoryResult(d.redResultList) }}
+        <td>{{@d.test_result.replace(/,/g,'&nbsp;&nbsp;')}}</td>
+    </tr>
+{{/each}}

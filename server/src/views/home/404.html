@@ -1,0 +1,27 @@
+<!--中间独立-->
+<div class="eyu100-main main-404errorPage">
+	<div class="main-centerSection">
+		<div class="err_con">
+			<div class="er_bg"></div>
+			<p class="er_btn">
+				<a href="/">
+					<i class="blank_in"></i>
+					回到首页
+				</a>
+				<a id="backUp" click="javascript:window.history(-1);">
+					<i class="blank_do"></i>
+					返回上一页
+				</a>
+			</p>
+			<p class="er_ts">提示：很抱歉，您访问的页面出错了，请返回上一页或回到首页。</p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    require(['jquery'], function($) {
+        $('#backUp').on('click', function(){
+            history.back();
+        })
+    })
+</script>

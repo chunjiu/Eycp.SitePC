@@ -1,0 +1,23 @@
+ {{each sortVideo(numberLotteryAwardList) list index}}
+
+                 <li data-lotterycode="{{@list.lotteryCode}}">
+                     <div class="public-videoBlock">
+                                              <div class="videoB">
+                                                  <a class="maskLayer" href="/live/{{@list.lotteryCode}}-detail" target="_blank"><i class="videoBtn"></i></a>
+                                                  <img src="{{cdnUrl}}/pic/lotteryVideo/{{@list.lotteryCode}}.jpg" alt="" class="img" />
+                                                  <span class="nameB"><b class="name">{{@list.lotteryName}}</b><i class="issue">{{@list.next.period}}期</i></span>
+                                              </div>
+                                              <div class="timeB">
+                                                  <span class="time">距离<b data-lotterycode="{{@list.lotteryCode}}" data-time="{{@list.awardTimeInterval}}" class="countDownTime">{{@getCountDownTimeDay(list.awardTimeInterval)}}</b></span>
+                                                   {{if getCountDownTimeDay(list.awardTimeInterval) == '00:00:00' }}
+                                                      <a href="/live/{{@list.lotteryCode}}-detail" target="_blank" class="textBtn" style="display:none;">开始直播</a>
+                                                      <i class="timeText" style="display:block;">正在直播中...</i>
+                                                   {{else}}
+                                                       <a href="/live/{{@list.lotteryCode}}-detail" target="_blank" class="textBtn" style="display:block;">开始直播</a>
+                                                       <i class="timeText" style="display:none;">正在直播中...</i>
+                                                    {{/if}}
+                                              </div>
+                      </div>
+               </li>
+
+{{/each}}

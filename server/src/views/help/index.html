@@ -1,0 +1,57 @@
+<!--中间独立-->
+<div class="eyu100-main main-helpPageBlock">
+	<div class="main-centerSection">
+		<!--一级栏目-->
+		<p class="help_nav">
+			<span class="n_tit">帮助中心</span>
+		</p>
+		<!--帮助中心内容-->
+		<div class="help_centerB">
+			<!--左边导航栏-->
+			<div class="pc_left">
+				<ul class="nav_ul">
+                    {{each helpList help idx}}
+                    
+                    <li {{if help.id == pId || (pId == 0 && idx == 0)}}class="active"{{/if}}>
+                        <div class="na_tit">
+								<span class="u_f">{{help.name}}</span>
+								<span class="u_se"><i></i></span>
+                        </div>
+                        <div class="sel_d" {{if help.id == pId || (pId == 0 && idx == 0)}}style="display: block;"{{else}}style="display: none;"{{/if}}>
+                            <ul>
+                            {{each help.children item}}
+                            <li>
+                                <a {{if item.id == id}}class="active"{{/if}} href="/help/{{item.id}}">
+                                    <i class="icon"></i>
+                                    <span class="fon">{{item.name}}</span>
+                                </a>
+                            </li>
+                            {{/each}}
+                            </ul>
+                        </div>
+                    </li>
+                    {{/each}}
+				</ul>
+			</div>
+			<!--右边内容-->
+			<div class="pc_right">
+				<p class="r_tit">{{title}}</p>
+				<div class="r_con">
+                    {{if detail}}
+                        {{@ detail.content}}
+                    {{/if}}
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/help/index.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize();
+    })
+</script>

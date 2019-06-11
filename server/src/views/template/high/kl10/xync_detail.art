@@ -1,0 +1,19 @@
+  {{ each resultList  historyList}}
+                                          <tr>
+                                              <td>{{@historyList.issueNo}}期</td>
+                                              <td>{{@formatDate(historyList.awardDate)}}</td>
+                                              {{ each historyList.result.split(',')  his}}
+                                                <td>
+                                                 {{ if lotteryCode == 'hnkl10' }}
+                                                    <div class="public-number-zoology">
+                                                      <span class="num{{@his}}"></span>
+                                                    </div>
+                                                  {{else}}
+                                                    <div class="public-number-xync">
+                                                     <span class="num{{@his}}"></span>
+                                                    </div>
+                                                  {{/if}}
+                                                </td>
+                                              {{/each }}
+                                          </tr>
+                              {{/each }}

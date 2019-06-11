@@ -1,0 +1,57 @@
+<div class="ld-publicSubNav"  id="leftNav">
+    <span class="ld-line"></span>
+    <!--二级栏目-->
+    <div class="ld-publicSubNav">
+        <ul {{if type != 'digit'}}style="display:none"{{/if}}>
+            
+            <li class="first active">
+                <a class="nav">全国福彩<i class="arrow"></i></a>
+                <div class="subNavBlock">
+                    {{if data.digit && data.digit.boon}}
+                    {{each data.digit.boon item}}
+                    <a href="/digit/{{item.code}}/detail" class="subNav{{if lotteryCode == item.code}} active{{/if}}">{{item.name}}</a>
+                    {{/each}}
+                    {{/if}}
+                </div>
+            </li>
+            <li class="active">
+                <a class="nav">全国体彩<i class="arrow"></i></a>
+                <div class="subNavBlock">
+                    {{if data.digit && data.digit.sport}}
+                    {{each data.digit.sport item}}
+                    <a href="/digit/{{item.code}}/detail" class="subNav{{if lotteryCode == item.code}} active{{/if}}">{{item.name}}</a>
+                    {{/each}}
+                    {{/if}}
+                </div>
+            </li>
+        </ul>
+        <ul {{if type != 'high'}}style="display:none"{{/if}}>
+            {{if data.high}}
+                {{each data.high.list item idx}}
+                <li class="{{if idx == 0}}first {{/if}}{{if item.showActive}}active{{/if}}">
+                    <a class="nav">{{item.name}}<i class="arrow"></i></a>
+                    <div class="subNavBlock">
+                        {{each item.children lottery}}
+                        <a href="/high/{{lottery.code}}/detail" class="subNav{{if lotteryCode == lottery.code}} active{{/if}}">{{lottery.name}}</a>
+                        {{/each}}
+                    </div>
+                </li>
+                {{/each}}
+            {{/if}}
+        </ul>
+        <ul {{if type != 'other'}}style="display:none"{{/if}}>
+            {{if data.other && data.other.list}}
+                {{each data.other.list item idx}}
+                <li class="{{if idx == 0}}first {{/if}}{{if item.showActive}}active{{/if}}">
+                    <a class="nav">{{item.name}}<i class="arrow"></i></a>
+                    <div class="subNavBlock">
+                        {{each item.children lottery}}
+                        <a href="/local/{{lottery.code}}/detail-{{item.provinceId}}" class="subNav{{if lotteryCode == lottery.code && item.provinceId == provinceId}} active{{/if}}">{{lottery.name}}</a>
+                        {{/each}}
+                    </div>
+                </li>
+                {{/each}}
+            {{/if}}
+        </ul>
+    </div>
+</div>

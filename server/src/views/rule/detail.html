@@ -1,0 +1,127 @@
+<!--中间独立-->
+<div class="eyu100-main main-lotteryDetailsPage">
+	<div class="main-centerSection">
+		<!--面包屑-->
+		<div class="public-crumbsBlock">
+			<a href="/rule" class="link">玩法规则</a><i class="arrow">&gt;</i><span class="unlink">{{@decodeURIComponent(name)}}玩法</span>
+		</div>
+		<!--一级栏目-->
+		<div class="ld-publicNav">
+            <ul>
+                <li>
+                    <a href="{{if data.first && data.first.digit}}/rule/{{data.first.digit.code}}-boon{{else}}#{{/if}}" class="sort{{if type == 'digit' || type == 'boon' || type == 'sport'}} active{{/if}}"><i class="qg"></i>全国彩</a>
+                    <i class="line"></i>
+                </li>
+                <li>
+                    <a href="{{if data.first &&  data.first.high}}/rule/{{data.first.high.code}}-high{{else}}#{{/if}}" class="sort{{if type == 'high'}} active{{/if}}"><i class="gp"></i>高频彩</a>
+                    <i class="line"></i>
+                </li>
+                <li><a href="{{if data.first &&  data.first.other}}/rule/{{data.first.other.code}}-other-14{{else}}#{{/if}}" class="sort{{if type == 'other'}} active{{/if}}"><i class="df"></i>地方彩</a></li>
+            </ul>
+		</div>
+		<div class="ld-DetailsBlock">
+			<span class="ld-line"></span>
+			<!--二级栏目-->
+			<div class="ld-publicSubNav">
+				<ul>
+                    {{if type == 'digit' || type == 'boon' || type == 'sport'}}
+                    <li class="first">
+                        <a class="nav">全国福彩<i class="arrow"></i></a>
+                        <div class="subNavBlock">
+                            {{if data.digit && data.digit.boon}}
+                            {{each data.digit.boon item}}
+                            <a href="{{if code == item.code}}#{{else}}/rule/{{item.code}}-boon{{/if}}" class="subNav{{if code == item.code}} active{{/if}}" data-type="digit">{{item.name}}</a>
+                            {{/each}}
+                            {{/if}}
+                        </div>
+                    </li>
+                    <li class="">
+                        <a class="nav">全国体彩<i class="arrow"></i></a>
+                        <div class="subNavBlock">
+                            {{if data.digit && data.digit.sport}}
+                            {{each data.digit.sport item}}
+                            <a href="{{if code == item.code}}#{{else}}/rule/{{item.code}}-sport{{/if}}" class="subNav{{if code == item.code}} active{{/if}}" data-type="digit">{{item.name}}</a>
+                            {{/each}}
+                            {{/if}}
+                        </div>
+                    </li>
+                    {{/if}}
+                    {{if type == 'high'}}
+                        {{if data.high.list}}
+                        {{each data.high.list item idx}}
+                        <li class="{{if idx == 0}}first {{/if}}">
+                            <a class="nav">{{item.name}}<i class="arrow"></i></a>
+                            <div class="subNavBlock">
+                                {{each item.children lottery}}
+                                <a href="{{if code == lottery.code}}#{{else}}/rule/{{lottery.code}}-high{{/if}}" class="subNav{{if code == lottery.code}} active{{/if}}">{{lottery.name}}</a>
+                                {{/each}}
+                            </div>
+                        </li>
+                        {{/each}}
+                        {{/if}}
+                    {{/if}}
+                    {{if type == 'other'}}
+                        {{if data.other && data.other.list}}
+                        {{each data.other.list item idx}}
+                        <li class="{{if idx == 0}}first {{/if}}">
+                            <a class="nav">{{item.name}}<i class="arrow"></i></a>
+                            <div class="subNavBlock">
+                                {{each item.children lottery}}
+                                <a href="{{if code == lottery.code}}#{{else}}/rule/{{lottery.code}}-other-{{item.provinceId}}{{/if}}" class="subNav{{if code == lottery.code && item.provinceId == proid}} active{{/if}}">{{lottery.name}}</a>
+                                {{/each}}
+                            </div>
+                        </li>
+                        {{/each}}
+                        {{/if}}
+                    {{/if}}
+				</ul>
+			</div>
+			<div class="ld-contentBlock">
+				<div class="lc_playingPage">
+					<div class="pp_nav">
+						<ul>
+							<li data-type="introduceContent">
+								<a href="#" class="active">
+									<i class="pl_js"></i>
+									玩法介绍
+								</a>
+							</li>
+							<li data-type="ruleContent">
+								<a href="#">
+									<i class="pl_gz"></i>
+									玩法规则
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="pp_con" data-type="introduceContent">
+                        {{if detail.introduceContent}}
+						{{@ detail.introduceContent}}
+                        {{/if}}
+                    </div>
+					<div class="pp_con" data-type="ruleContent" style="display: none;">
+                        {{if detail.ruleContent}}
+                        {{@ detail.ruleContent}}
+                        {{/if}}
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+    .ld-publicSubNav li:last-child {
+        border-bottom: 1px solid #e9e9e9;
+    }
+</style>
+
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/public/ruleBar.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize("{{code}}","{{type}}");
+    })
+</script>

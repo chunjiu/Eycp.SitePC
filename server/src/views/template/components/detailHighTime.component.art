@@ -1,0 +1,27 @@
+   <div class="cl_num">
+                        <a href="/{{@classify}}/{{@lotteryCode}}/" class="ln_img">
+                            <img src="{{@cdnUrl}}/pic/lottery/86/{{@lotteryCode}}.png" alt="" />
+                        </a>
+                        <div class="num_con">
+                            <div class="mc_number">
+                                <div class="mc_left"  id="countDownTime">
+                                    <p class="mc_title"><b>{{@awardtimes.lotteryName}}</b><span>当前第<i>{{@awardtimes.current.period}}期</i></span></p>
+                                    <div class="mc_time">
+                                        <span class="time" id="minute">--</span>
+                                        <span>分</span>
+                                        <span class="time" id="second">--</span>
+                                        <span>秒</span>
+                                    </div>
+                                    <span class="mc_da">
+										每日销售<i class="font_red">{{@awardtimes.totalPeriod}}期</i> <i class="font_gray"> | </i> 今日剩余<i class="font_red" id="surplus">{{@(awardtimes.overPeriod)}}期</i>
+									</span>
+                                </div>
+                                <div class="mc_right">
+                                    <a href="/{{@classify}}/{{@lotteryCode}}/live">
+                                        <img src="{{@cdnUrl}}/pic/lotteryVideo/{{@lotteryCode}}.jpg" alt="" />
+                                        <i></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

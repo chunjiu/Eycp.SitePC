@@ -1,0 +1,90 @@
+<div class="trend-tableBlock">
+                    <div class="trend-leftB">
+                        <div class="left-titleB">
+                            <div class="left-textB">{{if omissionData}}{{if omissionData.length > 0}}<i id="lastPeriod" style="display:none;">{{omissionData[0].issueNo}}{{omissionData[0].endIssueNo}}</i>{{/if}}{{/if}}<i class="title">{{if stype == 1}}遗漏{{else if stype ==0 }}循环周期{{/if}}组合：</i><i class="time">{{number}}</i>&nbsp;<i class="text"> (次数变化)</i></div>
+                            <div class="left-funB" id="searchNumberCombination">
+                                <span class="ipuText" style="width: 200px;"><input id="txtLottery" maxlength="30" type="text" placeholder="输入号码组合" ></span>
+                                <span class="btn">查询</span>
+                            </div>
+                        </div>
+                        <div class="left-trendB">
+
+                                 <div id="hightCharts"></div>
+
+                                 <style type="text/css">
+                                     #hightCharts{
+                                         width: 100%;
+                                         height: 280px;
+                                         overflow-x: auto;
+                                         overflow-y: hidden;
+                                     }
+                                     .highcharts-navigator{
+                                         display:none;
+                                      }
+                                     .highcharts-series-1{
+                                          display:none;
+                                      }
+                                      .highcharts-input-group{
+                                         display:none;
+                                      }
+                                      .highcharts-navigator-handle-left{
+                                        display:none;
+                                      }
+                                      .highcharts-navigator-handle-right{
+                                        display:none;
+                                      }
+                                      .highcharts-range-selector-buttons{
+                                        display:none;
+                                      }
+
+                                 </style>
+
+                        </div>
+                    </div>
+                    <div class="trend-rightB">
+                        <div class="right-titleB">
+                            <table>
+                                <tbody>
+                                {{if stype == 0}}
+                                    <tr>
+                                        <th class="2">期号区间</th>
+                                        <th width="25%">出现次数</th>
+                                    </tr>
+                                {{else if stype ==1 }}
+                                    <tr>
+                                        <th width="35%">期号</th>
+                                        <th>号码</th>
+                                        <th width="25%">遗漏值</th>
+                                    </tr>
+                                {{/if}}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="right-tableB">
+                            <table>
+                                <tbody>
+                                {{if omissionData}}
+                                   {{if stype == 0}}
+                                       {{each omissionData list  index}}
+                                            <tr {{if index%2}}class="odd"{{/if}} >
+                                                <td  class="issue" colspan="2">{{list.startIssueNo}}-{{list.endIssueNo}}</td>
+                                                <td width="25%">{{list.totalCount}}</td>
+                                            </tr>
+                                        {{/each}}
+                                    {{else if stype ==1 }}
+                                        {{each omissionData list  index}}
+                                            <tr {{if index%2}}class="odd"{{/if}} >
+                                                <td width="35%" class="issue">{{list.issueNo}}</td>
+                                                <td class="issue">{{list.result}}</td>
+                                                <td width="25%">{{list.missCount}}</td>
+                                            </tr>
+                                        {{/each}}
+                                    {{/if}}
+                                {{else}}
+                                   <tr><td colspan="3">暂无任何数据</td></tr>
+                                {{/if}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>

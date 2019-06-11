@@ -1,0 +1,186 @@
+
+<!--彩种二级目录-->
+<div class="lh-btnB" data-category="2" {{if groupType == 2}}style="display:block;"{{else}}style="display:none;"{{/if}}>
+    {{each highChilds item idx}}
+    <span class="btn high-category{{if idx == 0}} active{{/if}}" data-id="{{item.id}}">{{if item.name == "十一选五"}}11选5{{else}}{{item.name}}{{/if}}</span>
+    {{/each}}
+</div>
+
+<div class="lh-btnB" data-category="3" {{if groupType == 3}}style="display:block;"{{else}}style="display:none;"{{/if}}>
+    {{each list.province item idx}}
+    <span class="btn province{{if idx == 0}} active{{/if}}" data-id="{{item.id}}">{{item.name}}</span>
+    {{/each}}
+</div>
+{{if list.digital && list.digital.boon}}
+<p class="lh-titleB" data-type="1" {{if groupType != 0 && groupType != 1}}style="display:none;"{{/if}}>福利彩票</p>
+<!--表格-->
+<div class="public-table" data-type="1" {{if groupType != 0 && groupType != 1}}style="display:none;"{{/if}}>
+    <table>
+        <tr>
+            <th>彩种</th>
+            <th>期号</th>
+            <th>开奖日期</th>
+            <th>开奖号码</th>
+            <th>奖金池</th>
+            <th>开奖日</th>
+            <th>直播</th>
+            <th>走势图表</th>
+            <th>遗漏分析</th>
+            <th>主页</th>
+        </tr>
+        <tr>
+            {{each list.digital.boon item}}
+            <tr>
+                <td class="tab-name"><a target="_blank" href="/digit/{{item.lotteryCode}}" class="touch">{{item.lotteryName}}</a></td>
+                <td>{{item.issueNo}}期</td>
+                <td>{{item.strAwardDate}}</td>
+                <td>
+                    <div class="public-number-ball">
+                        {{@ item | lotteryDigitHallHistory}}
+                        <a target="_blank" href="/digit/{{item.lotteryCode}}/detail" class="tab-touch" rel="nofollow">详情</a>
+                    </div>
+                </td>
+                <td>{{item.poolAmount | formatMoney}}元</td>
+                <td>{{item.lotteryDate}}</td>
+                <td><span class="tab-btnB"><a target="_blank" {{if item.hasVideo}}href="/live/{{item.lotteryCode}}-detail"{{/if}} class="btn{{if !item.hasVideo}} noTouch{{/if}}">开奖直播</a></span></td>
+
+                {{if item.lotteryCode == 'dlt' || item.lotteryCode == 'ssq'}}
+                    <td><span class="tab-iconB"><a href="/chart/{{item.lotteryCode}}/11" class="trend" target="_blank"></a></span></td>
+                {{else}}
+                     <td><span class="tab-iconB"><a href="/chart/{{item.lotteryCode}}/1" class="trend" target="_blank"></a></span></td>
+                {{/if}}
+
+                <td><span class="tab-iconB"><a href="/omission/{{item.lotteryCode}}/11" class="omit" target="_blank"></a></span></td>
+                <td><a target="_blank" href="/digit/{{item.lotteryCode}}" class="touch" rel="nofollow">主页</a></td>
+            </tr>
+            {{/each}}
+    </table>
+</div>
+{{/if}}
+{{if list.digital && list.digital.sport}}
+<p class="lh-titleB" data-type="1" {{if groupType != 0 && groupType != 1}}style="display:none;"{{/if}}>体育彩票</p>
+<!--表格-->
+<div class="public-table" data-type="1" {{if groupType != 0 && groupType != 1}}style="display:none;"{{/if}}>
+    <table>
+        <tr>
+            <th>彩种</th>
+            <th>期号</th>
+            <th>开奖日期</th>
+            <th>开奖号码</th>
+            <th>奖金池</th>
+            <th>开奖日</th>
+            <th>直播</th>
+            <th>走势图表</th>
+            <th>遗漏分析</th>
+            <th>主页</th>
+        </tr>
+        {{each list.digital.sport item}}
+            <tr>
+                <td class="tab-name"><a target="_blank" href="/digit/{{item.lotteryCode}}" class="touch">{{item.lotteryName}}</a></td>
+                <td>{{item.issueNo}}期</td>
+                <td>{{item.strAwardDate}}</td>
+                <td>
+                    <div class="public-number-ball">
+                        {{@ item | lotteryDigitHallHistory}}
+                        <a target="_blank" href="/digit/{{item.lotteryCode}}/detail" class="tab-touch" rel="nofollow">详情</a>
+                    </div>
+                </td>
+                <td>{{item.poolAmount | formatMoney}}元</td>
+                <td>{{item.lotteryDate}}</td>
+                <td><span class="tab-btnB"><a target="_blank" {{if item.hasVideo}}href="/live/{{item.lotteryCode}}-detail"{{/if}} class="btn{{if !item.hasVideo}} noTouch{{/if}}">开奖直播</a></span></td>
+
+                {{if item.lotteryCode == 'dlt' || item.lotteryCode == 'ssq'}}
+                            <td><span class="tab-iconB"><a href="/chart/{{item.lotteryCode}}/11" class="trend" target="_blank"></a></span></td>
+                {{else}}
+                            <td><span class="tab-iconB"><a href="/chart/{{item.lotteryCode}}/1" class="trend" target="_blank"></a></span></td>
+                {{/if}}
+
+                 <td><span class="tab-iconB"><a href="/omission/{{item.lotteryCode}}/11" class="omit" target="_blank"></a></span></td>
+                <td><a target="_blank" href="/digit/{{item.lotteryCode}}" class="touch" rel="nofollow">主页</a></td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
+{{/if}}
+{{if list.high}}
+<p class="lh-titleB" data-type="2" {{if groupType != 0 && groupType != 2}}style="display:none;"{{/if}}>高频彩</p>
+<!--表格-->
+<div class="public-table" data-type="2" {{if groupType != 0 && groupType != 2}}style="display:none;"{{/if}}>
+    <table>
+        <tr>
+            <th>彩种</th>
+            <th>期号</th>
+            <th>开奖号码</th>
+            <th>期数/每天</th>
+            <th>开奖频率</th>
+            <th>直播</th>
+            <th>走势图表</th>
+            <th>遗漏分析</th>
+            <th>主页</th>
+        </tr>
+        {{each list.high item}}
+        <tr data-highCategory="{{item.groupChildId}}">
+            <td class="tab-name"><a target="_blank" href="/high/{{item.lotteryCode}}" class="touch">{{item.lotteryName}}</a></td>
+            <td>{{item.issueNo}}期</td>
+            {{@ item.awardResult | lotteryHighHallHistory item.lotteryCode}}
+            <td>{{item.issueNum}}期</td>
+            <td {{if item.lotteryCode == 'cqssc'}}style="width: 100px;word-break: break-all;"{{/if}}>{{item.rateDesc}}</td>
+            <td><span class="tab-btnB"><a target="_blank" {{if item.hasVideo}}href="/live/{{item.lotteryCode}}-detail"{{/if}} class="btn{{if !item.hasVideo}} noTouch{{/if}}">开奖直播</a></span></td>
+
+            {{if item.lotteryCode == 'bjpk10' || item.lotteryCode == 'shssl' || item.lotteryCode == 'bjkl8' || item.lotteryCode == 'hn481'}}
+             <td><span class="tab-iconB"></span></td>
+             <td><span class="tab-iconB"></span></td>
+            {{else}}
+                 <td><span class="tab-iconB"><a href="/chart/{{item.lotteryCode}}/1" class="trend" target="_blank"></a></span></td>
+                 {{if (groupType == 0 || groupType == 2) && item.groupChildId==1}}
+                    <td><span class="tab-iconB"><a href="/omission/{{item.lotteryCode}}/101" class="omit" target="_blank"></a></span></td>
+                 {{else}}
+                    <td><span class="tab-iconB"><a href="/omission/{{item.lotteryCode}}/11" class="omit" target="_blank"></a></span></td>
+                 {{/if}}
+                
+            {{/if}}
+
+           
+            <td><a target="_blank" href="/high/{{item.lotteryCode}}" class="touch" rel="nofollow">主页</a></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+{{/if}}
+
+{{if list.area && list.area.data && list.area.province && list.area.area}}
+<p class="lh-titleB" data-type="3" {{if groupType != 0 && groupType != 3}}style="display:none;"{{/if}}>地方彩</p>
+<!--表格-->
+<div class="public-table" data-type="3" {{if groupType != 0 && groupType != 3}}style="display:none;"{{/if}}>
+    <table>
+        <tr>
+            <th>省份</th>
+            <th>彩种</th>
+            <th>期号</th>
+            <th>开奖日期</th>
+            <th>开奖号码</th>
+            <th>奖金池</th>
+            <th>开奖频率</th>
+            <th>更多</th>
+        </tr>
+        {{each list.area.province province}}
+            {{each list.area.area[province.id] item idx}}
+            <tr data-province="{{item.provinceId}}">
+                {{if idx == 0}}<td rowspan="{{province.count}}">{{item.provinceName}}</td>{{/if}}
+                <td class="tab-name"><a target="_blank" href="/local/{{item.lotteryCode}}/detail-{{item.provinceId}}" class="touch" >{{item.lotteryName}}</a></td>
+                <td>{{item.issueNo}}期</td>
+                <td>{{item.strAwardDate}}</td>
+                <td>
+                    <div class="public-number-ball">
+                        {{@ item.awardResult | lotteryDigitHallHistory}}
+                    </div>
+                </td>
+                <td>{{item.poolAmount | formatMoney}}元</td>
+                <td>{{item.rateDesc}}</td>
+                <td><a target="_blank" href="/local/{{item.lotteryCode}}/detail-{{item.provinceId}}" class="touch" rel="nofollow">详情</a></td>
+            </tr>
+            {{/each}}
+        {{/each}}
+    </table>
+</div>
+{{/if}}

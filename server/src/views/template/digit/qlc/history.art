@@ -1,0 +1,8 @@
+{{each history d}}
+    <tr>
+        <td>{{d.issue_no}}期</td>
+        <td>{{d.award_date | digitLotteryDate}}</td>
+        {{@ d.redResultList | qlcRedHistoryResult}}
+        {{@ d.blueResultList | qlcBlueHistoryResult}}
+    </tr>
+{{/each}}

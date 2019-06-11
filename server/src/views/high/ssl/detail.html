@@ -1,0 +1,11 @@
+{{ include '../../template/components/detailHigh.component.art' }}
+
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/{{@classify}}/ssl/detail.container'
+    ];
+
+    require(pathArray, function(callback) {
+        callback.initialize('{{lotteryCode}}', '{{classify}}');
+    })
+</script>

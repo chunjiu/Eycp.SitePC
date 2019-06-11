@@ -1,0 +1,72 @@
+{{if list && list.length > 0 }}
+                                 {{each list  childsList}}
+                                 <div class="ln-li" data-code="{{@childsList.lotteryCode}}" data-nextPeriod="{{@childsList.next.period}}">
+                                     <a href="high/{{@childsList.lotteryCode}}" class="logo"><img src="{{cdnUrl}}/pic/logo/logo_{{@childsList.lotteryCode}}.png" alt=""></a>
+
+                                    <div class="ln-contentB">
+                                         <div class="newInfoBlock">
+                                             <p class="info">
+                                                 <a class="name" href="/high/{{@childsList.lotteryCode}}">{{@childsList.lotteryName}}</a>
+                                                 <span class="latestIssue">当前第<i class="font-red">{{@childsList.current.period}}</i>期</span>
+                                                 <span class="data">{{@awardDateFormat(childsList.current.awardTime)}}</span>
+                                             </p>
+                                             {{@renderHomeBallList(childsList.result, childsList.lotteryCode)}}
+                                             <!--正在开奖-->
+                                             <p class="beProgressing" style="display: none">第{{@childsList.next.period}}期正在开奖.....</p>
+                                         </div>
+                                         <a href="/live/{{@childsList.lotteryCode}}-detail" class="btn">开奖直播</a>
+                                         <div class="timeBlock">
+                                             <span class="timeText">下一期开奖倒计：</span>
+                                                 <span class="time" data-time="{{@childsList.awardTimeInterval}}">
+                                                     {{@renderLotteryTime(childsList.awardTimeInterval)}}
+                                                 </span>
+                                         </div>
+                                         <span class="line"></span>
+
+
+                                         <div class="ln-funBtnB">
+
+                                              <a href="/high/{{@childsList.lotteryCode}}/history" class="funBtn">历史开奖</a>
+
+                                               {{if childsList.classify == '11x5'}}
+                                                     <a href="/chart/{{@childsList.lotteryCode}}/1" class="funBtn">走势图表</a>
+                                                     <a href="/omission/{{@childsList.lotteryCode}}/101" class="funBtn">遗漏分析</a>
+                                               {{else if childsList.classify == 'k3' || childsList.classify == 'kl10' || childsList.classify == 'ssc'}}
+                                                     <a href="/chart/{{@childsList.lotteryCode}}/1" class="funBtn">走势图表</a>
+                                                     <a href="/omission/{{@childsList.lotteryCode}}/11" class="funBtn">遗漏分析</a>
+                                               {{/if}}
+
+                                                {{if childsList.classify}}
+                                                   <a href="/plan/{{@childsList.lotteryCode}}/1" class="funBtn">追号推荐</a>
+                                                {{/if}}
+
+                                                 {{if childsList.classify == '11x5'}}
+                                                    <a href="/point/1-{{@childsList.lotteryCode}}" class="funBtn">每日提点</a>
+                                                 {{else if childsList.classify == 'k3'}}
+                                                    <a href="/point/2-{{@childsList.lotteryCode}}" class="funBtn">每日提点</a>
+                                                 {{else if childsList.classify == 'kl10'}}
+                                                    <a href="/point/3-{{@childsList.lotteryCode}}" class="funBtn">每日提点</a>
+                                                 {{else if childsList.classify == 'ssc'}}
+                                                     <a href="/point/4-{{@childsList.lotteryCode}}" class="funBtn">每日提点</a>
+                                                {{/if}}
+
+                                                {{if  childsList.classify == '11x5' }}
+                                                      <a href="/article/list-{{@childsList.classify}}-32-p1" class="funBtn">技巧文章</a>
+                                                {{else if childsList.classify == 'k3' }}
+                                                       <a href="/article/list-{{@childsList.classify}}-34-p1" class="funBtn">技巧文章</a>
+                                                 {{else if childsList.classify == 'kl10' }}
+                                                        <a href="/article/list-{{@childsList.classify}}-33-p1" class="funBtn">技巧文章</a>
+                                                  {{else if childsList.classify == 'ssc' }}
+                                                        <a href="/article/list-{{@childsList.classify}}-35-p1" class="funBtn">技巧文章</a>
+                                                   {{else}}
+                                                        <a href="/article/list-other-36-p1" class="funBtn">技巧文章</a>
+                                                   {{/if}}
+
+                                              </div>
+
+
+                                </div>
+
+                    </div>
+                {{/each}}
+ {{/if}}

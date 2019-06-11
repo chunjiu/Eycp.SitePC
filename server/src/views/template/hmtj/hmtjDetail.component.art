@@ -1,0 +1,157 @@
+
+<div class="erb-lis">
+                    <div class="erb-titleB">
+                        <div class="public_selectPlugIn">
+                            <span class="selectArrow"></span>
+                            <span class="selectedText">近{{quantity}}期</span>
+                            <div class="selectOption">
+
+                                 {{if lotteryCode=='pl3' || lotteryCode == 'fc3d' }}
+
+                                        <span class="lis" data-num="10">近10期统计</span>
+                                        <span class="lis" data-num="20">近20期统计</span>
+                                         <span class="lis" data-num="50">近50期统计</span>
+
+                                 {{else}}
+
+                                          <span class="lis" data-num="20">近20期统计</span>
+                                          <span class="lis" data-num="30">近30期统计</span>
+                                           <span class="lis" data-num="50">近50期统计</span>
+
+                                 {{/if}}
+
+                            </div>
+                        </div>
+                        {{if hmtjData}}
+                            <span class="title">{{hmtjData.expertName}}历史详情<i class="font-red">（四等奖以上命中{{ (hmtjData.pobability*100).toFixed(0)+'%' }}）</i></span>
+                            <span class="t-text">历史最好成绩：{{@hmtjData.historyBestIssueNo}}期中出{{@hmtjData.historyBestResult}}</span>
+                        {{/if}}
+                    </div>
+                    <div class="public-table">
+                        <table>
+
+                            <thead>
+
+                              <tr>
+                                 <th width="10%">开奖期数</th>
+                                            <th>开奖号码</th>
+                                                              {{if lotteryCode=='ssq'}}
+                                                                      <th>推荐红球号码</th>
+                                                                      <th>推荐蓝球号码</th>
+                                                              {{else if lotteryCode=="dlt"}}
+                                                                    <th>前区推荐号码</th>
+                                                                    <th>后区推荐号码</th>
+                                                              {{else if lotteryCode=="qlc"}}
+                                                                    <th>号码推荐</th>
+                                                              {{/if}}
+                                                              <th width="15%">
+                                                                  <div class="lt-tableThBlock">
+                                                                      <div class="thBlock">
+                                                                          <span class="thName">中奖号码情况</span><span class="thArrow"><i class="top"></i><i class="bottom"></i></span>
+                                                                      </div>
+                                                                  </div>
+                                                              </th>
+                                                              <th width="10%">
+                                                                  <div class="lt-tableThBlock">
+                                                                      <div class="thBlock">
+                                                                          <span class="thName">奖项情况</span><!--<span class="thArrow"><i class="top"></i><i class="bottom"></i></span>-->
+                                                                      </div>
+                                                                  </div>
+                                     </th>
+                                 </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                             {{if hmtjData}}
+                                  {{each hmtjData.details list index}}
+                                                                <tr>
+                                                                    <td>{{list.issueNo}}</td>
+                                                                     {{if list.state == 0}}
+                                                                        <td>--</td>
+                                                                     {{else}}
+                                                                        <td><span class='fontWidth3'>{{@hmtjFormatResult(list.result)}}</span></td>
+                                                                    {{/if}}
+                                                                    <td>
+                                                                        <span {{if list.state == 0}} class="font-red  fontWidth" {{else}} class="font-gray  fontWidth" {{/if}}>
+                                                                        {{if lotteryCode=="qlc"}}
+                                                                            {{if list.redRecommend }}
+                                                                                {{each list.redRecommend  redBall  redBallIndex }}
+                                                                                     {{if list.redRecommend.length-1 == redBallIndex}}<span {{if list.result.indexOf("|"+redBall)>=0}} class='font-blue' {{else if list.result.indexOf(redBall)>=0}} class='font-red' {{/if}}>{{@redBall}}</span>{{else}}<span {{if list.result.indexOf("|"+redBall)>=0}} class='font-blue' {{else if list.result.indexOf(redBall)>=0}} class='font-red' {{/if}}>{{@redBall}}<i class="font-gray">,</i></span>{{/if}}
+                                                                                {{/each}}
+                                                                            {{/if}}
+                                                                        {{else}}
+                                                                             {{if list.redRecommend }}
+                                                                                {{each list.redRecommend  redBall  redBallIndex }}
+                                                                                     {{if list.redRecommend.length-1 == redBallIndex}}<span {{if list.redResult.indexOf(redBall)>=0}} class='font-red' {{/if}}>{{@redBall}}</span>{{else}}<span {{if list.redResult.indexOf(redBall)>=0}} class='font-red' {{/if}}>{{@redBall}}<i class="font-gray">,</i></span>{{/if}}
+                                                                                {{/each}}
+                                                                            {{/if}}
+                                                                        {{/if}}
+                                                                        </span>
+                                                                    </td>
+                                                                    {{if lotteryCode!="qlc"}}
+                                                                    <td>
+                                                                        <span {{if list.state == 0}} class="font-blue fontWidth2" {{else}} class="font-gray fontWidth2" {{/if}}>
+                                                                           {{if list.blueRecommend }}
+                                                                                {{each list.blueRecommend  blueBall  blueBallIndex }}
+                                                                                     {{if list.blueRecommend.length-1 == blueBallIndex}}<span {{if list.blueResult.indexOf(blueBall)>=0}} class='font-blue' {{/if}}>{{@blueBall}}</span>{{else}}<span {{if list.blueResult.indexOf(blueBall)>=0}} class='font-blue' {{/if}}>{{@blueBall}}<i class="font-gray">,</i></span>{{/if}}
+                                                                                {{/each}}
+                                                                            {{/if}}
+                                                                        </span>
+                                                                    </td>
+                                                                    {{/if}}
+
+                                                                    <td data-value ='{{@summationValue( list.hitResult ) }}'>{{@list.hitResult == '' ? '--': list.hitResult}}</td>
+                                                                    <td>{{@(list.winningDetails == '' ? '--': list.winningDetails).replace(/\|/g,'<br/>')}}</td>
+                                                                </tr>
+                                  {{/each}}
+                            {{/if}}
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                  <style type='text/css'>
+
+                           .fontWidth3{
+                                   width: 170px;
+                                   text-align:center;
+                                   display: inline-block !important;
+                            }
+
+                            .fontWidth{
+                                   width: 89%;
+                                   text-align: center;
+                                   display: inline-block !important;
+                            }
+
+                            .fontWidth2{
+                                  width: 85%;
+                                  text-align:center;
+                                   display: inline-block !important;
+                             }
+
+                            span.font-red, span.font-blue, span.font-gray{
+                                   font-size: 0px;
+                                   display:inline-block;
+                                   word-break:break-all;
+                            }
+
+                            span.font-red  span,  span.font-blue span, span.font-gray span{
+                                   font-size:14px;
+                                   white-space: nowrap;
+                                   text-align: center;
+                                   display: inline-block;
+                            }
+
+                           .font-gray i, .font-red i, .font-blue i{
+                                  font-size:14px;
+                                  white-space: nowrap;
+                           }
+                       </style>

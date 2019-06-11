@@ -1,0 +1,43 @@
+<!--中间独立-->
+<div class="eyu100-main main-lotteryHomePage">
+    <div class="main-centerSection">
+        <div class="public-lotteryLatestInfo">
+            {{ include '../../template/components/lotteryTimer.component.art' }}
+        </div>
+        <div class="lh-articleListBlock">
+            {{ include '../../template/components/lotteryPlayforOther.component.art' }}
+        </div>
+        <div class="lh-historyTableBlock">
+
+            <p class="ht-title"><a class="name"  href="/high/{{lotteryCode}}/history" target="_blank">{{awardTime.lotteryName}}开奖记录</a><a href="/high/{{lotteryCode}}/history" class="more" rel="nofollow" target="_blank">更多>></a></p>
+            <!--历史记录-->
+            <div class="public-table">
+                <table>
+                   {{@ lotteryCode | hn481Header}}
+                    <tbody class="history-body">
+                        {{ include '../../template/high/hn481/index.art' }}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ht-otherBlock" style="padding-top: 0px;">
+                {{ include '../../template/components/playIntroduction.component.art' }}
+            </div>
+
+        </div>
+        
+        <!--相关推荐-->
+        {{ include '../../partials/recommend.html' }}
+    </div>
+</div>
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/high/hn481/index.container',
+        'core/views/containers/high/common/index.container'
+    ];
+
+    require(pathArray, function(callback1, callback2) {
+        callback1.initialize('{{lotteryCode}}', {{isAwarding}}, {{awardTime.current.period}});
+        callback2.initialize();
+    })
+</script>

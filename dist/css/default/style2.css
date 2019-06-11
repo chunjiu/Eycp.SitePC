@@ -1,0 +1,2724 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*******************************************************************************************************************************************
+*  
+*  2CP项目开发css样式   日期：2014-12-09   For:Emily
+*
+*******************************************************************************************************************************************/
+
+/*******************************************************************************************************************************************
+*  
+*  公共样式
+*
+*******************************************************************************************************************************************/
+.clearFloat {
+    clear: both;
+}
+
+.leftFloat {
+    float: left;
+}
+
+.rightFloat {
+    float: right;
+}
+
+.positionRelative {
+    position: relative;
+}
+
+.ecp_trendTable {
+    /*width: 967px;*/
+    overflow-x: auto;
+    overflow-y: hidden;
+     padding-bottom:20px\9;
+}
+@media screen and (min-width:0\0) { 
+  .ecp_trendTable {
+    /*width: 967px;*/
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom:20px;
+  }
+} 
+
+.ecp_History table .ecp_dividingLine td {
+    border-bottom: 2px solid #ccc;
+}
+/*******************************************************************************************************************************************
+*  
+*  录像内页样式
+*
+*******************************************************************************************************************************************/
+
+.ecp_video {
+    background: #FFF;
+}
+
+    .ecp_video .ecp_leftNewTitleCenter {
+        background: none;
+        text-align: center;
+    }
+
+    .ecp_video .ecp_newsConsBlock {
+        padding: 20px 18px 20px 18px;
+    }
+
+        .ecp_video .ecp_newsConsBlock .ecp_video_tool {
+            border-bottom: 2px solid #b90000;
+            height: 33px;
+        }
+
+            .ecp_video .ecp_newsConsBlock .ecp_video_tool .ecp_video_tool_title {
+                display: block;
+                width: 79px;
+                text-align: center;
+                height: 32px;
+                line-height: 32px;
+                color: #333;
+                border-top: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                background-color: #f1f1f1;
+                float: left;
+            }
+
+                .ecp_video .ecp_newsConsBlock .ecp_video_tool .ecp_video_tool_title.hover {
+                    color: #FFF;
+                    font-weight: bold;
+                    border-top: 1px solid #cb1115;
+                    border-right: 1px solid #cb1115;
+                    border-left: 0px;
+                    background-color: #cb1115;
+                }
+
+                .ecp_video .ecp_newsConsBlock .ecp_video_tool .ecp_video_tool_title:hover {
+                    text-decoration: none;
+                }
+
+            .ecp_video .ecp_newsConsBlock .ecp_video_tool .ecp_video_select {
+                height: 22px;
+                color: #333;
+                border: 1px solid #b2b6bc;
+                margin-right: 11px;
+                cursor: pointer;
+            }
+
+            .ecp_video .ecp_newsConsBlock .ecp_video_tool .ecp_video_btn {
+                width: 71px;
+                height: 24px;
+                text-align: center;
+                line-height: 24px;
+                border: 0px;
+                color: #FFF;
+                border-radius: 2px;
+                background-color: #e53030;
+                margin-left: 8px;
+                cursor: pointer;
+            }
+
+        .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg {
+            width: 683px;
+            margin-top: 20px;
+            float: none;
+            clear: none;
+        }
+
+            .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg .ecp_ticketImgs {
+                width: 80px;
+                height: 80px;
+                padding: 27px 27px 0 30px;
+            }
+
+            .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg .hotAndColdAnalysis {
+                width: 380px;
+                clear: none;
+                padding: 15px 0px 5px 0px;
+            }
+
+                .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg .hotAndColdAnalysis .ecp_ticket_List {
+                    padding: 0px;
+                    width: auto;
+                }
+
+                    .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg .hotAndColdAnalysis .ecp_ticket_List .grayFont {
+                        line-height: 18px;
+                    }
+
+                    .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg .hotAndColdAnalysis .ecp_ticket_List .detail {
+                        padding: 0px;
+                    }
+
+                    .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg .hotAndColdAnalysis .ecp_ticket_List li.addPadding10 {
+                        padding: 2px 0 11px 0;
+                    }
+
+            .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg .ecp_videoLink_d {
+                float: right;
+                padding: 16px 17px 0px 0px;
+                width: 110px;
+            }
+
+                .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg .ecp_videoLink_d .ecp_videoLink {
+                    padding: 0 20px 0 24px;
+                    background: url(../../images/ecp_videoLink.png) no-repeat center left;
+                    display: block;
+                    height: 32px;
+                    line-height: 32px;
+                    cursor: pointer;
+                }
+
+                .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg .ecp_videoLink_d .ecp_videoPlay {
+                    padding: 0 20px 0 24px;
+                    background: url(../../images/ecp_jtbtn.jpg) no-repeat center left;
+                    display: block;
+                    height: 32px;
+                    line-height: 32px;
+                    cursor: pointer;
+                }
+
+                .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg .ecp_videoLink_d a {
+                    color: #333;
+                    font-size: 12px;
+                }
+
+                    .ecp_video .ecp_newsConsBlock .ecp_newsAnalysisyellowBg .ecp_videoLink_d a:hover {
+                        color: #d61939;
+                    }
+
+    .ecp_video .ecp_videoPlayDiv {
+        padding: 0px 18px 10px 18px;
+    }
+
+        .ecp_video .ecp_videoPlayDiv .ecp_hasAVideo {
+            background-color: #000;
+            height: 440px;
+            width: 685px;
+            position: relative;
+        }
+
+            .ecp_video .ecp_videoPlayDiv .ecp_hasAVideo .ecp_hasAVideo_playBtn {
+                display: block;
+                height: 80px;
+                width: 80px;
+                background: url(../../images/ecp_openVideoBtns.png) no-repeat center;
+                position: absolute;
+                top: 41%;
+                left: 44%;
+            }
+
+        .ecp_video .ecp_videoPlayDiv .ecp_noVideo {
+            height: 250px;
+            width: 590px;
+            padding: 190px 0px 0px 95px;
+        }
+
+            .ecp_video .ecp_videoPlayDiv .ecp_noVideo .ecp_noVideo_text {
+                background: url(../../images/ecp_cry.jpg) no-repeat center left;
+                height: 59px;
+                line-height: 59px;
+                font-size: 14px;
+                padding-left: 77px;
+            }
+
+                .ecp_video .ecp_videoPlayDiv .ecp_noVideo .ecp_noVideo_text a {
+                    color: #ab1501;
+                }
+
+    .ecp_video .ecp_newPrvAndNext {
+        padding: 0px 18px 10px 18px;
+        width: 685px;
+        float: none;
+        clear: none;
+    }
+
+        .ecp_video .ecp_newPrvAndNext .ecp_lntc_name {
+            font-size: 14px;
+            font-family: 宋体;
+        }
+
+    .ecp_video .ecp_video_vote {
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        font-size: 16px;
+        font-family: 宋体;
+        color: #FFF;
+        background-color: #06be58;
+        width: 50%;
+        float: left;
+    }
+
+    .ecp_video .ecp_video_vote2 {
+        background-color: #ab1501;
+        width: 50%;
+    }
+
+    .ecp_video .ecp_newsVideoCons {
+        padding: 20px 0 18px 0;
+        float: none;
+        clear: none;
+    }
+
+        .ecp_video .ecp_newsVideoCons .ecp_bigWidth {
+            float: none;
+            clear: none;
+            width: auto;
+        }
+
+            .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList {
+                width: 720px;
+                float: none;
+            }
+
+                .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .leftArrow {
+                    width: 35px;
+                    height: 110px;
+                    _height: 120px;
+                    background: url(../../images/ecp_left_btn.gif) no-repeat center #FFF;
+                }
+
+                    .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .leftArrow:hover {
+                        background: url(../../images/ecp_left_btnHover.jpg) no-repeat center #FFF;
+                    }
+
+                .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .rightArrow {
+                    width: 35px;
+                    height: 110px;
+                    _height: 120px;
+                    background: url(../../images/ecp_right_btn.gif) no-repeat center #FFF;
+                }
+
+                    .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .rightArrow:hover {
+                        background: url(../../images/ecp_right_btnHover.jpg) no-repeat center #FFF;
+                    }
+
+                .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .videoList {
+                    width: 645px;
+                    height: 110px;
+                }
+
+                    .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .videoList li {
+                        width: 149px;
+                        height: 108px;
+                        margin: 0 12px 0 0;
+                        border: 2px solid #fff;
+                        border-radius: 8px;
+                    }
+
+                        .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .videoList li a {
+                            cursor: pointer;
+                        }
+
+                            .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .videoList li a:hover {
+                                text-decoration: none;
+                            }
+
+                        .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .videoList li.redBorder {
+                            border: 2px solid yellow;
+                            margin: 0 11px 0 0;
+                        }
+
+                        .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .videoList li h1 a:hover {
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+
+                        .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .videoList li h1.videoImg {
+                            width: 149px;
+                            height: 108px;
+                        }
+
+                        .ecp_video .ecp_newsVideoCons .ecp_bigWidth .ecp_LiveVideoList .videoList li h1 .imageTitle {
+                            background: url(../../images/ecp_Translucent.png);
+                            _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/ecp_Translucent.png'); /* IE6 */
+                            border-radius: 0px 0px 6px 6px;
+                        }
+
+.cdb_video li {
+    width: auto;
+    float: none;
+    text-align: left;
+    padding: 0px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+    .cdb_video li a {
+        font-family: 宋体;
+    }
+/*******************************************************************************************************************************************
+*  
+*  常见问题页样式
+*
+*******************************************************************************************************************************************/
+.ecp_FAQ .ecp_navPath {
+    color: #e53030;
+}
+
+.ecp_FAQ .ecp_FAQConsLeftTitle {
+    background: url(../../images/ecp_problem.jpg) no-repeat 22px center #fff;
+    padding-left: 60px;
+    line-height: 47px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 202px;
+    height: 47px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.ecp_FAQ .ecp_lotteryModule .icon01, .ecp_FAQ .ecp_lotteryModule .icon02 {
+    background: #fff;
+    padding: 0 0 0 25px;
+    width: 237px;
+}
+
+.ecp_FAQ .ecp_lotteryModule_list li {
+    background: none;
+    padding-right: 40px;
+    width: 167px;
+    overflow: hidden;
+}
+
+    .ecp_FAQ .ecp_lotteryModule_list li.hover {
+        background: #e53030;
+    }
+/*******************************************************************************************************************************************
+*  
+*  开奖公告页样式
+*
+*******************************************************************************************************************************************/
+
+.ecp_LotteryAnnouncement {
+    /*padding: 25px 45px 50px;*/
+    /*width: 630px;*/
+}
+
+    .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg {
+        width: 628px;
+        float: none;
+        clear: none;
+    }
+
+        .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg .ecp_ticketImgs {
+            width: 80px;
+            height: 80px;
+            padding: 27px 27px 0 25px;
+        }
+
+        .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg .hotAndColdAnalysis {
+            width: 320px;
+            clear: none;
+            padding: 25px 0px 5px 0px;
+        }
+
+            .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg .hotAndColdAnalysis .ecp_ticket_List {
+                padding: 0px;
+                width: auto;
+            }
+
+                .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg .hotAndColdAnalysis .ecp_ticket_List .bigTitle {
+                    float: left;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #be0000;
+                    padding-right: 9px;
+                }
+
+            .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg .hotAndColdAnalysis .lotteryHallBlockRightTime {
+                padding: 10px 0px 24px 0px;
+                width: 300px;
+            }
+
+        .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg .ecp_videoLink_d {
+            float: right;
+            padding: 20px 17px 0px 0px;
+            width: 110px;
+        }
+
+            .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg .ecp_videoLink_d .ecp_videoLink {
+                padding: 0 20px 0 24px;
+                background: url(../../images/ecp_videoLink.png) no-repeat center left;
+                display: block;
+                height: 32px;
+                line-height: 32px;
+                cursor: pointer;
+            }
+
+            .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg .ecp_videoLink_d .ecp_videoPlay {
+                padding: 0 20px 0 24px;
+                background: url(../../images/ecp_jtbtn.jpg) no-repeat center left;
+                display: block;
+                height: 32px;
+                line-height: 32px;
+                cursor: pointer;
+            }
+
+            .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg .ecp_videoLink_d a {
+                color: #0361a8;
+                font-size: 12px;
+            }
+
+                .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg .ecp_videoLink_d a:hover, .ecp_LotteryAnnouncement .ecp_newsAnalysisyellowBg .ecp_videoLink_d a.hover {
+                    color: #d61939;
+                    text-decoration: none;
+                }
+
+    .ecp_LotteryAnnouncement .ecp_highFrequencyAnnouncement {
+        padding: 0px;
+        margin: 20px 0px 0px 0px;
+        width: 628px;
+        height: auto;
+    }
+
+        .ecp_LotteryAnnouncement .ecp_highFrequencyAnnouncement .announcementTitle_d {
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #e0e0e0;
+            padding-left: 20px;
+        }
+
+    .ecp_LotteryAnnouncement .announcementTitle {
+        line-height: 32px;
+        height: 32px;
+        padding: 10px 0px 6px 0px;
+        _line-height: 20px;
+        _height: 20px;
+    }
+
+        .ecp_LotteryAnnouncement .announcementTitle .announcementTitle_text {
+            font-size: 14px;
+            font-weight: bold;
+            float: left;
+            line-height: 32px;
+            margin-right: 19px;
+        }
+
+    .ecp_LotteryAnnouncement .ecp_LA_select {
+        height: 30px;
+        float: left;
+        display: block;
+        *padding-top: 5px;
+        _padding-top: 3px;
+    }
+
+        .ecp_LotteryAnnouncement .ecp_LA_select select {
+            border: 1px solid #b2b6bc;
+            cursor: pointer;
+        }
+
+    .ecp_LotteryAnnouncement .announcementTitle a {
+        color: #0361a8;
+    }
+
+        .ecp_LotteryAnnouncement .announcementTitle a:hover {
+            color: #e53030;
+            text-decoration: none;
+        }
+
+    .ecp_LotteryAnnouncement .announcementTitle .AT_L_video {
+        background: url(../../images/ecp_jtbtn2.png) no-repeat center left;
+        padding-left: 26px;
+        height: 17px;
+        line-height: 17px;
+        margin-right: 27px;
+        display: block;
+        float: right;
+        margin-top: 8px;
+    }
+
+    .ecp_LotteryAnnouncement .announcementTitle .AT_L_history {
+        background: url(../../images/ecp_history.png) no-repeat center left;
+        padding-left: 26px;
+        height: 17px;
+        line-height: 17px;
+        margin-right: 27px;
+        display: block;
+        float: right;
+        margin-top: 8px;
+    }
+
+    .ecp_LotteryAnnouncement .announcementDate {
+        font-size: 12px;
+        padding: 11px 0 11px 0px;
+    }
+
+    .ecp_LotteryAnnouncement .ecp_highFrequencyAnnouncement .announcement_BallList {
+        padding: 12px 0 0 0px;
+        float: none;
+        clear: none;
+    }
+
+        .ecp_LotteryAnnouncement .ecp_highFrequencyAnnouncement .announcement_BallList .orderLeft {
+            width: 60px;
+            padding: 5px 0 0 20px;
+            float: left;
+            display: block;
+            line-height: 34px;
+        }
+
+    .ecp_LotteryAnnouncement .ecp_highFrequencyAnnouncement .announcement_Order {
+        float: none;
+        clear: none;
+        padding: 10px 0 0 0;
+    }
+
+        .ecp_LotteryAnnouncement .ecp_highFrequencyAnnouncement .announcement_Order .orderLeft {
+            padding: 0px 0 0 20px;
+        }
+
+    .ecp_LotteryAnnouncement .ecp_highFrequencyAnnouncement .announcement_sales_d {
+        border-top: 1px solid #e0e0e0;
+        margin-top: 15px;
+    }
+
+        .ecp_LotteryAnnouncement .ecp_highFrequencyAnnouncement .announcement_sales_d .announcement_sales {
+            clear: none;
+            padding: 11px 0 11px 20px;
+            width: 180px;
+        }
+
+            .ecp_LotteryAnnouncement .ecp_highFrequencyAnnouncement .announcement_sales_d .announcement_sales .left2 {
+                color: #ff0007;
+            }
+
+.announcement_sales .rightJT3 {
+    display: block;
+    height: 18px;
+    float: left;
+    background: url(../../images/ecp_xiaoliangJTleft3.jpg) no-repeat left #6cc0df;
+    margin-left: 10px;
+    _display: inline;
+}
+
+    .announcement_sales .rightJT3 font {
+        height: 18px;
+        padding: 0 5px 0 10px;
+        display: block;
+        line-height: 18px;
+        float: left;
+        color: #fff;
+        background: url(../../images/ecp_xiaoliangJTRight3.jpg) no-repeat right;
+        font-size: 12px;
+        font-family: Tahoma;
+        font-weight: bold;
+    }
+
+.ecp_LotteryAnnouncement .ecp_History {
+    /*width: 630px;*/
+    padding: 0 0 0 0;
+    margin-top: 20px;
+    /*float: left;*/
+}
+
+    .ecp_LotteryAnnouncement .ecp_History table tr td {
+        height: 36px;
+        font-size: 14px;
+    }
+
+.ecp_LotteryAnnouncement .ecp_History2 table tr td {
+    height: 36px;
+    font-size: 12px;
+}
+
+.ecp_LotteryAnnouncement .ecp_History table tr.ColorIsRed {
+    color: #e1292e;
+}
+
+.ecp_LotteryAnnouncement .ecp_History table tr.ColorIsGreen {
+    color: #51be42;
+}
+/*******************************************************************************************************************************************
+*  
+*  联系我们页面样式
+*
+*******************************************************************************************************************************************/
+
+.ecp_ContactUs .ecp_leftNewTitleChange li {
+    width: 120px;
+}
+
+    .ecp_ContactUs .ecp_leftNewTitleChange li a {
+        width: 120px;
+    }
+
+.ecp_ContactUs .ecp_newsRightAnalysis {
+    padding: 15px 0 10px 33px;
+}
+
+.ecp_ContactUs .ecp_newsRightContent .ecp_email {
+    color: #535353;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+}
+
+.ecp_ContactUs .ecp_newsRightContent .ecp_email {
+    color: #535353;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.ecp_ContactUs .ecp_newsRightContent .ecp_ContactUsRightDl {
+    padding: 0px 30px 8px 0px;
+}
+
+    .ecp_ContactUs .ecp_newsRightContent .ecp_ContactUsRightDl dt {
+        color: #0b71bf;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 28px;
+        margin-top: 8px;
+    }
+
+    .ecp_ContactUs .ecp_newsRightContent .ecp_ContactUsRightDl dd {
+        color: #999;
+        line-height: 24px;
+        padding: 0;
+        margin: 0;
+    }
+
+.ecp_ContactUs .ecp_newsLeftContent .ecp_newsListCons {
+    padding: 18px 30px 33px;
+    min-height: 700px;
+}
+
+    .ecp_ContactUs .ecp_newsLeftContent .ecp_newsListCons .ecp_newsConsBlock {
+        padding: 0;
+        line-height: 30px;
+    }
+
+    .ecp_ContactUs .ecp_newsLeftContent .ecp_newsListCons .ecp_cu_VideoCalling {
+        padding-bottom: 20px;
+        clear: left;
+        float: left;
+    }
+
+        .ecp_ContactUs .ecp_newsLeftContent .ecp_newsListCons .ecp_cu_VideoCalling .ecp_cu_vc_text {
+            width: 448px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #dadada;
+            background-color: #f5f5f5;
+            float: left;
+            outline: none;
+        }
+
+        .ecp_ContactUs .ecp_newsLeftContent .ecp_newsListCons .ecp_cu_VideoCalling .ecp_cu_vc_btn {
+            width: 94px;
+            height: 34px;
+            line-height: 34px;
+            cursor: pointer;
+            background: url(../../images/ecp_cu_vc_btn2.jpg) no-repeat;
+            color: #666;
+            float: left;
+            margin-left: 10px;
+            outline: none;
+            border: 0;
+        }
+
+            .ecp_ContactUs .ecp_newsLeftContent .ecp_newsListCons .ecp_cu_VideoCalling .ecp_cu_vc_btn:hover,
+            .ecp_ContactUs .ecp_newsLeftContent .ecp_newsListCons .ecp_cu_VideoCalling .ecp_cu_vc_btn.hover {
+                background: url(../../images/ecp_cu_vc_btn1.jpg) no-repeat;
+                color: #FFF;
+            }
+/*******************************************************************************************************************************************
+*  
+*  七乐透历史开奖页面样式
+*
+*******************************************************************************************************************************************/
+
+.ecp_sevenLottoHistory .lotteryHallTimeMs {
+    float: none;
+    clear: none;
+}
+
+.ecp_sevenLottoHistory .ecp_cu_vc_btn {
+    width: 94px;
+    height: 34px;
+    cursor: pointer;
+    border: 0px;
+    background: url(../../images/ecp_cu_vc_btn2.jpg) no-repeat;
+    color: #666;
+    float: left;
+    margin-right: 10px;
+    outline: none;
+}
+
+    .ecp_sevenLottoHistory .ecp_cu_vc_btn.hover {
+        background: url(../../images/ecp_cu_vc_btn1.jpg) no-repeat;
+        color: #FFF;
+        border: none;
+        width: 94px;
+        height: 34px;
+        line-height: 34px;
+    }
+
+.ecp_sevenLottoHistory .ecp_cu_vc_btn110 {
+    width: 110px;
+    height: 34px;
+    cursor: pointer;
+    border: 0px;
+    background: url(../../images/newimg/ecp_cu_vc_btnL110.jpg) no-repeat;
+    color: #666;
+    float: left;
+    margin-right: 10px;
+    outline: none;
+}
+
+    .ecp_sevenLottoHistory .ecp_cu_vc_btn110.hover {
+        background: url(../../images/newimg/ecp_cu_vc_btnL110.jpg) no-repeat;
+        color: #FFF;
+        border: none;
+        width: 110px;
+        height: 34px;
+        line-height: 34px;
+        background-position: 0 -34px;
+    }
+
+.ecp_sevenLottoHistory .ecp_cu_vc_btn120 {
+    width: 120px;
+    height: 34px;
+    cursor: pointer;
+    border: 0px;
+    background: url(../../images/newimg/ecp_cu_vc_btnL120.jpg) no-repeat;
+    color: #666;
+    float: left;
+    margin-right: 10px;
+    outline: none;
+}
+
+    .ecp_sevenLottoHistory .ecp_cu_vc_btn120.hover {
+        background: url(../../images/newimg/ecp_cu_vc_btnL120.jpg) no-repeat;
+        color: #FFF;
+        border: none;
+        width: 120px;
+        height: 34px;
+        line-height: 34px;
+        background-position: 0 -34px;
+    }
+
+.ecp_sevenLottoHistory .ecp_cu_vc_btn140 {
+    width: 140px;
+    height: 34px;
+    cursor: pointer;
+    border: 0px;
+    background: url(../../images/newimg/ecp_cu_vc_btnL140.jpg) no-repeat;
+    color: #666;
+    float: left;
+    margin-right: 10px;
+    outline: none;
+}
+
+    .ecp_sevenLottoHistory .ecp_cu_vc_btn140.hover {
+        background: url(../../images/newimg/ecp_cu_vc_btnL140.jpg) no-repeat;
+        color: #FFF;
+        border: none;
+        width: 140px;
+        height: 34px;
+        line-height: 34px;
+        background-position: 0 -34px;
+    }
+
+.ecp_SLHTool {
+    border-left: 1px solid #d1d1d1;
+    border-top: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
+    padding: 0px 17px;
+    position: relative;
+    /*width: 931px;*/
+}
+
+.ecp_SLHTool1 {
+    text-align: center;
+    padding: 11px 17px;
+    z-index: 1005;
+}
+
+.ecp_SLHTool .ecp_SLHToolLeft {
+    position: absolute;
+    top: 11px;
+    left: 9px;
+    text-align: left;
+}
+
+.ecp_SLHTool .ecp_SLHToolRight {
+    position: absolute;
+    top: 8px;
+    *top: 8px!important;
+    _top: 10px;
+    right: 9px;
+    z-index: 55;
+}
+
+.ecp_SLHTool2 .ecp_SLHToolRight {
+    position: absolute;
+    top: 4px;
+    *top: 4px!important;
+    _top: 4px;
+    right: 0px;
+    z-index: 55;
+}
+
+.ecp_SLHTool .ecp_SLHIcon {
+    float: left;
+    margin-right: 20px;
+    padding-top: 0px;
+    line-height: 14px;
+    height: 14px;
+    *padding-top: 3px!important;
+    _line-height: 10px;
+    _height: 10px;
+    _padding-bottom: 2px;
+    position: relative;
+}
+
+    .ecp_SLHTool .ecp_SLHIcon a {
+        color: #999;
+    }
+
+        .ecp_SLHTool .ecp_SLHIcon a:hover {
+            color: #de0000;
+        }
+
+.ecp_SLHTool .ecp_SLHIcon1 {
+    background: url(../../images/ecp_SLHIcon1.jpg) no-repeat top left;
+    padding-left: 13px;
+}
+
+.ecp_SLHTool .ecp_SLHIcon2 {
+    background: url(../../images/ecp_SLHIcon2.jpg) no-repeat top left;
+    padding-left: 17px;
+}
+
+.ecp_SLHTool .ecp_SLHIcon3 {
+    background: url(../../images/ecp_SLHIcon3.jpg) no-repeat top left;
+    padding-left: 18px;
+}
+
+.ecp_SLHTool .ecp_SLHIcon4 {
+    background: url(../../images/ecp_SLHIcon4.jpg) no-repeat top left;
+    padding-left: 20px;
+    height: 16px;
+    line-height: 16px;
+    _height: 16px;
+    _line-height: 12px;
+}
+
+.ecp_SLHTool .ecp_SLHIcon5 {
+    background: url(../../images/ecp_SLHIcon5.jpg) no-repeat top left;
+    padding-left: 13px;
+}
+
+.ecp_SLHTool .ecp_SLHIcon6 {
+    background: url(../../images/ecp_SLHIcon6.jpg) no-repeat top left;
+    padding-left: 17px;
+}
+
+.ecp_SLHTool .ecp_SLHIcon7 {
+    background: url(../../images/ecp_SLHIcon7.jpg) no-repeat top left;
+    padding-left: 23px;
+}
+
+.ecp_SLHTool .ecp_SLHIcon4_info {
+    position: absolute;
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    z-index: 10005;
+    background: #FFF;
+    width: 275px;
+    top: 20px;
+    left: 0px;
+    display: none;
+}
+
+    .ecp_SLHTool .ecp_SLHIcon4_info .ecp_SLHIcon4_info_text {
+        line-height: 21px;
+        float: left;
+        margin: 0px 0px 0px 10px;
+    }
+
+    .ecp_SLHTool .ecp_SLHIcon4_info .ecp_SLHTool_btn3 {
+        color: #207bc1;
+        margin: 1px 0px 0px 10px;
+    }
+
+        .ecp_SLHTool .ecp_SLHIcon4_info .ecp_SLHTool_btn3:hover {
+            background: url(../../images/_btn3_hover_bg2.jpg) no-repeat;
+            color: #d15d00;
+        }
+
+.ecp_SLHTool .ecp_SLHTool_btn1 {
+    cursor: pointer;
+    color: #666;
+    margin: 2px 0px 0px 10px;
+    display: inline-block;
+    width: 38px;
+    text-align: center;
+    height: 18px;
+    line-height: 18px;
+    *line-height: 18px!important;
+    _line-height: 19px;
+    font-size: 12px;
+    background: url(../../images/ecp_SLHTool_btn1_bg.jpg) no-repeat center;
+}
+
+    .ecp_SLHTool .ecp_SLHTool_btn1:hover {
+        text-decoration: none;
+    }
+
+    .ecp_SLHTool .ecp_SLHTool_btn1.btn1_hover {
+        color: #d15d00;
+        text-decoration: none;
+        background: url(../../images/btn1_hover_bg.jpg) no-repeat center;
+    }
+
+.ecp_SLHTool .ecp_SLHTool_sel {
+    cursor: pointer;
+    outline: none;
+    color: #333;
+    margin: 2px 2px 0px 10px;
+    height: 19px;
+    line-height: 19px;
+    *height: 20px!important;
+    *line-height: 20px!important;
+    _height: 20px;
+    _line-height: 20px;
+}
+
+.ecp_SLHTool .ecp_SLHTool_btn2 {
+    cursor: pointer;
+    outline: none;
+    color: #FFF;
+    background: url(../../images/ecp_SLHTool_btn2_bg.jpg) no-repeat center;
+    margin: 2px 0px 0px 10px;
+    display: inline-block;
+    width: 33px;
+    height: 18px;
+    line-height: 16px;
+    *line-height: 19px!important;
+    _line-height: 19px;
+    text-align: center;
+}
+
+    .ecp_SLHTool .ecp_SLHTool_btn2.hover {
+        border: 1px solid #be0000;
+        background-color: #be0000;
+        text-decoration: none;
+        width: auto;
+        padding: 1px 3px;
+    }
+
+    .ecp_SLHTool .ecp_SLHTool_btn2:hover {
+        text-decoration: none;
+    }
+
+.ecp_SLHTool .ecp_SLHTool_title {
+    float: left;
+    margin: 2px 0px 0px 0px;
+}
+
+.ecp_SLHTool .ecp_SLHTool1_title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #be0000;
+    display: block;
+    height: 16px;
+}
+
+.ecp_SLHTool2 {
+    padding: 4px 17px 7px 17px;
+    *padding: 4px 17px 9px 17px!important;
+    _padding: 4px 17px 2px 17px;
+    line-height: 20px;
+    height: 20px;
+    background: #f8f8f8;
+    z-index: 55;
+}
+
+.ecp_SLHTool3 {
+    height: 15px;
+    /*width: 931px;*/
+    position: initial;
+}
+
+.ecp_SLHTool4 {
+    text-align: center;
+    margin: 0px auto;
+    height: 25px;
+    background: #f2f2f2;
+    padding-top: 5px;
+    position: initial;
+}
+
+.ecp_SLHTool8 {
+    margin: 0px auto;
+    height: 1px;
+    /*width: 967px;*/
+    border-top: 1px solid #d1d1d1;
+    border-left: 0px;
+    border-right: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.ecp_SLHTool4 .ecp_SLHTool4Title {
+    display: inline-block;
+    text-decoration: none;
+    width: 46px;
+    height: 18px;
+    margin: 0px 2px;
+    color: #333;
+    font-size: 12px;
+    line-height: 17px;
+    line-height: 18px\9\0;
+    *line-height: 18px!important;
+    _line-height: 16px;
+    text-align: center;
+}
+
+* + html .ecp_SLHTool4 .ecp_SLHTool4Title {
+    vertical-align: middle;
+}
+
+    .ecp_SLHTool4 .ecp_SLHTool4Title:hover {
+        color: #fff;
+        text-decoration: none;
+        background: url(../../images/ecp_SLHTool4Title_bg.jpg) no-repeat;
+    }
+
+    .ecp_SLHTool4 .ecp_SLHTool4Title.ecp_SLHT4Thover {
+        background: url(../../images/ecp_SLHTool4Title_bg.jpg) no-repeat;
+        color: #fff;
+        text-decoration: none;
+    }
+
+.ecp_SLHTool5 {
+    /*width: 935px;*/
+    color: #999;
+    line-height: 24px;
+    margin: 0px auto;
+    background: #FFF;
+    padding: 7px 15px;
+    border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
+}
+
+.ecp_SLHTool .ecp_SLHTool_text {
+    line-height: 12px;
+    padding-top: 4px;
+    _padding-top: 4px;
+    float: left;
+}
+
+.ecp_SLHTool .ecp_SLHTool_chk {
+    margin: 2px 0px 0px 0px;
+    _margin: 2px 0px 0px 0px;
+    float: left;
+}
+
+.ecp_SLHTool .ecp_SLHTool_chkText {
+    float: left;
+    margin: 5px 20px 0px 5px;
+    line-height: 12px;
+    *line-height: 15px!important;
+    _line-height: 14px;
+}
+
+.ecp_SLHTool .ecp_SLHTool_btn3 {
+    display: block;
+    cursor: pointer;
+    outline: none;
+    background: url(../../images/ecp_SLHTool_btn3.jpg) no-repeat;
+    color: #333;
+    margin: 3px 0px 0px 20px;
+    width: 58px;
+    height: 18px;
+    text-align: center;
+    line-height: 16px;
+    line-height: 18px\0;
+    *line-height: 19px!important;
+    _line-height: 17px;
+}
+
+    .ecp_SLHTool .ecp_SLHTool_btn3:hover {
+        text-decoration: none;
+        color: #b60000;
+    }
+
+    .ecp_SLHTool .ecp_SLHTool_btn3.hover {
+        background: url(../../images/ecp_SLHTool_btn3-1.jpg) repeat-x bottom;
+        color: #b60000;
+    }
+
+.ecp_SLHTool1 .ecp_SLHTool_Explain_d {
+    display: block;
+    background: none;
+    float: left;
+    padding: 0px 10px 10px;
+    *padding: 3px 10px 10px!important;
+    _padding: 3px 10px 14px;
+    margin: 0px 0px 0px 10px;
+    z-index: 55;
+}
+
+.ecp_SLHTool2 .ecp_SLHTool_Explain_d {
+    display: block;
+    background: none;
+    float: right;
+    padding: 0px 10px 7px;
+    *padding: 2px 10px 10px!important;
+    _padding: 3px 10px 9px;
+    margin: 0px 0px 0px 10px;
+    z-index: 55;
+}
+
+.ecp_SLHTool .Explain_hover {
+    background: #FFF;
+    border-top: 1px solid #d1d1d1;
+    border-left: 1px solid #d1d1d1;
+    border-bottom: 1px solid #FFF;
+}
+
+.ecp_SLHTool .ecp_SLHTool_Explain {
+    display: block;
+    background: url(../../images/redJtks03.jpg) no-repeat center right;
+    padding-right: 16px;
+    color: #be0000;
+    border: 0px;
+    margin-top: 4px;
+    line-height: 15px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: bold;
+}
+
+    .ecp_SLHTool .ecp_SLHTool_Explain:hover {
+        background: url(../../images/redJtks04.jpg) no-repeat center right;
+        border: 0px;
+    }
+
+.ecp_History table tr.huangse td {
+    background: #fdfcf1;
+    height: 32px;
+}
+
+.ecp_History table tr.lanse td {
+    background: #eefefe;
+    height: 32px;
+}
+
+.ecp_History table tr td.ecp_SLHRedBall {
+    background: url(../../images/ecp_blueBall307.png) no-repeat center;
+    color: #FFF;
+    font-weight: bold;
+    font: 12px;
+}
+
+.ecp_History table tr td.ecp_SLHBlueBall {
+    background: url(../../images/ecp_blueBall308.png) no-repeat center;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.ecp_History table tr td.ecp_SLHGreenBall {
+    background: url(../../images/ecp_blueBall310.png) no-repeat center;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.ecp_History table tr td.ecp_SLHYellowBall {
+    background: url(../../images/ecp_blueBall309.png) no-repeat center;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.ecp_History table tr td.ecp_SLHPinkBall {
+    background: url(../../images/ecp_blueBall311.png) no-repeat center;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.ecp_History table tr td.ecp_SLHPurpleBall {
+    background: url(../../images/ecp_blueBall312.png) no-repeat center;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.ecp_History table tr td .ecp_SLHRedColor {
+    color: #be0000;
+    font-size: 12px;
+}
+
+/*******************************************************************************************************************************************
+*  
+*  号码遗漏统计页面样式
+*
+*******************************************************************************************************************************************/
+
+.ecp_bigLottoHistory .ecp_History .ecp_History_title {
+    background: url(../../images/ecp_toolName_bg.jpg) repeat-x center;
+    height: 32px;
+    border-left: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+}
+
+.ecp_bigLottoHistory .ecp_History .ecp_cu_vc_btn {
+    height: 32px;
+    width: 80px;
+    line-height: 32px;
+    _height: 30px;
+    _line-height: 30px;
+    text-align: center;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-right: 1px solid #e2e2e2;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    float: left;
+    border-radius: 2px;
+}
+
+    .ecp_bigLottoHistory .ecp_History .ecp_cu_vc_btn:hover {
+        text-decoration: none;
+    }
+
+    .ecp_bigLottoHistory .ecp_History .ecp_cu_vc_btn.hover {
+        background: #FFF;
+        border-top: 1px solid #e2e2e2;
+        color: #d93c05;
+        font-weight: bold;
+    }
+
+.ecp_numberOmissions .ecp_SLHTool2 {
+    border-left: 1px solid #e2e2e2;
+    border-top: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+}
+
+    .ecp_numberOmissions .ecp_SLHTool2 .Tool2_title {
+        color: #666;
+        margin: 0px 31px 0px 0px;
+        *margin: 3px 31px 0px 0px!important;
+        float: left;
+        cursor: pointer;
+        line-height: 20px;
+        height: 20px;
+    }
+
+        .ecp_numberOmissions .ecp_SLHTool2 .Tool2_title:hover, .ecp_numberOmissions .ecp_SLHTool2 .Tool2_title.hover {
+            color: #be0000;
+            border: 0;
+        }
+
+    .ecp_numberOmissions .ecp_SLHTool2 .ecp_redNO {
+        background: url(../../images/14Dimensions1.png) no-repeat center left;
+        padding-left: 20px;
+    }
+
+    .ecp_numberOmissions .ecp_SLHTool2 .ecp_blueNO {
+        background: url(../../images/14Dimensions2.png) no-repeat center left;
+        padding-left: 20px;
+    }
+
+.questionMark {
+    display: inline-block;
+    position: relative;
+}
+
+    .questionMark .questionMark_text {
+        display: inline-block;
+        padding-right: 12px;
+    }
+
+    .questionMark .questionMark_icon {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        position: absolute;
+        cursor: pointer;
+        top: 2px;
+        *top: 1px!important;
+        _top: 1px;
+        right: -2px;
+        z-index: 100;
+        background: url(../../images/questionMark.png) no-repeat bottom center;
+    }
+
+    .questionMark .questionMark_hover {
+        background: url(../../images/questionMark2.png) no-repeat bottom center;
+    }
+
+
+
+
+
+
+
+.questionMark_infoDiv {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000005;
+}
+
+    .questionMark_infoDiv .questionMark_info {
+        width: 254px;
+        padding: 7px 14px;
+        border: 1px solid #ccc;
+        background-color: #f8f8f8;
+        color: #666;
+        line-height: 18px;
+        text-align: left;
+        position: relative;
+        left: -57px;
+        bottom: 15px;
+        *bottom: 10px!important;
+        display: block;
+        z-index: 99999;
+    }
+
+        .questionMark_infoDiv .questionMark_info .ecp_QMBoderTriangle {
+            position: absolute;
+            bottom: -5px;
+            _bottom: -5px;
+            *bottom: -5px!important;
+            left: 52px;
+            display: block;
+            width: 9px;
+            height: 6px;
+            background: url(../../images/ecp_QMBoderTriangle.png) no-repeat center;
+            font-size: 0px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.triangleGroup {
+    background: url(../../images/triangleGroup.png) no-repeat;
+    width: 13px;
+    height: 7px;
+    display: block;
+}
+
+    .triangleGroup.tg1 {
+        background-position: -14px 0px;
+        font-size: 0px;
+        margin: 1px 0px 2px;
+        _margin: 0px 0px 2px;
+        *margin: 0px 0px 2px!important;
+    }
+
+        .triangleGroup.tg1:hover, .triangleGroup.tg1_hover {
+            background-position: 0px 0px;
+        }
+
+    .triangleGroup.tg2 {
+        font-size: 0px;
+        background-position: -14px -10px;
+    }
+
+        .triangleGroup.tg2:hover, .triangleGroup.tg2_hover {
+            background-position: 0px -10px;
+        }
+
+.triangleGroup2 {
+    background: url(../../images/triangleGroup2.png) no-repeat;
+    width: 7px;
+    height: 13px;
+    display: block;
+    margin: 5px 5px 0px 0px;
+    *margin: 5px 5px 0px 0px!important;
+    _margin: 5px 5px 0px 0px;
+    float: left;
+    cursor: pointer;
+}
+
+.tgTwo1 {
+    background-position: 0px 0px;
+    font-size: 0px;
+}
+
+    .tgTwo1:hover {
+        background-position: 0px -14px;
+    }
+
+.tgTwo1_forbid {
+    background-position: 0px -28px;
+    cursor: default;
+}
+
+.tgTwo2 {
+    font-size: 0px;
+    background-position: -10px 0px;
+}
+
+    .tgTwo2:hover {
+        background-position: -10px -14px;
+    }
+
+.tgTwo2_forbid {
+    background-position: -10px -28px;
+    cursor: default;
+}
+
+.ecp_bigLottoHistory .ecp_numberOmissions table tr td {
+    vertical-align: middle;
+}
+
+.ecp_numberOmissions table tr td .ecp_NOName {
+    color: #666;
+    float: left;
+    margin-right: 5px;
+}
+
+.ecp_numberOmissions table tr td .ecp_NONameDiv {
+    display: inline-block;
+    width: 82px;
+    _width: 82px;
+    *width: 82px!important;
+    margin: 0px auto;
+    height: 16px;
+    line-height: 16px;
+}
+
+.ecp_numberOmissions table tr td .ecp_DivWidth01 {
+    width: 106px;
+    _width: 106px;
+    *width: 106px!important;
+}
+
+.ecp_numberOmissions table tr td .ecp_DivWidth02 {
+    width: 67px;
+    _width: 67px;
+    *width: 67px!important;
+}
+
+.ecp_numberOmissions table tr td .ecp_DivWidth03 {
+    width: 93px;
+    _width: 93px;
+    *width: 93px!important;
+}
+
+.ecp_numberOmissions table tr td .ecp_NONameDiv .questionMark {
+    float: right;
+    margin-right: 5px;
+    text-align: right;
+}
+
+    .ecp_numberOmissions table tr td .ecp_NONameDiv .questionMark .questionMark_text {
+        padding-right: 0px;
+    }
+
+    .ecp_numberOmissions table tr td .ecp_NONameDiv .questionMark .questionMark_icon {
+        left: -15px;
+    }
+
+.ecp_numberOmissions table tr td .ecp_NOProgressBar_d {
+    height: 16px;
+    width: 99%;
+    background-color: #faf6e9;
+    display: block;
+    text-align: left;
+}
+
+    .ecp_numberOmissions table tr td .ecp_NOProgressBar_d .ecp_NOProgressBar {
+        height: 16px;
+        background-color: #f7c664;
+        display: block;
+        color: #333;
+        text-align: right;
+        line-height: 16px;
+    }
+
+.ecp_History table tr.huangse td {
+    background: #f8f6e4;
+}
+
+/*******************************************************************************************************************************************
+*  
+*  相生相克统计页面样式
+*
+*******************************************************************************************************************************************/
+
+.ecp_allelopathy .ecp_allelopathy_table {
+    position: relative;
+}
+
+.ecp_allelopathyBox {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000005;
+}
+
+    .ecp_allelopathyBox .ecp_allelopathyBox2 {
+        position: relative;
+        padding: 15px;
+        width: 200px;
+        line-height: 23px;
+        color: #505050;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: #dbdbdb;
+        border: 1px solid #828282;
+        border-radius: 3px;
+    }
+
+        .ecp_allelopathyBox .ecp_allelopathyBox2 .ecp_ABTriangle {
+            display: block;
+            width: 11px;
+            height: 14px;
+            font-size: 0px;
+            background: url(../../images/ecp_ABTriangle.png) no-repeat center;
+            position: absolute;
+            bottom: -14px;
+            _bottom: -14px;
+            left: 11px;
+        }
+
+.ecp_allelopathyYellowBox .ecp_allelopathyBox2 {
+    color: #c70006;
+    background-color: #ffbc64;
+    border: 1px solid #d47300;
+}
+
+    .ecp_allelopathyYellowBox .ecp_allelopathyBox2 .ecp_ABTriangle {
+        background: url(../../images/ecp_ABYellowTriangle.png) no-repeat center;
+    }
+
+.ecp_allelopathyBlueBox .ecp_allelopathyBox2 {
+    color: #0271d9;
+    background-color: #88d6ff;
+    border: 1px solid #42a2ec;
+}
+
+    .ecp_allelopathyBlueBox .ecp_allelopathyBox2 .ecp_ABTriangle {
+        background: url(../../images/ecp_ABBlueTriangle.png) no-repeat center;
+    }
+
+.ecp_allelopathy table tr td.ecp_a_name {
+    color: #666;
+    font-weight: bold;
+}
+
+.ecp_allelopathy table tr td.ecp_a_name {
+    background-color: #f7e9cc;
+    font-weight: 100;
+    height: 23px;
+}
+
+.ecp_allelopathy table tr td.ecp_a_redColor {
+    color: #e53030;
+}
+
+.ecp_allelopathy table tr td.ecp_a_blueColor {
+    color: #0088de;
+}
+
+/*******************************************************************************************************************************************
+*  
+*  冷热TOP10页面样式
+*
+*******************************************************************************************************************************************/
+.ecp_hotAndCold {
+    width: 473px;
+    *border-bottom: 1px solid #CCC!important;
+}
+
+.ecp_hot {
+    float: left;
+}
+
+.ecp_cold {
+    float: right;
+}
+
+.ecp_HAC_title {
+    height: 43px;
+}
+
+    .ecp_HAC_title a:hover {
+        text-decoration: none;
+    }
+
+    .ecp_HAC_title .ecp_HAC_Title {
+        border-bottom: 3px solid #ff8e1d;
+        display: block;
+        float: left;
+    }
+
+        .ecp_HAC_title .ecp_HAC_Title a {
+            display: block;
+            background: url(../../images/ecp_HAC_grayTitle.jpg) no-repeat bottom;
+            width: 235px;
+            _width: 235px;
+            height: 40px;
+            _height: 40px;
+            text-align: center;
+            line-height: 40px;
+            _line-height: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .ecp_HAC_title .ecp_HAC_Title.ecp_HAC_leftTitle {
+            padding-right: 3px;
+        }
+
+        .ecp_HAC_title .ecp_HAC_Title.ecp_HAC_rightTitle {
+            padding-left: 3px;
+        }
+
+        .ecp_HAC_title .ecp_HAC_Title.hover {
+            border-bottom: 0px;
+            padding: 0px;
+        }
+
+            .ecp_HAC_title .ecp_HAC_Title.hover a {
+                height: 43px;
+                line-height: 43px;
+                color: #FFF;
+            }
+
+.ecp_HAC_hotTitle .ecp_HAC_Title.hover a {
+    background: url(../../images/ecp_HAC_orangeTitle.jpg) no-repeat;
+    _height: 43px;
+    _line-height: 43px;
+}
+
+.ecp_HAC_coldTitle .ecp_HAC_Title {
+    border-bottom: 3px solid #1e9be9;
+}
+
+    .ecp_HAC_coldTitle .ecp_HAC_Title.hover a {
+        background: url(../../images/ecp_HAC_blueTitle.jpg) no-repeat;
+        _height: 40px;
+        _line-height: 40px;
+    }
+
+.ecp_hotAndCold table tr.huangse td {
+    color: #d69446;
+    height: 36px;
+}
+
+.ecp_hotAndCold table {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+    .ecp_hotAndCold table tr td {
+        border: 0px;
+        vertical-align: middle;
+        height: 37px;
+        *height: 37px!important;
+        border-top: 0px;
+        border-bottom: 1px solid #ccc;
+        border-left: 0;
+        border-right: 0;
+    }
+
+        .ecp_hotAndCold table tr td .ecp_HAC_tableText {
+            font-size: 16px;
+        }
+
+.ecp_hotAndCold .questionMark_icon {
+    top: 10px;
+    *top: 7px!important;
+    _top: 5px;
+}
+
+.ecp_hotAndCold .questionMark .questionMark_text {
+    width: 40px;
+}
+
+.ecp_HAC_top {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0px auto;
+    font-size: 12px;
+    color: #FFF;
+    border-radius: 2px;
+    background: #bebebe;
+    line-height: 16px;
+    text-align: center;
+    background: url(../../images/ecp_HAC_num.jpg) no-repeat\9;
+    background-position: -51px 0px\9;
+}
+
+    .ecp_HAC_top.ecp_HAC_hotTop1 {
+        background: #f24104;
+        background: url(../../images/ecp_HAC_num.jpg) no-repeat\9;
+        background-position: 0px 0px\9;
+    }
+
+    .ecp_HAC_top.ecp_HAC_hotTop2 {
+        background: #f58501;
+        background: url(../../images/ecp_HAC_num.jpg) no-repeat\9;
+        background-position: -17px 0px\9;
+    }
+
+    .ecp_HAC_top.ecp_HAC_hotTop3 {
+        background: #f1c701;
+        background: url(../../images/ecp_HAC_num.jpg) no-repeat\9;
+        background-position: -34px 0px\9;
+    }
+
+    .ecp_HAC_top.ecp_HAC_coldTop1 {
+        background: #0465bf;
+        background: url(../../images/ecp_HAC_num.jpg) no-repeat\9;
+        background-position: 0px -17px\9;
+    }
+
+    .ecp_HAC_top.ecp_HAC_coldTop2 {
+        background: #23a5e9;
+        background: url(../../images/ecp_HAC_num.jpg) no-repeat\9;
+        background-position: -17px -17px\9;
+    }
+
+    .ecp_HAC_top.ecp_HAC_coldTop3 {
+        background: #38cff0;
+        background: url(../../images/ecp_HAC_num.jpg) no-repeat\9;
+        background-position: -34px -17px\9;
+    }
+
+.ecp_hotAndCold .ecp_HAC_thermometerValues_d {
+    display: inline-block;
+    _width: 115px;
+    *width: 115px!important;
+    height: 19px;
+    margin: 0px auto;
+}
+
+    .ecp_hotAndCold .ecp_HAC_thermometerValues_d .ecp_HAC_thermometer_d {
+        width: 46px;
+        height: 11px;
+        padding: 8px 0px 0px 14px;
+        float: left;
+        background: url(../../images/hotThermometer.jpg) no-repeat center;
+        margin-right: 6px;
+        text-align: left;
+    }
+
+        .ecp_hotAndCold .ecp_HAC_thermometerValues_d .ecp_HAC_thermometer_d .ecp_HAC_thermometer {
+            max-width: 39px;
+            height: 2px;
+            font-size: 0px;
+            background: #ec3200;
+        }
+
+    .ecp_hotAndCold .ecp_HAC_thermometerValues_d .ecp_HAC_thermometerValues {
+        color: #858484;
+        line-height: 19px;
+    }
+
+.ecp_hotAndCold .ecp_HAC_detail {
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: url(../../images/ecp_detail.jpg) no-repeat;
+    background-position: 0px 0px;
+    font-size: 0px;
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+    .ecp_hotAndCold .ecp_HAC_detail:hover, .ecp_hotAndCold .ecp_HAC_detail.hover {
+        background-position: 0px -19px;
+    }
+
+.ecp_cold .ecp_HAC_thermometerValues_d .ecp_HAC_thermometer_d {
+    background: url(../../images/coldThermometer.jpg) no-repeat center;
+}
+
+    .ecp_cold .ecp_HAC_thermometerValues_d .ecp_HAC_thermometer_d .ecp_HAC_thermometer {
+        background: #0077fd;
+    }
+
+.ecp_cold table tr.huangse td {
+    color: #48a7e4;
+    background: #f6fdff;
+}
+/*******************************************************************************************************************************************
+*  
+*  基本走势页面样式
+*
+*******************************************************************************************************************************************/
+v\:line {
+    behavior: url(#default#VML);
+    position: absolute;
+}
+
+.ecp_dataMap .iconJB {
+    display: inline-block;
+    padding: 0 15px 0 0;
+    background: url(../../images/ecp_dataMapjb.gif) no-repeat right center;
+    cursor: pointer;
+}
+
+.ecp_dataMap .iconJT {
+    cursor: pointer;
+}
+
+.ecp_dataMap .ecp_DM_redFont {
+    color: #e53030;
+    font-weight: bold;
+}
+
+.ecp_dataMap .ecp_DM_blueFont {
+    color: #207bc1;
+    font-weight: bold;
+}
+
+.ecp_dataMap .yellowBg2 {
+    background: #fbffc3;
+    color: #cfb76e;
+}
+
+.ecp_dataMap .redBallBg2 {
+    background: url(../../images/ecp_dataMapRedBall.png) no-repeat #fbffc3 center;
+    font-family: Tahoma;
+    color: #fff;
+}
+/*******************************************************************************************************************************************
+*  
+*  北京快乐8_历史开奖页面样式
+*
+*******************************************************************************************************************************************/
+.ecp_History .ecp_bj_blueColor2 {
+    color: #1f7ac1;
+}
+
+.ecp_History .ecp_bj_redColor {
+    color: #e70000;
+    font-weight: bold;
+}
+
+.ecp_History .ecp_bj_orangeColor {
+    color: #cb8f00;
+    font-weight: bold;
+}
+
+.ecp_History .ecp_bj_greenColor {
+    color: #67b036;
+    font-weight: bold;
+}
+
+.ecp_History .ecp_bj_blueColor {
+    color: #0153e9;
+    font-weight: bold;
+}
+
+.ecp_History .ecp_bj_purpleColor {
+    color: #7e01e9;
+    font-weight: bold;
+}
+
+.ecp_History .ecp_bj_blackColor {
+    color: #343434;
+    font-weight: bold;
+}
+
+.ecp_History .ecp_bj_grayColor {
+    color: #666;
+}
+
+.ecp_SLHTool .ecp_SLHToolSearch_d {
+    float: left;
+}
+
+    .ecp_SLHTool .ecp_SLHToolSearch_d .ecp_SLHToolSearchText {
+        display: block;
+        margin-left: 2px;
+        line-height: 12px;
+        _padding-top: 5px;
+        padding-top: 4px;
+        *padding-top: 6px!important;
+        float: left;
+    }
+
+    .ecp_SLHTool .ecp_SLHToolSearch_d .ecp_SLHToolSearch {
+        width: 86px;
+        height: 17px;
+        border: 1px solid #bbb;
+        margin-left: 6px;
+        line-height: 17px;
+        cursor: pointer;
+    }
+
+        .ecp_SLHTool .ecp_SLHToolSearch_d .ecp_SLHToolSearch.Search_icon {
+            background: url(../../images/datePicker.gif) no-repeat center right;
+            padding-left: 20px;
+        }
+
+.ecp_SLHTool .ecp_SLHToolBtn {
+    margin: 0px 7px;
+    height: 21px;
+    line-height: 12px;
+    *line-height: 19px!important;
+    _line-height: 19px;
+    cursor: pointer;
+}
+/*******************************************************************************************************************************************
+*  
+*  福彩3D_历史开奖页面样式
+*
+*******************************************************************************************************************************************/
+.ecp_Color3 {
+    color: #333;
+}
+
+.ecp_Colorbe0 {
+    color: #be0000;
+}
+
+.ecp_dataMap .grayBg {
+    background: #f5f8ff;
+    color: #333;
+}
+
+.ecp_dataMap .blueGrayBg {
+    background: #eff2ff;
+    color: #666;
+}
+
+.ecp_dataMap .purpleBg {
+    background: #5b40e5;
+    color: #FFF;
+}
+
+.ecp_dataMap .orangeBg {
+    background: #ff9314;
+    color: #FFF;
+}
+
+.ecp_angleStandard_d {
+    background: url(../../images/ecp_angleStandard_bg.png) no-repeat center;
+    background-position: 0px 0px;
+    display: block;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    z-index: 55;
+    font-size: 0px;
+}
+
+    .ecp_angleStandard_d.ASBG_purple {
+        background-position: 0px -12px;
+    }
+
+    .ecp_angleStandard_d .ecp_angleStandard {
+        background: url(../../images/ecp_angleStandard_text.gif) no-repeat;
+        background-position: 0px 0px;
+        display: block;
+        width: 6px;
+        height: 7px;
+        margin: 2px auto;
+        font-size: 0px;
+    }
+
+        .ecp_angleStandard_d .ecp_angleStandard.ASBG_two {
+            background-position: 0px -8px;
+        }
+
+        .ecp_angleStandard_d .ecp_angleStandard.ASBG_three {
+            background-position: 0px -16px;
+        }
+
+        .ecp_angleStandard_d .ecp_angleStandard.ASBG_four {
+            background-position: 0px -24px;
+        }
+
+        .ecp_angleStandard_d .ecp_angleStandard.ASBG_five {
+            background-position: 0px -32px;
+        }
+
+/*******************************************************************************************************************************************
+*  
+*  PK10_历史开奖页面样式
+*
+*******************************************************************************************************************************************/
+.ecp_BJPK10History .ecp_SLHTool .ecp_SLHTool_chkText {
+    margin: 5px 8px 0px 3px;
+    *margin: 6px 8px 0px 3px!important;
+    _margin: 2px 8px 0px 3px;
+}
+
+.ecp_BJPK10History .ecp_PK10Number {
+    background: url(../../images/ecp_PK10Number.png) no-repeat;
+    display: block;
+    width: 25px;
+    height: 25px;
+    font-size: 0px;
+    margin: 0px auto;
+}
+
+    .ecp_BJPK10History .ecp_PK10Number.ecp_PK10N_01 {
+        background-position: 0px 0px;
+    }
+
+    .ecp_BJPK10History .ecp_PK10Number.ecp_PK10N_02 {
+        background-position: 0px -25px;
+    }
+
+    .ecp_BJPK10History .ecp_PK10Number.ecp_PK10N_03 {
+        background-position: 0px -50px;
+    }
+
+    .ecp_BJPK10History .ecp_PK10Number.ecp_PK10N_04 {
+        background-position: 0px -75px;
+    }
+
+    .ecp_BJPK10History .ecp_PK10Number.ecp_PK10N_05 {
+        background-position: 0px -100px;
+    }
+
+    .ecp_BJPK10History .ecp_PK10Number.ecp_PK10N_06 {
+        background-position: 0px -125px;
+    }
+
+    .ecp_BJPK10History .ecp_PK10Number.ecp_PK10N_07 {
+        background-position: 0px -150px;
+    }
+
+    .ecp_BJPK10History .ecp_PK10Number.ecp_PK10N_08 {
+        background-position: 0px -175px;
+    }
+
+    .ecp_BJPK10History .ecp_PK10Number.ecp_PK10N_09 {
+        background-position: 0px -200px;
+    }
+
+    .ecp_BJPK10History .ecp_PK10Number.ecp_PK10N_10 {
+        background-position: 0px -225px;
+    }
+
+/*******************************************************************************************************************************************
+*  
+*  江苏3_跨度和值组合表页面样式
+*
+*******************************************************************************************************************************************/
+.ecp_JS3_spanAndValues table tr td {
+    height: 30px;
+    font-size: 14px;
+}
+
+.ecp_JS3_spanAndValues .ecp_IS3_title {
+    background: url(../../images/ecp_IS3_title.jpg) no-repeat top left;
+    width: 80px;
+    height: 43px;
+    max-width: 80px;
+    max-height: 43px;
+    min-width: 80px;
+    min-height: 43px;
+}
+
+.ecp_JS3_spanAndValues .ecp_IS3_BGColorF2 {
+    background: #F2F2F2;
+    color: #666;
+}
+
+.ecp_JS3_spanAndValues .ecp_IS3_BGColorFFDFDF {
+    /*background:#ffdfdf;
+    color:#c05454;*/
+}
+
+.ecp_JS3_spanAndValues .ecp_IS3_BGColorFFFEF1 {
+    /*background:#FFFEF1;
+    color:#c8a13c;*/
+}
+
+.ecp_JS3_spanAndValues .ecp_IS3_BGColorFFFAF1 {
+    /*background:#fffaf1;
+    color:#b88c5c;*/
+}
+
+.ecp_JS3_spanAndValues .ecp_IS3_BGColorEFFDFE {
+    /*background:#effdfe;
+    color:#6d9dd2;*/
+}
+
+.ecp_JS3_spanAndValues .ecp_IS3_BGColorFFF1FC {
+    /*background:#fff1fc;
+    color:#af78a1;*/
+}
+
+.ecp_JS3_spanAndValues .ecp_IS3_BGColorF8FFF1 {
+    /*background:#f8fff1;
+    color:#82a85d;*/
+}
+
+.ecp_JS3_spanAndValues .ecp_IS3_BGColorFFDFDF {
+    /*background:#ffdfdf;
+    color:#c05454;*/
+}
+/*******************************************************************************************************************************************
+*  
+*  江苏3_类型走势页面样式
+*
+*******************************************************************************************************************************************/
+/*连号----橙色球蓝色色背景*/
+.ecp_dataMap .orangeBallBg {
+    /*background-image: url(../../images/ecp_dataMapOrangeBall.png);
+	background-repeat: no-repeat;
+	background-position: center;*/
+    background: url(../../images/ecp_dataMapOrangeBall.png) no-repeat #effdff center;
+    font-family: Tahoma;
+    color: #fff;
+}
+/*连号----橙色球黄色背景*/
+.ecp_dataMap .orangeBallYellowBg {
+    background: url(../../images/ecp_dataMapOrangeBall.png) no-repeat #feffef center;
+    font-family: Tahoma;
+    color: #fff;
+}
+/*蓝色球黄色背景*/
+.ecp_dataMap .blueBallYellowBg {
+    background: url(../../images/ecp_dataMapBlueBall.png) no-repeat #feffef center;
+    font-family: Tahoma;
+    color: #fff;
+}
+/*重号----绿色球蓝色背景*/
+.ecp_dataMap .greenBallBg {
+    background: url(../../images/ecp_dataMapGreenBall.png) no-repeat #effdff center;
+    font-family: Tahoma;
+    color: #fff;
+}
+/*北京赛车PK10(季军球)----绿色球黄色背景*/
+.ecp_dataMap .vertBallYellowBg {
+    background: url(../../images/ecp_dataMapVertBall.png) no-repeat #feffef center;
+    font-family: Tahoma;
+    color: #fff;
+}
+/*重号----绿色球黄色背景*/
+.ecp_dataMap .greenBallYellowBg {
+    background: url(../../images/ecp_dataMapGreenBall.png) no-repeat #feffef center;
+    font-family: Tahoma;
+    color: #fff;
+}
+
+.ecp_dataMap .greenBallGreenBg {
+    background: url(../../images/ecp_dataMapGreenBall.png) no-repeat #EEFFFD center;
+    font-family: Tahoma;
+    color: #fff;
+}
+/*边号----紫色球蓝色背景*/
+.ecp_dataMap .purpleBallBg {
+    background: url(../../images/ecp_dataMapPurpleBall.png) no-repeat #effdff center;
+    font-family: Tahoma;
+    color: #fff;
+}
+/*边号----紫色球黄色背景*/
+.ecp_dataMap .purpleBallYellowBg {
+    background: url(../../images/ecp_dataMapPurpleBall.png) no-repeat #feffef center;
+    font-family: Tahoma;
+    color: #fff;
+}
+
+.ecp_dataMap_d .ecp_IS3_BGColorECD9FF {
+    background: #ecd9ff;
+    color: #b0a3bd;
+}
+
+.ecp_dataMap_d .ecp_IS3_BGColor6B1BBC {
+    background: #3184c2;
+    color: #FFF;
+}
+
+.ecp_dataMap_d .ecp_BGColorFFFAEF {
+    background: #fffaef;
+    color: #aeaeae;
+}
+
+.ecp_dataMap_d .ecp_BGColorE9E9E9 {
+    background: #e9e9e9;
+    color: #c6c6c6;
+}
+
+.ecp_dataMap_d .ecp_BGColor9C9C9C {
+    background: #9c9c9c;
+    color: #FFF;
+}
+
+.ecp_dataMap_d .ecp_BGColorEEFFFD {
+    background: #EEFFFD;
+    color: #6ecfc9;
+}
+
+.ecp_dataMap_d .ecp_IS3_BGColor9999CC {
+    background: #9999cc;
+    color: #cfcfff;
+}
+
+.ecp_dataMap .BoldFont {
+    font-weight: bold;
+}
+
+.ecp_dataMap .fd0BoldFont {
+    font-weight: bold;
+    color: #FD0000;
+}
+/*******************************************************************************************************************************************
+*  
+*  快乐十分_开奖综合走势页面样式
+*
+*******************************************************************************************************************************************/
+.ecp_dataMap .redBallBlueBg {
+    background: url(../../images/ecp_dataMapRedBall.png) no-repeat #effdff center;
+    font-family: Tahoma;
+    color: #fff;
+}
+
+.ecp_History table td {
+    height: 20px;
+    font-size: 12px;
+}
+
+/*******************************************************************************************************************************************
+*  
+*  排列5_号码定位走势页面样式
+*
+*******************************************************************************************************************************************/
+.ecp_array5 .ecp_dataMap .ecp_width01 td {
+    width: 17px;
+}
+
+.ecp_dataMapWidth15 .ecp_width01 td {
+    width: 15px;
+}
+/*******************************************************************************************************************************************
+*  
+*  七彩乐_号码定位走势(特码）页面样式
+*
+*******************************************************************************************************************************************/
+.ecp_dataMap .blueFont2 {
+    color: #207bc1;
+}
+
+.ecp_dataMap .progressBar {
+    position: relative;
+}
+
+    .ecp_dataMap .progressBar .progressBar_text {
+        position: absolute;
+        top: 10px;
+    }
+/*******************************************************************************************************************************************
+*  
+*  双色球历史开奖页面样式
+*
+*******************************************************************************************************************************************/
+.ecp_dataMap .redBoldFont {
+    color: #e0282d;
+    font-weight: bold;
+    font-family: 宋体;
+}
+
+.ecp_dataMap .greenBoldFont {
+    color: #328500;
+    font-weight: bold;
+    font-family: 宋体;
+}
+/*******************************************************************************************************************************************
+*  
+*  时时彩页面样式
+*
+*******************************************************************************************************************************************/
+.ecp_dataMap .ecp_width15 td {
+    width: 15px;
+}
+
+.ecp_dataMap .ecp_width16 td {
+    width: 16px;
+}
+
+.ecp_dataMap .ecp_width18 td {
+    width: 18px;
+}
+
+.ecp_dataMap .ecp_width19 td {
+    width: 19px;
+}
+
+.ecp_dataMap .ecp_width20 td {
+    width: 20px;
+}
+
+.ecp_dataMap .ecp_width21 td {
+    width: 21px;
+}
+
+.ecp_dataMap .ecp_width22 td {
+    width: 22px;
+}
+
+.ecp_dataMap .ecp_width23 td {
+    width: 23px;
+}
+
+.ecp_dataMap .ecp_width24 td {
+    width: 24px;
+}
+
+.ecp_dataMap .ecp_width25 td {
+    width: 25px;
+}
+
+.ecp_dataMap .ecp_width26 td {
+    width: 26px;
+}
+
+.ecp_dataMap .ecp_width27 td {
+    width: 27px;
+}
+
+.ecp_dataMap .ecp_width28 td {
+    width: 28px;
+}
+
+.ecp_dataMap .ecp_width29 td {
+    width: 29px;
+}
+
+.ecp_dataMap .ecp_width30 td {
+    width: 30px;
+}
+/*大小单双露珠*/
+.ecp_SSC .SSC_SLHTool1 {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.ecp_SSC .SSC_SLHTool5 {
+    border-top: 0px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.ecp_SSC .ecp_SSCTool {
+    margin-top: 8px;
+    padding: 10px 17px 10px 17px;
+    _padding: 10px 17px 5px 17px;
+    *padding: 10px 17px 5px 17px!important;
+}
+
+    .ecp_SSC .ecp_SSCTool .ecp_SSCToolLeft {
+        float: left;
+    }
+
+    .ecp_SSC .ecp_SSCTool .ecp_SSCToolRight {
+        float: right;
+    }
+
+    .ecp_SSC .ecp_SSCTool .ecp_SSCToolText {
+        margin: 3px 0px 0px 5px;
+        float: left;
+    }
+
+    .ecp_SSC .ecp_SSCTool .ecp_SSCToolText2 {
+        color: #fe0000;
+        margin: 3px 0px 0px 10px;
+        float: left;
+    }
+
+    .ecp_SSC .ecp_SSCTool .ecp_SLHToolSelect_d {
+        margin: 0px 5px 0px 10px;
+        float: left;
+        height: 21px;
+    }
+
+        .ecp_SSC .ecp_SSCTool .ecp_SLHToolSelect_d .ecp_SLHToolSelect {
+            height: 21px;
+            cursor: pointer;
+        }
+
+.ecp_History table.ecp_roadmap_table td {
+    height: auto;
+    line-height: 18px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 14px; 
+    background: #f9f9f9;
+    color: blue;
+}
+
+.ecp_History table.ecp_roadmap_table .odd {
+    background-color: #f1f1f1;
+    color: red;
+}
+
+.ecp_History table.ecp_roadmap_table .hover {
+    background-color: #feff96;
+    color: #333;
+}
+
+.ecp_History table.ecp_roadmap_table span {
+    display: block;
+}
+
+.ecp_SSC_d {
+    padding-bottom: 10px;
+}
+
+    .ecp_SSC_d .ecp_SSC_title {
+        padding-top: 8px;
+        line-height: 14px;
+        padding-left: 5px;
+        font-size: 14px;
+        font-weight: inherit;
+        color: red;
+    }
+/*******************************************************************************************************************************************
+*  
+*  登录窗口样式
+*
+*******************************************************************************************************************************************/
+/*.loginBox {*/
+    /*background: #FFF;*/
+    /*border-radius: 5px;*/
+    /*width: 389px;*/
+    /*padding: 0px 0px 30px 0px;*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*left: 0px;*/
+    /*display: block;*/
+/*}*/
+
+/*.loginBox_banner {*/
+    /*margin-bottom: 18px;*/
+    /*width: 389px;*/
+    /*height: 159px;*/
+    /*overflow: hidden;*/
+/*}*/
+
+    /*.loginBox_banner img {*/
+        /*border-radius: 5px 5px 0 0;*/
+    /*}*/
+
+/*.loginBox .loginMove {*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*left: 0px;*/
+    /*z-index: 1;*/
+/*}*/
+
+/*.loginBox .loginBox_text {*/
+    /*text-align: center;*/
+    /*font-family: 微软雅黑;*/
+    /*font-size: 20px;*/
+    /*color: #d00a0d;*/
+    /*line-height: 20px;*/
+    /*margin: 0;*/
+    /*padding-bottom: 18px;*/
+/*}*/
+
+/*.loginBox .loginBox_title {*/
+    /*text-align: center;*/
+    /*font-family: 微软雅黑;*/
+    /*font-size: 20px;*/
+    /*color: #333;*/
+    /*line-height: 20px;*/
+    /*margin: 0;*/
+    /*padding-bottom: 10px;*/
+/*}*/
+
+/*.loginBox .loginBox_input_d {*/
+    /*padding: 14px 0px 0px;*/
+    /*text-align: center;*/
+    /*display: block;*/
+    /*position: relative;*/
+/*}*/
+
+    /*.loginBox .loginBox_input_d .loginBox_input {*/
+        /*width: 296px;*/
+        /*border: 1px solid #eeead9;*/
+        /*border-radius: 3px;*/
+        /*background: #fefbef;*/
+        /*padding: 11px 15px;*/
+        /*height: 16px;*/
+        /*!*line-height: 42px;*!*/
+        /*font-family: 宋体;*/
+        /*font-size: 14px;*/
+        /*color: #bfbfbf;*/
+    /*}*/
+
+    /*.loginBox .loginBox_input_d .loginBox_btn {*/
+        /*background: url(../../images/loginBox_btn.jpg) no-repeat center;*/
+        /*width: 329px;*/
+        /*height: 45px;*/
+        /*border: 0px;*/
+        /*font-family: 微软雅黑;*/
+        /*font-size: 16px;*/
+        /*color: #FFF;*/
+        /*cursor: pointer;*/
+        /*display: block;*/
+        /*margin: 2px auto 0px;*/
+        /*outline: none;*/
+    /*}*/
+
+    /*.loginBox .loginBox_input_d .ecp_loginPassword {*/
+        /*background: url(../../images/ecp_loginPassword.gif) no-repeat 13px center #fefbef;*/
+    /*}*/
+
+    /*.loginBox .loginBox_input_d .ecp_loginCaveat {*/
+        /*position: absolute;*/
+        /*background: url(../../images/Caveat.png) no-repeat center left;*/
+        /*padding-left: 20px;*/
+        /*font-size: 12px;*/
+        /*color: #e53030;*/
+        /*left: 32px;*/
+        /*bottom: -29px;*/
+    /*}*/
+
+/*.loginBox .loginBox_a {*/
+    /*width: 328px;*/
+    /*margin: 32px auto 0px;*/
+    /*text-align: right;*/
+    /*display: block;*/
+    /*line-height: 12px;*/
+    /**line-height: 20px!important;*/
+    /*_line-height: 16px;*/
+    /*vertical-align: middle;*/
+/*}*/
+
+/*.loginBox_a span {*/
+    /*font-size: 10px;*/
+/*}*/
+
+/*.loginBox .loginBox_a a {*/
+    /*font-family: 宋体;*/
+    /*color: #34598c;*/
+    /*padding: 0px 9px;*/
+    /*font-size: 12px;*/
+    /*text-decoration: none;*/
+/*}*/
+
+    /*.loginBox .loginBox_a a:hover {*/
+        /*color: #d00a0d;*/
+        /*text-decoration: underline;*/
+    /*}*/
+
+/*.loginBox .login_close {*/
+    /*display: block;*/
+    /*background: url(../../images/login_close.png) no-repeat center;*/
+    /*width: 30px;*/
+    /*height: 28px;*/
+    /*cursor: pointer;*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*right: 0px;*/
+    /*z-index: 2;*/
+/*}*/
+
+/*******************************************************************************************************************************************
+*  
+*  遮罩层样式
+*
+*******************************************************************************************************************************************/
+.ecp_maskLayerDiv {
+    z-index: 1001;
+    position: absolute;
+    background: #FFF;
+    top: 0px;
+    padding: 0px;
+    margin-left: 15px;
+}
+
+.ecp_maskLayerDivGd {
+    background: url(../../images/windowBlackBg.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100000;
+}
+
+
+.ecp_dataMapCopy {
+    width: 55px;
+    border-collapse: collapse;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+    background: #fff;
+}
+
+    .ecp_dataMapCopy td {
+        border: 1px solid #ccc;
+        text-align: center;
+        height: 20px;
+    }
+
+    .ecp_dataMapCopy .ecp_grayBg {
+        height: 43px;
+        background: none repeat scroll 0% 0% #F2F2F2;
+    }
+
+    .ecp_dataMapCopy .iconJT {
+        display: inline-block;
+        padding: 0 15px 0 0;
+        background: url('../../images/ecp_dataMapjt.gif') no-repeat scroll right center transparent;
+    }
+
+    .ecp_dataMapCopy .iconJY {
+        display: inline-block;
+        padding: 0 15px 0 0;
+        background: url(../../images/ecp_dataMapjb.gif) no-repeat right center;
+    }
+
+.ecp_dataMap .iconJY {
+    display: inline-block;
+    padding: 0 15px 0 0;
+    background: url(../../images/ecp_dataMapjb.gif) no-repeat right center;
+}
+
+.LockRow /*固定行的样式*/ {
+    position: relative;
+    /*top: expression(this.parentElement.parentElement.parentElement.scrollTop);*/
+    top: 0px;
+    z-index: 2;
+}
+
+.LockCell /*固定列的样式*/ {
+    position: relative;
+    /*left: expression(this.parentElement.parentElement.parentElement.parentElement.scrollLeft);*/
+    left: 0px;
+    z-index: 0;
+}
+
+.LockCross /*行列交叉处样式*/ {
+    z-index: 3;
+}
+
+.divBoxing /*外出div样式*/ {
+    clear: both;
+    overflow: scroll;
+    position: relative;
+    display: inline-block;
+}

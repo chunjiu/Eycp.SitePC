@@ -1,0 +1,48 @@
+<!--中间独立-->
+<div class="eyu100-main main-lotteryDetailsPage">
+	<div class="main-centerSection">
+		<!--面包屑-->
+		<div class="public-crumbsBlock">
+			  <a href="/" class="link">首页</a><i class="arrow">&gt;</i><a href="/lottery" class="link">开奖大厅</a><i class="arrow">&gt;</i><a href="/{{@classify}}/{{@lotteryCode}}" class="link">{{@awardtimes.lotteryName}}</a><i class="arrow">&gt;</i><h1 class="unlink">{{@awardtimes.lotteryName}}开奖公告</h1>
+		</div>
+		<!--一级栏目-->
+		{{ include './detailTab.component.art' }}
+
+		<div class="ld-DetailsBlock"  id="detailAwardGrade">
+			<span class="ld-line"></span>
+			<!--二级栏目-->
+			{{ include './detailLeftNav.component.art' }}
+
+			<div class="ld-contentBlock">
+				<div class="lc_lotteB else_lotteB">
+
+					<div class="cl_num">
+
+						<a href="/{{@classify}}/{{@lotteryCode}}/" class="ln_img"><img style="width: 80px;" src="{{@cdnUrl}}/pic/logo/logo_{{@lotteryCode}}.png" alt="" /></a>
+
+						<div class="num_con">
+
+							 {{ include './detailTime.component.art' }}
+
+	                         {{ include './detailDigitNotice.component.art' }}
+
+						</div>
+					</div>
+
+					<div class="cl_listBlock">
+
+						<p class="cl_tit">开奖详情</p>
+
+                         <div id="list">
+
+                                 {{ include '../digit/common/detail.art' }}
+
+                         </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--相关推荐-->
+		 {{ include '../../partials/recommend.html' }}
+	</div>
+</div>

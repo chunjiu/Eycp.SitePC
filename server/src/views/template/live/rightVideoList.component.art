@@ -1,0 +1,26 @@
+ {{each sortVideo(lotteryAwardlList) list index}}
+
+            {{if index == 0}}
+            <li class="active">
+            {{else}}
+            <li>
+            {{/if}}
+                    <div class="list_li">
+                                <span class="arrow"></span>
+                                <b class="name">{{@list.lotteryName}}</b>
+                                <span class="issue">{{@list.next.period}}期</span>
+                                <span class="time">距离开奖：<b data-time="{{@list.awardTimeInterval}}">{{@getCountDownTime(list.awardTimeInterval)}}</b></span>
+                                <a class="btn" href="/live/{{@list.lotteryCode}}-detail" target="_blank">观看直播</a>
+                    </div>
+                    <div class="list_content">
+                                <div class="textB">
+                                    <span class="text1">每日销售<b class="num">{{@list.totalPeriod}}</b>期，今日剩余<b class="num">{{@list.overPeriod}}</b>期</span>
+                                    <span class="text2">上期号码：<b class="num">{{@list.next.period}}</b>期</span>
+                                    <a class="more" href="/digit/{{@list.lotteryCode}}-detail" target="_blank">详情&gt;</a>
+                                </div>
+
+                                {{@renderLotteryListForVideo(list.lotteryCode, lotteryAwardlList , province)}}
+
+                     </div>
+            </li>
+   {{/each}}

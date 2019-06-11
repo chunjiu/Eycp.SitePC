@@ -1,0 +1,564 @@
+ 	/// <summary>
+        /// 双色球
+        /// </summary>
+        [Description("双色球")]
+        ssq = 1,
+
+        /// <summary>
+        /// 福彩3D
+        /// </summary>
+        [Description("福彩3D")]
+        fc3d = 2,
+
+        /// <summary>
+        /// 七乐彩
+        /// </summary>
+        [Description("七乐彩")]
+        qlc = 3,
+
+        /// <summary>
+        /// 大乐透
+        /// </summary>
+        [Description("大乐透")]
+        dlt = 4,
+
+        /// <summary>
+        /// 排列3
+        /// </summary>
+        [Description("排列三")]
+        pl3 = 5,
+
+        /// <summary>
+        /// 排列5
+        /// </summary>
+        [Description("排列五")]
+        pl5 = 6,
+        /// <summary>
+        /// 七星彩
+        /// </summary>
+        [Description("七星彩")]
+        qxc = 7,
+        /// <summary>
+        /// 重庆时时彩
+        /// </summary>
+        [Description("重庆时时彩")]
+        cqssc = 8,
+        /// <summary>
+        /// 江西时时彩
+        /// </summary>
+        [Description("江西时时彩")]
+        jxssc = 9,
+        /// <summary>
+        /// 北京赛车pk0
+        /// </summary>
+        [Description("北京赛车PK10")]
+        bjpk10 = 10,
+        /// <summary>
+        /// 山东11选5
+        /// 十一运夺金
+        /// </summary>
+        [Description("十一运夺金")]
+        sd11x5 = 11,
+        /// <summary>
+        /// 江西十一选五
+        /// </summary>
+        [Description("江西11选5")]
+        jx11x5 = 12,
+        /// <summary>
+        /// 广东十一选五
+        /// </summary>
+        [Description("广东11选5")]
+        gd11x5 = 13,
+        /// <summary>
+        /// 幸运农场
+        /// </summary>
+        [Description("幸运农场")]
+        xync = 14,
+        /// <summary>
+        /// 广东快乐十分
+        /// </summary>
+        [Description("广东快乐十分")]
+        gdkl10 = 15,
+        /// <summary>
+        /// 江苏快3
+        /// </summary>
+        [Description("江苏快3")]
+        jsk3 = 16,
+        /// <summary>
+        /// 北京快乐8
+        /// </summary>
+        [Description("北京快乐8")]
+        bjkl8 = 17,
+        /// <summary>
+        /// 上海时时乐
+        /// </summary>
+        [Description("上海时时乐")]
+        shssl = 18,
+        /// <summary>
+        /// "江苏7位数
+        /// </summary>
+        [Description("江苏7位数")]
+        js7ws = 19,
+        /// <summary>
+        /// 福建31选7
+        /// </summary>
+        [Description("福建体彩31选7")]
+        fj31x7 = 20,
+        /// <summary>
+        /// 福建22选5
+        /// </summary>
+        [Description("福建体彩22选5")]
+        fj22x5 = 21,
+        /// <summary>
+        /// 福建36选7
+        /// </summary>
+        [Description("福建体彩36选7")]
+        fj36x7 = 22,
+        /// <summary>
+        /// 华东15选5
+        /// </summary>
+        [Description("15选5")]
+        hd15x5 = 23,
+        /// <summary>
+        /// 东方6+1
+        /// </summary>
+        [Description("东方6+1")]
+        df6j1 = 24,
+        /// <summary>
+        /// 上海天天彩选4
+        /// </summary>
+        [Description("上海天天彩选4")]
+        shttcx4 = 25,
+        /// <summary>
+        /// 浙江6+1=浙江体彩6+1
+        /// </summary>
+        [Description("浙江6+1")]
+        zj6j1 = 26,
+        /// <summary>
+        /// 浙江20选5
+        /// </summary>
+        [Description("浙江20选5")]
+        zj20x5 = 27,
+        ///// <summary>
+        ///// 浙江体彩6+1=浙江6+1
+        ///// </summary>
+        //[Description("浙江体彩6+1")]
+        //zjtc6j1 = 26,
+        /// <summary>
+        /// 安徽25选5
+        /// </summary>
+        [Description("安徽25选5")]
+        ah25x5 = 29,
+        /// <summary>
+        /// 齐鲁风采23选5
+        /// </summary>
+        [Description("齐鲁风采23选5")]
+        qlfc23x5 = 30,
+        /// <summary>
+        /// 好彩1
+        /// </summary>
+        [Description("好彩1")]
+        hc1 = 31,
+        /// <summary>
+        /// 南粤风采36选7
+        /// </summary>
+        [Description("南粤风采36选7")]
+        nyfc36x7 = 32,
+        /// <summary>
+        /// 广东26选5
+        /// </summary>
+        [Description("广东26选5")]
+        gd26x5 = 33,
+        /// <summary>
+        /// 广西快乐双彩24选7
+        /// </summary>
+        [Description("广西快乐双彩24选7")]
+        gxklsc24x7 = 34,
+        /// <summary>
+        /// 海南4+1
+        /// </summary>
+        [Description("海南4+1")]
+        hn4j1 = 35,
+        /// <summary>
+        /// 深圳风采35选7
+        /// </summary>
+        [Description("深圳风采35选7")]
+        szfc35x7 = 36,
+        /// <summary>
+        /// 新疆35选7
+        /// </summary>
+        [Description("新疆35选7")]
+        xj35x7 = 37,
+        /// <summary>
+        /// 新疆18选7
+        /// </summary>
+        [Description("新疆18选7")]
+        xj18x7 = 38,
+        /// <summary>
+        /// 新疆25选7
+        /// </summary>
+        [Description("新疆25选7")]
+        xj25x7 = 39,
+        /// <summary>
+        /// 云贵川22选5（天天乐）
+        /// </summary>
+        [Description("云贵川22选5")]
+        ygcttl = 40,
+        /// <summary>
+        /// 中原风采22选5
+        /// </summary>
+        [Description("中原风采22选5")]
+        zyfc22x5 = 41,
+        /// <summary>
+        /// 楚天风采22选5
+        /// </summary>
+        [Description("楚天风采22选5")]
+        ctfc22x5 = 42,
+        /// <summary>
+        /// 黑龙江22选5
+        /// </summary>
+        [Description("黑龙江22选5")]
+        hlj22x5 = 43,
+        /// <summary>
+        /// 黑龙江风采p62
+        /// </summary>
+        [Description("黑龙江风采p62")]
+        hljp62 = 44,
+        /// <summary>
+        /// 黑龙江36选7
+        /// </summary>
+        [Description("黑龙江36选7")]
+        hlj36x7 = 45,
+        /// <summary>
+        /// 黑龙江体彩6+1
+        /// </summary>
+        [Description("黑龙江体彩6+1")]
+        hljtc6j1 = 46,
+        /// <summary>
+        /// 辽宁35选7
+        /// </summary>
+        [Description("辽宁35选7")]
+        ln35x7 = 47,
+        /// <summary>
+        /// 河北排列7
+        /// </summary>
+        [Description("河北排列7")]
+        hbpl7 = 48,
+        /// <summary>
+        /// 河北排列5
+        /// </summary>
+        [Description("河北排列5")]
+        hbpl5 = 49,
+        /// <summary>
+        /// 河北好运2
+        /// </summary>
+        [Description("河北好运2")]
+        hbhy2 = 50,
+        /// <summary>
+        /// 河北好运3
+        /// </summary>
+        [Description("河北好运3")]
+        hbhy3 = 51,
+        /// <summary>
+        /// 河北20选5
+        /// </summary>
+        [Description("河北20选5")]
+        hb20x5 = 52,
+        /// <summary>
+        /// 河北11选5
+        /// </summary>
+        [Description("河北11选5")]
+        heb11x5 = 53,
+        /// <summary>
+        /// 河北快3
+        /// </summary>
+        [Description("河北快3")]
+        hebk3 = 54,
+        /// <summary>
+        /// 天津快乐十分
+        /// </summary>
+        [Description("天津快乐十分")]
+        tjkl10 = 55,
+
+        /// <summary>
+        /// 天津时时彩
+        /// </summary>
+        [Description("天津时时彩")]
+        tjssc = 56,
+        /// <summary>
+        /// 天津11选5
+        /// </summary>
+        [Description("天津11选5")]
+        tj11x5 = 57,
+        /// <summary>
+        /// 山西泳坛夺金
+        /// </summary>
+        [Description("山西泳坛夺金")]
+        sxytdj = 58,
+        /// <summary>
+        /// 山西11选5
+        /// </summary>
+        [Description("山西11选5")]
+        sx11x5 = 59,
+        /// <summary>
+        /// 内蒙古11选5
+        /// </summary>
+        [Description("内蒙古11选5")]
+        nmg11x5 = 60,
+        /// <summary>
+        /// 内蒙古时时彩
+        /// </summary>
+        [Description("内蒙古时时彩")]
+        nmgssc = 61,
+        /// <summary>
+        /// 内蒙古快3
+        /// </summary>
+        [Description("内蒙古快3")]
+        nmgk3 = 103,
+        /// <summary>
+        /// 江苏11选5
+        /// </summary>
+        [Description("江苏11选5")]
+        js11x5 = 62,
+
+        /// <summary>
+        /// 山东群英会
+        /// </summary>
+        [Description("群英会")]
+        qyh = 63,
+        /// <summary>
+        /// 浙江11选5
+        /// </summary>
+        [Description("浙江11选5")]
+        zj11x5 = 64,
+
+        /// <summary>
+        /// 浙江快乐彩（快乐12）
+        /// </summary>
+        [Description("快乐12")]
+        kl12 = 65,
+        /// <summary>
+        /// 安徽快3
+        /// </summary>
+        [Description("安徽快3")]
+        ahk3 = 66,
+        /// <summary>
+        /// 安徽11选5
+        /// </summary>
+        [Description("安徽11选5")]
+        ah11x5 = 67,
+        /// <summary>
+        /// 上海11选5
+        /// </summary>
+        [Description("上海11选5")]
+        sh11x5 = 68,
+        /// <summary>
+        /// 上海快3
+        /// </summary>
+        [Description("上海快3")]
+        shk3 = 69,
+        /// <summary>
+        /// 福建11选5
+        /// </summary>
+        [Description("福建11选5")]
+        fj11x5 = 70,
+        /// <summary>
+        /// 福建快3
+        /// </summary>
+        [Description("福建快3")]
+        fjk3 = 71,
+        /// <summary>
+        /// 宁夏11选5
+        /// </summary>
+        [Description("宁夏11选5")]
+        nx11x5 = 72,
+        /// <summary>
+        /// 陕西11选5
+        /// </summary>
+        [Description("陕西11选5")]
+        shx11x5 = 73,
+        /// <summary>
+        /// 甘肃11选5
+        /// </summary>
+        [Description("甘肃11选5")]
+        gs11x5 = 74,
+        /// <summary>
+        /// 新疆11选5
+        /// </summary>
+        [Description("新疆11选5")]
+        xj11x5 = 75,
+        /// <summary>
+        /// 新疆时时彩
+        /// </summary>
+        [Description("新疆时时彩")]
+        xjssc = 76,
+        /// <summary>
+        /// 新疆喜乐彩
+        /// </summary>
+        [Description("新疆喜乐彩")]
+        xjxlc = 77,
+        /// <summary>
+        /// 黑龙江时时彩
+        /// </summary>
+        [Description("黑龙江时时彩")]
+        hljssc = 78,
+        /// <summary>
+        /// 黑龙江11选5
+        /// </summary>
+        [Description("黑龙江11选5")]
+        hlj11x5 = 79,
+        /// <summary>
+        /// 黑龙江快乐十分
+        /// </summary>
+        [Description("黑龙江快乐十分")]
+        hljkl10 = 80,
+        /// <summary>
+        /// 吉林快3
+        /// </summary>
+        [Description("吉林快3")]
+        jlk3 = 81,
+        /// <summary>
+        /// 吉林11选5
+        /// </summary>
+        [Description("吉林11选5")]
+        jl11x5 = 82,
+        /// <summary>
+        /// 吉林时时彩
+        /// </summary>
+        [Description("吉林时时彩")]
+        jlssc = 83,
+        /// <summary>
+        /// 辽宁11选5
+        /// </summary>
+        [Description("辽宁11选5")]
+        ln11x5 = 84,
+        /// <summary>
+        /// 辽宁快乐12
+        /// </summary>
+        [Description("辽宁快乐12")]
+        lnkl12 = 85,
+        /// <summary>
+        /// 贵州快3
+        /// </summary>
+        [Description("贵州快3")]
+        gzk3 = 86,
+        /// <summary>
+        /// 贵州11选5
+        /// </summary>
+        [Description("贵州11选5")]
+        gz11x5 = 87,
+        /// <summary>
+        /// 四川快乐12
+        /// </summary>
+        [Description("四川快乐12")]
+        sckl12 = 88,
+        /// <summary>
+        /// 四川11选5
+        /// </summary>
+        [Description("四川11选5")]
+        sc11x5 = 89,
+        /// <summary>
+        /// 重庆11选5
+        /// </summary>
+        [Description("重庆11选5")]
+        cq11x5 = 90,
+        /// <summary>
+        /// 云南11选5
+        /// </summary>
+        [Description("云南11选5")]
+        yn11x5 = 91,
+        /// <summary>
+        /// 云南时时彩
+        /// </summary>
+        [Description("云南时时彩")]
+        ynssc = 92,
+        /// <summary>
+        /// 云南快乐十分
+        /// </summary>
+        [Description("云南快乐十分")]
+        ynkl10 = 93,
+        /// <summary>
+        /// 广西快乐十分
+        /// </summary>
+        [Description("广西快乐十分")]
+        gxkl10 = 94,
+        /// <summary>
+        /// 广西快3
+        /// </summary>
+        [Description("广西快3")]
+        gxk3 = 95,
+        /// <summary>
+        /// 广西11选5
+        /// </summary>
+        [Description("广西11选5")]
+        gx11x5 = 96,
+        /// <summary>
+        /// 湖南快乐十分
+        /// </summary>
+        [Description("湖南快乐十分")]
+        hnkl10 = 97,
+        /// <summary>
+        /// 幸运赛车
+        /// </summary>
+        [Description("幸运赛车")]
+        xysc = 98,
+        /// <summary>
+        /// 河南11选5
+        /// </summary>
+        [Description("河南11选5")]
+        hn11x5 = 99,
+        /// <summary>
+        /// 河南快赢481
+        /// </summary>
+        [Description("河南快赢481")]
+        hn481 = 100,
+        /// <summary>
+        /// 湖北快3
+        /// </summary>
+        [Description("湖北快3")]
+        hubk3 = 101,
+        /// <summary>
+        /// 湖北11选5
+        /// </summary>
+        [Description("湖北11选5")]
+        hub11x5 = 102,
+        /// <summary>
+        /// 河南幸运彩
+        /// </summary>
+        [Description("河南幸运彩")]
+        hnxyc = 104,
+        /// <summary>
+        /// 河南快3
+        /// </summary>
+        [Description("河南快3")]
+        hnk3 = 105,
+        /// <summary>
+        /// 北京11选5
+        /// </summary>
+        [Description("北京11选5")]
+        bj11x5 = 106,
+        /// <summary>
+        /// 青海11选5
+        /// </summary>
+        [Description("青海11选5")]
+        qh11x5 = 107,
+        /// <summary>
+        /// 北京快3
+        /// </summary>
+        [Description("北京快3")]
+        bjk3 = 108,
+        /// <summary>
+        /// 江西快3
+        /// </summary>
+        [Description("江西快3")]
+        jxk3 = 109,
+        /// <summary>
+        /// 甘肃快3
+        /// </summary>
+        [Description("甘肃快3")]
+        gsk3 = 110,
+        /// <summary>
+        /// 青海快3
+        /// </summary>
+        [Description("青海快3")]
+        qhk3 = 111

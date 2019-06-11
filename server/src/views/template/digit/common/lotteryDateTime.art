@@ -1,0 +1,1 @@
+开奖日期：<i>{{@DateFormatTime(history.awardTime)}}</i>  |  兑奖截止日期：<i>{{@Deadline(history.awardTime)}}</i>

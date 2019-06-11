@@ -1,0 +1,39 @@
+<div class="public-articleList lh-contentList">
+    <div class="public-titleBlock">
+        <i class="icon-zx"></i>
+        <span class="name">技巧</span>
+        {{if lotteryType == 'digit'}}
+        <a href="/article/list-{{lotteryCode}}-37-p1" class="more" rel="nofollow"  target='_blank'>更多>></a>
+        {{else}}
+        <a href="/article/list-other-36-p1" class="more" rel="nofollow"  target='_blank'>更多>></a>
+        {{/if}}
+    </div>
+    <div class="al_listBlock">
+        <ul>
+            {{each tecInfo tec}}
+                {{if lotteryType == 'digit'}}
+                <li><a href="/article/detail-37-{{tec.id}}.html" class="title" style="width: 238px"  target='_blank'>{{tec.title}}</a><span class="date">{{tec.createDate | formatDateTime 'MM-dd'}}</span></li>
+                {{else}}
+                <li><a href="/article/detail-36-{{tec.id}}.html" class="title" style="width: 238px"  target='_blank'>{{tec.title}}</a><span class="date">{{tec.createDate | formatDateTime 'MM-dd'}}</span></li>
+                {{/if}}
+                
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<style>
+    .howToPlay .content {
+        position: relative;
+        max-height: 219px;
+        overflow: hidden;
+    }
+</style>
+<!--玩法介绍-->
+<!--
+<div class="howToPlay w306">
+    <p class="title">玩法介绍<a href="/rule/{{lotteryCode}}-{{lotteryType}}" class="more" rel="nofollow"  target='_blank'>更多>></a></p>
+    <div class="content">
+        {{@ rule.introduceContent}}
+    </div>
+</div>
+-->
