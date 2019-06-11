@@ -1,3 +1,6 @@
+
+
+
 <!--中间独立-->
 <div class="eyu100-main main-indexPage">
     <div class="main-centerSection">
@@ -13,27 +16,35 @@
                 <!--banner-->
                 <div class="ip-banner" id="banner">
                     <ul class="banner-list">
-                        {{if adBanner && adBanner[0].data }} {{if adBanner[0].data.length > 0}} {{each adBanner[0].data list index}} {{if index > 3 }} break; {{else}}
-                        <li data-index="{{@index}}">
-                            <a href="{{@list.url}}" target="_blank" rel="nofollow"><img src="{{@list.content}}" alt="{{@list.description}}" /></a>
-                        </li>
-                        {{/if}} {{/each}} {{else}}
-                        <li><img src="{{cdnUrl}}/images/index/bannerIndex_defult.png" alt="" /></li>
-                        {{/if}} {{else}}
-                        <li><img src="{{cdnUrl}}/images/index/bannerIndex_defult.png" alt="" /></li>
+                        {{if adBanner && adBanner[0].data }}
+
+                            {{if adBanner[0].data.length > 0}}
+
+                               {{each adBanner[0].data list index}}
+                                        {{if index > 3 }}
+                                                        break;
+                                        {{else}}
+                                       <li data-index="{{@index}}"><a href="{{@list.url}}" target="_blank" rel="nofollow"><img src="{{@list.content}}" alt="{{@list.description}}" /></a></li>
+                                        {{/if}}
+                                {{/each}}
+                            {{else}}
+                                <li><img src="{{cdnUrl}}/images/index/bannerIndex_defult.png" alt="" /></li>
+                            {{/if}}
+                        {{else}}
+                           <li><img src="{{cdnUrl}}/images/index/bannerIndex_defult.png" alt="" /></li>
                         {{/if}}
                     </ul>
                     <div class="banner-dot" id="page">
                     </div>
                 </div>
                 <!--追号推荐-->
-                <div class="public-recommendZhuiHao">
+                  <div class="public-recommendZhuiHao">
                     <div class="public-titleBlock">
                         <i class="icon-zh"></i>
                         <span class="name">追号推荐</span>
-                        <a href="/plan" class="more" target="_blank" rel="nofollow">更多>></a>
+                        <a href="/plan" class="more"  target="_blank" rel="nofollow">更多>></a>
                     </div>
-                    <div class="rzh-table" id="plan" data-systime="{{@systime}}">
+                    <div class="rzh-table" id="plan"  data-systime="{{@systime}}">
                         <table>
                             <tr>
                                 <th>彩种</th>
@@ -47,7 +58,7 @@
 
                         </table>
                     </div>
-                </div>
+                </div>  
             </div>
             <div class="b1-r">
                 <!--最新公告-->
@@ -55,15 +66,19 @@
                     <div class="public-titleBlock">
                         <i class="icon-zxgg"></i>
                         <span class="name">最新公告</span>
-                        <a href="/notice" class="more" target="_blank" rel="nofollow">更多>></a>
+                        <a href="/notice" class="more"  target="_blank" rel="nofollow">更多>></a>
                     </div>
                     <div class="al_listBlock">
                         <ul>
-                            {{if noticeList.data}} {{if noticeList.data.length > 0}} {{each noticeList.data list }}
-                            <li><a href="/notice/detail-{{@list.id }}.html" class="title" target="_blank">{{@list.title }}</a></li>
-                            {{ /each }} {{else}}
-                            <li style="color: #999; text-align: center;">暂无任何公告</li>
-                            {{/if}} {{/if}}
+                            {{if noticeList.data}}
+                                {{if noticeList.data.length > 0}}
+                                    {{each noticeList.data  list }}
+                                        <li><a href="/notice/detail-{{@list.id }}.html"  class="title" target="_blank">{{@list.title }}</a></li>
+                                    {{ /each }}
+                                {{else}}
+                                        <li style="color: #999; text-align: center;">暂无任何公告</li>
+                                {{/if}}
+                            {{/if}}
                         </ul>
                     </div>
                 </div>
@@ -72,7 +87,7 @@
                     <div class="public-titleBlock">
                         <i class="icon-td"></i>
                         <span class="name">每日提点</span>
-                        <a href="/point" class="more" target="_blank" rel="nofollow">更多>></a>
+                        <a href="/point" class="more"  target="_blank" rel="nofollow">更多>></a>
                     </div>
                     <div class="al_listBlock" id="point">
                         <ul>
@@ -88,46 +103,61 @@
                 <div class="public-titleBlock">
                     <i class="icon-kjgg"></i>
                     <span class="name">开奖公告</span>
-                    <a href="/lottery" class="more" target="_blank" rel="nofollow">更多>></a>
+                    <a href="/lottery" class="more"  target="_blank" rel="nofollow">更多>></a>
                 </div>
                 <div class="la-list">
                     <ul>
-                        {{if awardNoticeList && awardNoticeList.length > 0}} {{ each awardNoticeList list index}} {{if index == 0}}
-                        <li class="first" onclick="javascript:window.open('/digit/{{@list.lotteryCode }}','_blank');">
-                            {{else}}
-                            <li onclick="javascript:window.open('/digit/{{@list.lotteryCode }}','_blank')">
-                                {{/if}}
-                                <span class="textB"><a href="/digit/{{@list.lotteryCode }}" class="name" target="_blank">{{@list.lotteryName }} </a><i class="issue">{{@list.issueNo }}期&nbsp;{{@list.week}}&nbsp;{{@formatDateTime(list.awardDatetime,'MM-dd hh:mm')}}</i></span>
-                                <div class="public-number-ball">
-                                    {{@stringChangeBall(list.awardResult, 3 , list.lotteryCode) }}
-                                </div>
-                            </li>
-                            {{/each}} {{else}}
-                            <li class="first" style="color: #999; text-align: center;">暂无任何开奖公告</li>
-                            {{/if}}
+                        {{if awardNoticeList && awardNoticeList.length > 0}}
+                            {{ each awardNoticeList  list  index}}
+                              {{if index == 0}}
+                                <li class="first" onclick="javascript:window.open('/digit/{{@list.lotteryCode }}','_blank');">
+                              {{else}}
+                                <li onclick="javascript:window.open('/digit/{{@list.lotteryCode }}','_blank')" >
+                              {{/if}}
+                                        <span class="textB"><a href="/digit/{{@list.lotteryCode }}" class="name" target="_blank">{{@list.lotteryName }} </a><i class="issue">{{@list.issueNo }}期&nbsp;{{@list.week}}&nbsp;{{@formatDateTime(list.awardDatetime,'MM-dd hh:mm')}}</i></span>
+                                        <div class="public-number-ball">
+                                            {{@stringChangeBall(list.awardResult, 3 , list.lotteryCode) }}
+                                        </div>
+                                 </li>
+                            {{/each}}
+                        {{else}}
+                                 <li class="first" style="color: #999; text-align: center;">暂无任何开奖公告</li>
+                        {{/if}}
                     </ul>
                 </div>
             </div>
             <div class="b2-r">
-                <div id="lotteryList">
-                    <!--开奖公告-高频彩-->
-                    <div class="public-lotteryMenuB" id="tab">
-                        <div class="lmb-content">
-                            <i class="borBot"></i> {{if classifyList && classifyList.length > 0}} {{each classifyList list index}} {{if index == 0}}
-                            <a href="javascript: void(0)" class="name active" data-classity={ {@list.classify}}>{{@list.name}}</a>
-                            <i class="line"></i> {{else if index == classifyList.length -1}}
-                            <a href="javascript: void(0)" class="name" data-classity={ {@list.classify}}>{{@list.name}}</a> {{else}}
-                            <a href="javascript: void(0)" class="name" data-classity={ {@list.classify}}>{{@list.name}}</a>
-                            <i class="line"></i> {{/if}} {{/each}} {{/if}}
-                        </div>
-                        <a href="/lottery/2" class="more" target="_blank" rel="nofollow">更多>></a>
-                    </div>
-                    <div class="ip-gpcLotteryNotice" id="content">
-                        {{if classifyList && classifyList.length > 0}} {{each classifyList list index}} {{if index == 0}}
-                        <div data-classity={ {@list.classify}} data-name="{{@list.name}}" class="lis  active">
+               <div id="lotteryList">
+                <!--开奖公告-高频彩-->
+                <div class="public-lotteryMenuB" id="tab">
+                    <div class="lmb-content">
+                    <i class="borBot"></i>
+                    {{if classifyList && classifyList.length > 0}}
+                        {{each classifyList  list  index}}
+                            {{if index == 0}}
+                                <a href="javascript: void(0)" class="name active" data-classity = {{@list.classify}} >{{@list.name}}</a>
+                                <i class="line"></i>
+                            {{else if index == classifyList.length -1}}
+                                 <a href="javascript: void(0)" class="name" data-classity = {{@list.classify}}>{{@list.name}}</a>
                             {{else}}
-                            <div data-classity={ {@list.classify}} data-name="{{@list.name}}" class="lis" style="display: none;">
-                                {{/if}} {{if list.childs && list.childs.length > 0 }} {{each list.childs childsList}}
+                                 <a href="javascript: void(0)" class="name" data-classity = {{@list.classify}}>{{@list.name}}</a>
+                                 <i class="line"></i>
+                            {{/if}}
+                        {{/each}}
+                    {{/if}}
+                    </div>
+                    <a href="/lottery/2" class="more"  target="_blank" rel="nofollow">更多>></a>
+                </div>
+                <div class="ip-gpcLotteryNotice" id="content">
+                    {{if classifyList && classifyList.length > 0}}
+                       {{each classifyList list index}}
+                            {{if index == 0}}
+                                <div data-classity = {{@list.classify}} data-name="{{@list.name}}" class="lis  active">
+                            {{else}}
+                                <div data-classity = {{@list.classify}} data-name="{{@list.name}}" class="lis"  style="display: none;">
+                            {{/if}}
+                            {{if list.childs && list.childs.length > 0 }}
+                                {{each list.childs  childsList}}
                                 <div class="ln-li" data-code="{{@childsList.lotteryCode}}" data-nextPeriod="{{@childsList.next.period}}">
                                     <a href="high/{{@childsList.lotteryCode}}" class="logo" target="_blank"><img src="{{cdnUrl}}/pic/logo/logo_{{@childsList.lotteryCode}}.png" alt=""></a>
 
@@ -144,161 +174,188 @@
                                         </div>
                                         <a href="/live/{{@childsList.lotteryCode}}-detail" class="btn" target="_blank">开奖直播</a>
                                         <div class="timeBlock">
-                                            <span class="timeText">下一期开奖倒计时：</span> {{if index == 0}}
-                                            <span class="time" data-time="{{@childsList.awardTimeInterval}}">
-                                                          {{@renderLotteryTime(childsList.awardTimeInterval)}}
-                                                 </span> {{else}}
-                                            <span class="time" data-time="">
-                                                     <span class=""><b>--</b><i>--</i></span>
-                                            <span class=""><b>--</b><i>--</i></span>
-                                            </span>
+                                            <span class="timeText">下一期开奖倒计时：</span>
+
+                                            {{if index == 0}}
+                                                <span class="time" data-time="{{@childsList.awardTimeInterval}}">
+                                                         {{@renderLotteryTime(childsList.awardTimeInterval)}}
+                                                </span>
+                                            {{else}}
+                                                <span class="time" data-time="">
+                                                    <span class=""><b>--</b><i>--</i></span>
+                                                    <span class=""><b>--</b><i>--</i></span>
+                                                </span>
                                             {{/if}}
 
                                         </div>
                                         <span class="line"></span>
 
                                         <div class="ln-funBtnB">
-                                            <a href="/high/{{@childsList.lotteryCode}}/history" class="funBtn">历史开奖</a> {{if list.classify == '11x5'}}
-                                            <a href="/chart/{{@childsList.lotteryCode}}/1" class="funBtn">走势图表</a>
-                                            <a href="/omission/{{@childsList.lotteryCode}}/101" class="funBtn">遗漏分析</a> {{else if list.classify == 'k3' || list.classify == 'kl10' || list.classify == 'ssc'}}
-                                            <a href="/chart/{{@childsList.lotteryCode}}/1" class="funBtn">走势图表</a>
-                                            <a href="/omission/{{@childsList.lotteryCode}}/11" class="funBtn">遗漏分析</a> {{/if}}
+                                            <a href="/high/{{@childsList.lotteryCode}}/history" class="funBtn">历史开奖</a>
+                                            {{if list.classify == '11x5'}}
+                                                <a href="/chart/{{@childsList.lotteryCode}}/1" class="funBtn">走势图表</a>
+                                                <a href="/omission/{{@childsList.lotteryCode}}/101" class="funBtn">遗漏分析</a>
+                                            {{else if list.classify == 'k3' || list.classify == 'kl10' || list.classify == 'ssc'}}
+                                                <a href="/chart/{{@childsList.lotteryCode}}/1" class="funBtn">走势图表</a>
+                                                <a href="/omission/{{@childsList.lotteryCode}}/11" class="funBtn">遗漏分析</a>
+                                            {{/if}}
 
                                             <a href="/plan/{{@childsList.lotteryCode}}/1" class="funBtn">追号推荐</a>
-                                            <a href="/point/1-{{@childsList.lotteryCode}}" class="funBtn">每日提点</a> {{if list.classify == '11x5' }}
-                                            <a href="/article/list-{{@list.classify}}-32-p1" class="funBtn">技巧文章</a> {{else if list.classify == 'k3' }}
-                                            <a href="/article/list-{{@list.classify}}-34-p1" class="funBtn">技巧文章</a> {{else if list.classify == 'kl10' }}
-                                            <a href="/article/list-{{@list.classify}}-33-p1" class="funBtn">技巧文章</a> {{else if list.classify == 'ssc' }}
-                                            <a href="/article/list-{{@list.classify}}-35-p1" class="funBtn">技巧文章</a> {{else}}
-                                            <a href="/article/list-other-36-p1" class="funBtn">技巧文章</a> {{/if}}
+                                            <a href="/point/1-{{@childsList.lotteryCode}}" class="funBtn">每日提点</a>
+
+                                            {{if  list.classify == '11x5' }}
+                                               <a href="/article/list-{{@list.classify}}-32-p1" class="funBtn">技巧文章</a>
+                                            {{else if list.classify == 'k3' }}
+                                               <a href="/article/list-{{@list.classify}}-34-p1" class="funBtn">技巧文章</a>
+                                            {{else if list.classify == 'kl10' }}
+                                               <a href="/article/list-{{@list.classify}}-33-p1" class="funBtn">技巧文章</a>
+                                            {{else if list.classify == 'ssc' }}
+                                               <a href="/article/list-{{@list.classify}}-35-p1" class="funBtn">技巧文章</a>
+                                            {{else}}
+                                               <a href="/article/list-other-36-p1" class="funBtn">技巧文章</a>
+                                            {{/if}}
                                         </div>
 
 
                                     </div>
 
                                 </div>
-                                {{/each}} {{/if}}
-                            </div>
-                            {{/each}} {{/if}}
+                              {{/each}}
+                            {{/if}}
                         </div>
+                       {{/each}}
+                    {{/if}}
+                </div>
+              </div>
+                <!--开奖直播-->
+                <div class="ip-videoB">
+                    <div class="public-titleBlock">
+                        <i class="icon-zb"></i>
+                        <span class="name">开奖直播</span>
+                        <a href="/live" class="more"  target="_blank" rel="nofollow">更多>></a>
                     </div>
-                    <!--开奖直播-->
-                    <div class="ip-videoB">
-                        <div class="public-titleBlock">
-                            <i class="icon-zb"></i>
-                            <span class="name">开奖直播</span>
-                            <a href="/live" class="more" target="_blank" rel="nofollow">更多>></a>
+                    <div class="vb" id="videoList">
+                        <span class="btnL" id="btnL"></span>
+                        <div class="list" id="list">
+                            <ul>
+                                {{if lotteryVideoList && lotteryVideoList.length > 0}}
+                                    {{each lotteryVideoList  list  index}}
+
+                                            {{if index <= 2 }}
+
+                                                    <li  data-code="{{@list.lotteryCode}}" class="active"  data-index="{{@index}}">
+                                                        <div class="public-videoBlock">
+                                                            <div class="videoB">
+                                                                <a class="maskLayer" href="/live/{{@list.lotteryCode}}-detail" target="_blank"><i class="videoBtn"></i></a>
+                                                                <img src="{{cdnUrl}}/pic/lotteryVideo/{{@list.lotteryCode}}.jpg" alt="{{@list.lotteryName}}" class="img" />
+                                                                <span class="nameB"><b class="name">{{@list.lotteryName}}</b><i class="issue">{{@list.next.period}}期</i></span>
+                                                            </div>
+                                                            <div class="timeB">
+                                                                <span class="time">距离<b data-time="{{@list.awardTimeInterval}}" class="countDownTime">{{@getCountDownTime(list.awardTimeInterval)}}</b></span>
+                                                                {{if getCountDownTimeDay(list.awardTimeInterval) == '00:00' }}
+                                                                   <a href="/live/{{@list.lotteryCode}}/detail" target="_blank" class="textBtn" style="display: none">开始直播</a>
+                                                                   <i class="timeText" style="display: block">正在直播中...</i>
+                                                                {{else}}
+                                                                   <a href="/live/{{@list.lotteryCode}}-detail" target="_blank" class="textBtn" style="display: block">开始直播</a>
+                                                                   <i class="timeText" style="display: none">正在直播中...</i>
+                                                                {{/if}}
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                            {{else}}
+
+                                                    <li  data-code="{{@list.lotteryCode}}" data-index="{{@index}}">
+                                                        <div class="public-videoBlock">
+                                                            <div class="videoB">
+                                                                <a class="maskLayer" href="javascript: void(0)" target="_blank"><i class="videoBtn"></i></a>
+                                                                <img src="{{cdnUrl}}/pic/lotteryVideo/default.png" alt="" class="img" />
+                                                                <span class="nameB"><b class="name">---</b><i class="issue">---期</i></span>
+                                                            </div>
+                                                            <div class="timeB">
+                                                                <span class="time">距离<b data-time="" class="countDownTime"></b></span>
+                                                                <a href="javascript: void(0)" target="_blank" class="textBtn" style="display: block">开始直播</a>
+                                                                <i class="timeText" style="display: none">正在直播中...</i>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                            {{/if}}
+
+                                    {{/each}}
+                                {{/if}}
+                            </ul>
                         </div>
-                        <div class="vb" id="videoList">
-                            <span class="btnL" id="btnL"></span>
-                            <div class="list" id="list">
-                                <ul>
-                                    {{if lotteryVideoList && lotteryVideoList.length > 0}} {{each lotteryVideoList list index}} {{if index
-                                    <=2 }} <li data-code="{{@list.lotteryCode}}" class="active" data-index="{{@index}}">
-                                        <div class="public-videoBlock">
-                                            <div class="videoB">
-                                                <a class="maskLayer" href="/live/{{@list.lotteryCode}}-detail" target="_blank"><i class="videoBtn"></i></a>
-                                                <img src="{{cdnUrl}}/pic/lotteryVideo/{{@list.lotteryCode}}.jpg" alt="{{@list.lotteryName}}" class="img" />
-                                                <span class="nameB"><b class="name">{{@list.lotteryName}}</b><i class="issue">{{@list.next.period}}期</i></span>
-                                            </div>
-                                            <div class="timeB">
-                                                <span class="time">距离<b data-time="{{@list.awardTimeInterval}}" class="countDownTime">{{@getCountDownTime(list.awardTimeInterval)}}</b></span> {{if getCountDownTimeDay(list.awardTimeInterval) == '00:00'
-                                                }}
-                                                <a href="/live/{{@list.lotteryCode}}/detail" target="_blank" class="textBtn" style="display: none">开始直播</a>
-                                                <i class="timeText" style="display: block">正在直播中...</i> {{else}}
-                                                <a href="/live/{{@list.lotteryCode}}-detail" target="_blank" class="textBtn" style="display: block">开始直播</a>
-                                                <i class="timeText" style="display: none">正在直播中...</i> {{/if}}
-                                            </div>
-                                        </div>
-                                        </li>
-
-                                        {{else}}
-
-                                        <li data-code="{{@list.lotteryCode}}" data-index="{{@index}}">
-                                            <div class="public-videoBlock">
-                                                <div class="videoB">
-                                                    <a class="maskLayer" href="javascript: void(0)" target="_blank"><i class="videoBtn"></i></a>
-                                                    <img src="{{cdnUrl}}/pic/lotteryVideo/default.png" alt="" class="img" />
-                                                    <span class="nameB"><b class="name">---</b><i class="issue">---期</i></span>
-                                                </div>
-                                                <div class="timeB">
-                                                    <span class="time">距离<b data-time="" class="countDownTime"></b></span>
-                                                    <a href="javascript: void(0)" target="_blank" class="textBtn" style="display: block">开始直播</a>
-                                                    <i class="timeText" style="display: none">正在直播中...</i>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        {{/if}} {{/each}} {{/if}}
-                                </ul>
-                            </div>
-                            <span class="btnR" id="btnR"></span>
-                        </div>
+                        <span class="btnR"  id="btnR"></span>
                     </div>
                 </div>
             </div>
-            <!--资讯技巧-->
-            <div class="ip-infoTechniques">
-                <div class="public-titleBlock">
-                    <i class="icon-zx"></i>
-                    <span class="name">资讯技巧</span>
-                    <a href="/article/list-0-8-p1" class="more" target="_blank" rel="nofollow">更多彩票技巧>></a>
-                </div>
-                <div class="it_listBlock">
-                    <ul>
-                        <li>
-                            <p class="sort"><a href="/article/list-0-6-p1">最新资讯</a></p>
-                            <div class="list">
-                                {{@getArtcleList(moreArticleList, 6) }}
-                            </div>
-                        </li>
-                        <li>
-                            <p class="sort"><a href="/article/list-11x5-32-p1">11选5技巧</a></a>
-                            </p>
-                            <div class="list">
-                                {{@getArtcleList(moreArticleList, 32) }}
-                            </div>
-                        </li>
-                        <li>
-                            <p class="sort"><a href="/article/list-k3-34-p1">快3技巧</a></p>
-                            <div class="list">
-                                {{@getArtcleList(moreArticleList, 34) }}
-                            </div>
-                        </li>
-                        <li>
-                            <p class="sort"><a href="/article/list-ssc-35-p1">时时彩技巧</a></p>
-                            <div class="list">
-                                {{@getArtcleList(moreArticleList, 35) }}
-                            </div>
-                        </li>
-                        <li>
-                            <p class="sort"><a href="/article/list-kl10-33-p1">快乐十分技巧</a></p>
-                            <div class="list">
-                                {{@getArtcleList(moreArticleList, 33) }}
-                            </div>
-                        </li>
-                        <li>
-                            <p class="sort"><a href="/article/list-other-32-p1">其它技巧</a></p>
-                            <div class="list">
-                                {{@getArtcleList(moreArticleList, 36) }}
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-
-            {{ include '../partials/friendlink.html' }}
         </div>
+        <!--资讯技巧-->
+        <div class="ip-infoTechniques">
+            <div class="public-titleBlock">
+                <i class="icon-zx"></i>
+                <span class="name">资讯技巧</span>
+                <a href="/article/list-0-8-p1" class="more"  target="_blank" rel="nofollow">更多彩票技巧>></a>
+            </div>
+            <div class="it_listBlock">
+                <ul>
+                    <li>
+                        <p class="sort"><a href="/article/list-0-6-p1">最新资讯</a></p>
+                        <div class="list">
+                             {{@getArtcleList(moreArticleList, 6) }}
+                        </div>
+                    </li>
+                    <li>
+                        <p class="sort"><a href="/article/list-11x5-32-p1">11选5技巧</a></a></p>
+                        <div class="list">
+                            {{@getArtcleList(moreArticleList, 32) }}
+                        </div>
+                    </li>
+                    <li>
+                        <p class="sort"><a href="/article/list-k3-34-p1">快3技巧</a></p>
+                        <div class="list">
+                            {{@getArtcleList(moreArticleList, 34) }}
+                        </div>
+                    </li>
+                    <li>
+                        <p class="sort"><a href="/article/list-ssc-35-p1">时时彩技巧</a></p>
+                        <div class="list">
+                            {{@getArtcleList(moreArticleList, 35) }}
+                        </div>
+                    </li>
+                    <li>
+                        <p class="sort"><a href="/article/list-kl10-33-p1">快乐十分技巧</a></p>
+                        <div class="list">
+                            {{@getArtcleList(moreArticleList, 33) }}
+                        </div>
+                    </li>
+                    <li>
+                        <p class="sort"><a href="/article/list-other-32-p1">其它技巧</a></p>
+                        <div class="list">
+                            {{@getArtcleList(moreArticleList, 36) }}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+      {{ include '../partials/friendlink.html' }}
     </div>
+</div>
 
 
-    <script type="text/javascript">
-        var pathArray = [
-            'core/views/containers/home/index.container'
-        ];
+<script type="text/javascript">
+    var pathArray = [
+        'core/views/containers/home/index.container'
+    ];
 
-        require(pathArray, function(callback) {
-            callback.initialize();
-        })
-    </script>
+    require(pathArray, function(callback) {
+        callback.initialize();
+    })
+</script>
+
+
+
+
