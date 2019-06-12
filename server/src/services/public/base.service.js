@@ -25,21 +25,21 @@ export class BaseService {
     /**
      *  获取特殊名字彩种数组;
      */
-    getSpecialCode(){
+    getSpecialCode() {
 
-        if(this.configService.specialCode !=undefined && this.configService.specialCode.length > 0 ){
+        if (this.configService.specialCode != undefined && this.configService.specialCode.length > 0) {
 
-            let  specialCode = this.configService.specialCode;
+            let specialCode = this.configService.specialCode;
 
-            for(let  i =0; i<specialCode.length; i++){
-                if( specialCode[i].province != '华东六省'){
-                    specialCode[i].province = specialCode[i].province.replace(/省/g,'');
+            for (let i = 0; i < specialCode.length; i++) {
+                if (specialCode[i].province != '华东六省') {
+                    specialCode[i].province = specialCode[i].province.replace(/省/g, '');
                 }
             }
 
             return specialCode;
 
-        }else{
+        } else {
 
             return [];
         }
@@ -49,9 +49,9 @@ export class BaseService {
     /**
      * 设置缓存
      */
-    setCache(_key, _expired = 0){
+    setCache(_key, _expired = 0) {
 
-        if( typeof(_key) != 'string' || _key ==undefined || _key ==''){
+        if (typeof(_key) != 'string' || _key == undefined || _key == '') {
             console.warn('缓存key值不能为空！');
             return;
         }
@@ -70,7 +70,7 @@ export class BaseService {
     /**
      *  返回错误信息给前端;
      */
-     errorMsg(_string){
+    errorMsg(_string) {
         console.error(_string);
         return new Promise((resolve, reject) => {
             resolve({
@@ -79,23 +79,23 @@ export class BaseService {
                 "errorCodeInfo": _string
             });
         });
-     }
+    }
 
     /**
      * 格式化返回(特需格式自己处理)
      */
     resultForm(_result) {
-        if (_result && _result.state==1) {
+        if (_result && _result.state == 1) {
             return _result.result;
-        } 
+        }
         return null;
     }
 
     resultPage(_result) {
         //一定存在这个
-        if (_result && _result.state==1 && _result.result != null) {
+        if (_result && _result.state == 1 && _result.result != null) {
             return _result.result;
-        }else if( _result.result === null ){
+        } else if (_result.result === null) {
             return [];
         }
     }
@@ -105,9 +105,9 @@ export class BaseService {
      * @param {*} _result 
      */
     resultArray(_result) {
-        if (_result && _result.state==1) {
+        if (_result && _result.state == 1) {
             return _result.result ? _result.result : [];
-        } 
+        }
         return [];
     }
 
@@ -141,7 +141,7 @@ export class BaseService {
             _baseURL = ((process.env.VERSION || 'beta') == 'beta' ? this.configService.api.pageUri.beta : this.configService.api.pageUri.release);
         }
 
-       
+
         let options = {
             baseUrl: _baseURL,
             url: url,
@@ -155,9 +155,9 @@ export class BaseService {
 
         options.baseURL = options.baseUrl;
         return axios.request(options).then(result => {
-            
+
             console.log(`Api-URL:${options.baseUrl}${options.url}-----------------success`);
-            return result.data; 
+            return result.data;
         }).catch(ex => {
             console.error(`Api-URL:${options.baseUrl}${options.url}------------------error`);
             return this.errorMsg(ex);
@@ -172,15 +172,15 @@ export class BaseService {
      */
     httpGet(httpOpt, cacheOpt, uriType = 1) {
 
-        if(typeof(httpOpt) != 'object'){
-           console.error('参数1类型不正确！');
-           return;
+        if (typeof(httpOpt) != 'object') {
+            console.error('参数1类型不正确！');
+            return;
         }
 
         // 允许为空
-        if(cacheOpt && typeof(cacheOpt) != 'object'){
-           console.error('参数2类型不正确！');
-           return;
+        if (cacheOpt && typeof(cacheOpt) != 'object') {
+            console.error('参数2类型不正确！');
+            return;
         }
 
         // if(uriType && typeof(uriType) != 'number'){
@@ -197,7 +197,7 @@ export class BaseService {
         let nodeEnv = ((process.env.NODE_ENV || 'development'));
 
 
-        let uriPath,headers;
+        let uriPath, headers;
 
 
         if (cacheOpt) {
@@ -205,55 +205,54 @@ export class BaseService {
             let fromCache = cacheService.get(cacheOpt);
 
             if (fromCache) {
-
-                //logger.debug(`命中cache-${cacheOpt.key}`);
+                logger.debug(`命中cache-${cacheOpt.key}`);
                 return Promise.resolve(fromCache);
             }
         }
 
         if (nodeEnv == "development") {
 
-            if(uriType == 1){
+            if (uriType == 1) {
 
                 uriPath = this.configService.api.uri.development;
 
-            }else if(uriType == 2){
+            } else if (uriType == 2) {
 
                 uriPath = this.configService.api.otherUri.development;
-    
-            }else if(uriType == 3){
-    
+
+            } else if (uriType == 3) {
+
                 uriPath = this.configService.api.adUri.development;
 
-            } else if(uriType == 4) {
+            } else if (uriType == 4) {
                 uriPath = this.configService.api.uuidUri.development;
 
             }
-           
+
             headers = {
                 'User-Agent': 'Request-Promise'
             }
 
-        }else{
+        } else {
 
             let _xhost = '';
 
-            if(uriType == 1){
+            if (uriType == 1) {
 
                 uriPath = ((process.env.VERSION || 'beta') == 'beta' ? this.configService.api.uri.beta : this.configService.api.uri.release);
                 _xhost = this.configService.api.uri.xhost;
 
-            }else if(uriType == 2){
+            } else if (uriType == 2) {
 
                 uriPath = ((process.env.VERSION || 'beta') == 'beta' ? this.configService.api.otherUri.beta : this.configService.api.otherUri.release);
                 _xhost = this.configService.api.otherUri.xhost;
-    
-            }else if(uriType == 3){
-    
+
+            } else if (uriType == 3) {
+
                 uriPath = ((process.env.VERSION || 'beta') == 'beta' ? this.configService.api.adUri.beta : this.configService.api.adUri.release);
                 _xhost = this.configService.api.adUri.xhost;
 
-            } else if(uriType == 4) {
+            } else if (uriType == 4) {
                 uriPath = ((process.env.VERSION || 'beta') == 'beta' ? this.configService.api.uuidUri.beta : this.configService.api.uuidUri.release);
                 _xhost = this.configService.api.uuidUri.xhost;
             }
@@ -266,19 +265,19 @@ export class BaseService {
         }
 
 
-       let defaultApiOptions = {
+        let defaultApiOptions = {
             baseUrl: uriPath,
             json: true,
             gzip: true,
             jar: true,
             timeout: 10000,
             resolveWithFullResponse: true,
-            forever: true,      // 设置为keepalive
+            forever: true, // 设置为keepalive
             headers: headers
         };
 
 
-        let options = { ...defaultApiOptions, ...httpOpt };
+        let options = {...defaultApiOptions, ...httpOpt };
 
         /** 输出地址还有参数 */
         // logger.debug(`Api-URL:${options.baseUrl}${options.url}--->${JSON.stringify(httpOpt.qs)}`);
@@ -300,18 +299,18 @@ export class BaseService {
         options.paramsSerializer = function(params) {
             let obj = [];
             Object.keys(params).forEach((key, idx) => {
-                if(params[key] instanceof Array) {
+                if (params[key] instanceof Array) {
                     params[key].forEach((item, index) => {
-                        if(typeof item != 'undefined' && item != null) {
+                        if (typeof item != 'undefined' && item != null) {
                             obj.push(`${key}[${index}]=${encodeURIComponent(item)}`);
                         }
                     })
                 } else {
-                    if(typeof params[key] != 'undefined' && params[key] != null) {
+                    if (typeof params[key] != 'undefined' && params[key] != null) {
                         obj.push(`${key}=${encodeURIComponent(params[key])}`);
                     }
                 }
-                
+
             });
 
             return obj.join('&');
@@ -320,12 +319,12 @@ export class BaseService {
         return axios.request(options).then(result => {
             if (cacheOpt && cacheOpt.expired > 0 && result && result.data) {
                 cacheService.set(cacheOpt, result.data);
-            } 
+            }
             // if(options.url == '/lottery/getawarddata') {
             //     throw '二个人通过'
             // }
             console.log(`Api-URL:${options.baseUrl}${options.url}--->${JSON.stringify(httpOpt.qs)}--------------success`);
-            return result.data; 
+            return result.data;
         }).catch(ex => {
             console.error(`Api-URL:${options.baseUrl}${options.url}--->${JSON.stringify(httpOpt.qs)}---------------error`);
             return this.errorMsg(ex);

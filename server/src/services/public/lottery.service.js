@@ -440,7 +440,7 @@ export class LotteryService extends BaseService {
             }
         };
 
-        return this.httpGet(httpOpt, cacheOpt);
+        return this.httpGet(httpOpt, cacheOpt); //还原
     }
 
 
@@ -709,7 +709,7 @@ export class LotteryService extends BaseService {
                 quantity: _quantity
             }
         };
-
+        console.log("httOpt", httpOpt)
         return this.httpGet(httpOpt, cacheOpt);
 
     }

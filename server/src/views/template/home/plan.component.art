@@ -1,7 +1,7 @@
  {{if recentplan}}
       {{if recentplan.length > 0}}
                                 {{each recentplan  list}}
-                                    <tr onclick="javascript:window.open('/plan/{{@list.lotteryCode}}/{{@list.pageType}}','_blank')" style="cursor: pointer;">
+                                    <tr onclick="javascript:window.open('/plan/{{@list.lotteryCode}}/{{@list.pageType}}','_blank')" style="cursor: pointer;" class='zhuihaoTabel'>
                                         <td>{{@list.lotteryName}}</td>
                                         <td>{{@list.period}}期</td>
                                         <td>{{@list.type}}</td>

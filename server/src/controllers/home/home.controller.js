@@ -344,7 +344,6 @@ class HomeController extends BaseController {
             _context.list = tempAwardArray;
 
             let _lotteryList = __template(this.path.join(__dirname, '../../views/template/home/lotteryList.component.art'), _context);
-
             return this.json({
                 resultHtml: _lotteryList
             }, request, reply);

@@ -14,17 +14,21 @@
                                              <!--正在开奖-->
                                              <p class="beProgressing" style="display: none">第{{@childsList.next.period}}期正在开奖.....</p>
                                          </div>
-                                         <a href="/live/{{@childsList.lotteryCode}}-detail" class="btn">开奖直播</a>
+                                        <!--<a href="/live/{{@childsList.lotteryCode}}-detail" class="btn">开奖直播</a>-->
                                          <div class="timeBlock">
                                              <span class="timeText">下一期开奖倒计：</span>
                                                  <span class="time" data-time="{{@childsList.awardTimeInterval}}">
                                                      {{@renderLotteryTime(childsList.awardTimeInterval)}}
                                                  </span>
                                          </div>
-                                         <span class="line"></span>
+                                        <!-- <span class="line"></span>-->
 
 
-                                         <div class="ln-funBtnB">
+                                        
+
+
+                                </div>
+                                 <div class="ln-funBtnB">
 
                                               <a href="/high/{{@childsList.lotteryCode}}/history" class="funBtn">历史开奖</a>
 
@@ -63,9 +67,6 @@
                                                    {{/if}}
 
                                               </div>
-
-
-                                </div>
 
                     </div>
                 {{/each}}
